@@ -1,0 +1,11 @@
+# Entorno de ingesta (Python 3.12). Crear con:
+#   uv venv ingest/.venv --python 3.12
+#   uv pip install --python ingest/.venv/bin/python -r ingest/requirements.txt
+#
+# OCR: RapidOCR (modelos PP-OCRv5 latinos via ONNXRuntime). Rapido en CPU y sin
+# el bug de oneDNN/PIR de paddlepaddle 3.x.
+pymupdf>=1.28
+pillow>=11
+numpy>=2
+rapidocr>=3.9
+onnxruntime>=1.27

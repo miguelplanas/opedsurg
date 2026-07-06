@@ -1,0 +1,13 @@
+{
+  "exams": [
+    {
+      "id": "2021-fea-cirurxia-pediatrica",
+      "title": "2021 Fea Cirurxia Pediatrica",
+      "counts": {
+        "comun": 12,
+        "especifica": 110
+      },
+      "language": "gl"
+    }
+  ]
+}

@@ -1,0 +1,1841 @@
+{
+  "id": "2021-fea-cirurxia-pediatrica",
+  "title": "2021 Fea Cirurxia Pediatrica",
+  "language": "gl",
+  "counts": {
+    "comun": 12,
+    "especifica": 110
+  },
+  "questions": [
+    {
+      "id": "C1",
+      "part": "comun",
+      "number": 1,
+      "reserve": false,
+      "stem": "Segundo o artigo 25.1 da Constitución Española,",
+      "options": {
+        "A": "Ninguén pode ser condenado ou sancionado por accións ou omisións que no momento de producirse non constitúan delicto, falta ou infracción administrativa, segundo a lexislación vixente naquel momento.",
+        "B": "Ninguén pode ser condenado ou sancionado por accións que no momento de producirse non constitúan delicto, falta ou infracción administrativa.",
+        "C": "Ninguén pode ser condenado por accións ou omisións que no momento de sancionarse non constitúan delicto, falta ou infracción administrativa.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C2",
+      "part": "comun",
+      "number": 2,
+      "reserve": false,
+      "stem": "Está clasificada como falta disciplinaria moi grave no Estatuto marco do persoal estatutario dos servizos de saúde:",
+      "options": {
+        "A": "O abuso de autoridade no exercicio das súas funcións.",
+        "B": "A incorrección cos superiores, compañeiros, subordinados ou usuarios.",
+        "C": "O abandono do servizo.",
+        "D": "O encubrimento, consentimento ou cooperación con calquera acto á comisión de faltas graves."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C3",
+      "part": "comun",
+      "number": 3,
+      "reserve": false,
+      "stem": "De acordo co establecido no Estatuto marco do pesoal estatutario dos servizos de saúde:",
+      "options": {
+        "A": "O persoal seleccionado polo sistema de promoción interna terá preferencia para a elección de praza respecto do persoal seleccionado polo sistema de acceso libre.",
+        "B": "O personal seleccionado polo sistema de promoción interna nunca terá preferencia para a elección de praza respecto do persoal seleccionado polo sistema de acceso libre.",
+        "C": "O persoal seleccionado polo sistema de acceso libre terá preferencia para a elección de praza respecto do persoal seleccionado polo sistema de promoción interna.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C4",
+      "part": "comun",
+      "number": 4,
+      "reserve": false,
+      "stem": "A función de vixilancia e control da normativa sobre prevención de riscos laborais corresponde a:",
+      "options": {
+        "A": "Á Axencia Galega de Prevención de Riscos Laborais.",
+        "B": "A Inspección de Traballo e Seguridade Social.",
+        "C": "Á Organización Internacional do Traballo.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C5",
+      "part": "comun",
+      "number": 5,
+      "reserve": false,
+      "stem": "Dacordo co establecido no Estatuto marco do persoal estatutario dos servizos de saúde,",
+      "options": {
+        "A": "El personal estatutario dos servizos de saúde clasifícase atendendo á función desenvolvida, ao nivel do título esixido para o ingreso e ao tipo do seu nomeamento.",
+        "B": "O persoal estatutario dos servizos de saúde clasifícase atendendo unicamente á función desenvolvida.",
+        "C": "O persoal estatutario dos servizos de saúde clasifícase atendendo ao tipo, duración e orixe do seu nomeamento.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C6",
+      "part": "comun",
+      "number": 6,
+      "reserve": false,
+      "stem": "Dacordo coa Lei de saúde de Galicia, son dereitos sanitarios:",
+      "options": {
+        "A": "O dereito á integridade física e psíquica.",
+        "B": "O dereito das persoas incapacitadas a estar acompañadas polos responsables legais da súa garda e protección.",
+        "C": "O dereito a renunciar a recibir información.",
+        "D": "Todos os anteriores son dereitos sanitarios."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C7",
+      "part": "comun",
+      "number": 7,
+      "reserve": false,
+      "stem": "De acordo co establecido no artigo 6 da Lei Xeral de Sanidade, as actuacións das Administracións Públicas Sanitarias están orientadas:",
+      "options": {
+        "A": "Á promoción da saúde.",
+        "B": "A promover o interés individual, familiar e social pola saúde mediante a axeitada educación sanitaria da poboación.",
+        "C": "A garantir a asistencia sanitaria en todos os casos de perda da saúde.",
+        "D": "Todas as respostas son correctas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C8",
+      "part": "comun",
+      "number": 8,
+      "reserve": false,
+      "stem": "Segundo o artigo 11.2 do Estatuto de Autonomía de Galicia,",
+      "options": {
+        "A": "O Parlamento será elixido por un prazo de cinco anos, dacordo cun sistema de representación proporcinal.",
+        "B": "El Parlamento será elixido por un prazo de catro anos, dacordo cun sistema de representación directa.",
+        "C": "O Parlamento será elixido por un prazo de catro anos, dacordo cun sistema de representación proporcional que asegure, ademáis, a representación das diversas zonas do territorio galego.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C9",
+      "part": "comun",
+      "number": 9,
+      "reserve": false,
+      "stem": "Dacordo coa Lei Orgánica 3/2018, de 5 de decembro, de protección de datos persoais e garantía dos dereitos digitais,",
+      "options": {
+        "A": "O tratamento dos datos persoais dun menos de idade unicamente poderá fundarse no seu consentimento cando sexa maior de doce anos.",
+        "B": "O tratamento dos datos persoais dun menor de idade unicamente poderá fundarse no seu consentimento cando sexa maior de catorce anos.",
+        "C": "O tratamento dos datos persoais dun menor de idade unicamente poderá fundarse no seu consentimento cando sexa maior de dazaoito anos.",
+        "D": "Ningunha resposta é correcta."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C10",
+      "part": "comun",
+      "number": 10,
+      "reserve": false,
+      "stem": "Segundo o artigo 116 da Constitución Española,",
+      "options": {
+        "A": "O estado de alarma será declarado polo Tribunal Supremo.",
+        "B": "O estado de alarma terá un prazo inicial dun mes.",
+        "C": "O estado de alarma será declarado polo Goberno mediante decreto acordado en Consejo de Ministros.",
+        "D": "O estado de alarma será declarado polo Senado mediante decreto."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C11",
+      "part": "comun",
+      "number": 1,
+      "reserve": true,
+      "stem": "Segundo o artigo 43.2 da Constitución Española,",
+      "options": {
+        "A": "Compete ao Goberno organizar e tutelar a saúde pública a través das prestacións e servizos necesarios.",
+        "B": "Compete aos poderes públicos organizar e tutelar a saúde pública a través de medidas preventivas e das prestacións e servizos necesarios.",
+        "C": "Compete ao Parlamento organizar e tutelar a saúde pública a través de medidas preventivas.",
+        "D": "Ningunha opción é correcta."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C12",
+      "part": "comun",
+      "number": 2,
+      "reserve": true,
+      "stem": "O empresario aplicará as medidas que integran o deber xeral de prevención, con arreglo aos seguintes principios xerais:",
+      "options": {
+        "A": "Evitar os riscos.",
+        "B": "Avaliar os riscos que non se podan evitar.",
+        "C": "Ter en conta a evolución da técnica.",
+        "D": "Todas as respostas son correctas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E1",
+      "part": "especifica",
+      "number": 1,
+      "reserve": false,
+      "stem": "En relación co desenvolvemento e descenso testicular indica a resposta FALSA:",
+      "options": {
+        "A": "O Xene SRY induce a diferenciación a testículo do tecido gonadal bipotencial.",
+        "B": "O factor seudoinsulínico 3, a testosterona, o ligamento suspensorio cranial e o gubernáculum son importantes no descenso testicular.",
+        "C": "A fase de descenso inguinoescrotal do testículo prodúcese principalmente durante o terceiro trimestre de xestación.",
+        "D": "A incidencia de testículos non descendidos é maior á idade dun ano que ao nacer."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E2",
+      "part": "especifica",
+      "number": 2,
+      "reserve": false,
+      "stem": "A elevación dos marcadores tumorais CA-125 e HE4 (proteína 4 do epidídimo humano) é máis frecuente en:",
+      "options": {
+        "A": "Tumores ováricos epiteliais–estromais.",
+        "B": "Tumores ováricos de células xerminais.",
+        "C": "Gonadoblastoma.",
+        "D": "Tecoma."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E3",
+      "part": "especifica",
+      "number": 3,
+      "reserve": false,
+      "stem": "A atresia de vías biliares clasifícase segundo os signos macroscópicos e colanxiográficos como tipo Ill, que é a máis frecuente, se presenta:",
+      "options": {
+        "A": "Oclusión do colédoco.",
+        "B": "Obliteración do conduto hepático común.",
+        "C": "Obliteración do colédoco, conduto hepático común e cístico.",
+        "D": "Oclusión de ámbolos condutos hepáticos, dereito e esquerdo, conduto hepático común, cístico e colédoco."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E4",
+      "part": "especifica",
+      "number": 4,
+      "reserve": false,
+      "stem": "Que atresias xexunoileais, segundo a clasificación de Grosfeld, NON adoitan acompañarse de diminución da lonxitude intestinal?",
+      "options": {
+        "A": "Tipo I.",
+        "B": "Tipo II.",
+        "C": "Tipo IIIb.",
+        "D": "Son correctas A e B."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E5",
+      "part": "especifica",
+      "number": 5,
+      "reserve": false,
+      "stem": "Das seguintes manobras cirúrxicas, cal sería a máis importante cando se realiza unha funduplicatura laparoscópica?",
+      "options": {
+        "A": "Apertura completa da membrana freo-esofáxica.",
+        "B": "Sección de todos os vasos gástricos curtos.",
+        "C": "Aproximación da crura diafragmática.",
+        "D": "Lonxitude do manguito > 3 cm."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E6",
+      "part": "especifica",
+      "number": 6,
+      "reserve": false,
+      "stem": "En cal destes supostos NON está indicado inicialmente o tratamento cirúrxico do refluxo gastroesofáxico?",
+      "options": {
+        "A": "Fallo de crecemento, a pesar de tratamento médico.",
+        "B": "RGE asociado a esófago de Barret.",
+        "C": "RGE asociado a estenose esofáxica.",
+        "D": "RGE en paciente neurolóxico."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E7",
+      "part": "especifica",
+      "number": 7,
+      "reserve": false,
+      "stem": "Con respecto ao ano imperforado sen fístula, cal das seguintes afirmacións é FALSA?",
+      "options": {
+        "A": "Constitúe o 5 % das malformacións anorrectais.",
+        "B": "Asóciase a Síndrome de Down.",
+        "C": "O prognóstico adoita ser malo.",
+        "D": "Existe unha parede común entre recto e uretra."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E8",
+      "part": "especifica",
+      "number": 8,
+      "reserve": false,
+      "stem": "O \"Pediatric Appendicitis Score\" inclúe os seguintes criterios, EXCEPTO:",
+      "options": {
+        "A": "Cifra de Leucocitos.",
+        "B": "Vómitos.",
+        "C": "Valor da proteína C reactiva.",
+        "D": "Migración da dor."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E9",
+      "part": "especifica",
+      "number": 9,
+      "reserve": false,
+      "stem": "En relación coas complicacións postoperatorias na atresia de duodeno é FALsO que:",
+      "options": {
+        "A": "A complicación precoz máis habitual é o atraso na tolerancia oral.",
+        "B": "A gastroxesunostomía asóciase a úlcera marxinal e hemorraxia.",
+        "C": "A mortalidade postoperatoria é baixa, pero a súa principal causa son as complicacións relacionadas coa técnica cirúrxica.",
+        "D": "É importante o seguimento a longo prazo porque as complicacións poden aparecer incluso anos despois."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E10",
+      "part": "especifica",
+      "number": 10,
+      "reserve": false,
+      "stem": "Sinale a resposta CORRECTA en relación co tratamento antibiótico na apendicite aguda non complicada:",
+      "options": {
+        "A": "Non precisa tratamento antibiótico preoperatorio nin postoperatorio.",
+        "B": "Só precisa tratamento antibiótico postoperatorio.",
+        "C": "Só precisa tratamento antibiótico preoperatorio.",
+        "D": "Precisa tratamento preoperatorio e postoperatorio."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E11",
+      "part": "especifica",
+      "number": 11,
+      "reserve": false,
+      "stem": "Con respecto ás malformacións conxénitas da parede abdominal (ou á formación xestacional da parede abdominal):",
+      "options": {
+        "A": "A parede abdominal fórmase durante a oitava semana de xestación.",
+        "B": "Durante a oitava semana, o crecemento intestinal e hepático rápido, producen a herniación dos mesmos fóra da cavidade abdominal.",
+        "C": "Na décima semana o intestino medio regresa á cavidade abdominal.",
+        "D": "A gastrosquise aparece en etapas xestacionais posteriores a que poida formarse un onfalocele."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E12",
+      "part": "especifica",
+      "number": 12,
+      "reserve": false,
+      "stem": "Cal é a proba de elección para detectar a afectación ósea en caso de Neuroblastoma?",
+      "options": {
+        "A": "Gammagrafía con Tecnecio-99m.",
+        "B": "Tomografía computadorizada.",
+        "C": "Resonancia magnética.",
+        "D": "Gammagrafía con lodo–131–Metayodobenzilguanidina."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E13",
+      "part": "especifica",
+      "number": 13,
+      "reserve": false,
+      "stem": "Que patoloxía NON esperamos atopar asociada a atresia duodenal?",
+      "options": {
+        "A": "Malformacións cardíacas.",
+        "B": "Trisomía 21.",
+        "C": "Malrotación intestinal.",
+        "D": "Malformacións vertebrais."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E14",
+      "part": "especifica",
+      "number": 14,
+      "reserve": false,
+      "stem": "Cal dos seguintes criterios NON se utiliza para indicar cirurxía prenatal nun feto con válvulas de uretra posterior (VUP) segundo a Sociedade Europea de Uroloxía Pediátrica?",
+      "options": {
+        "A": "Valores de: Na menor de 100 mEq/I, Cloruro menor de 90mEq/I, Osm menor de 200 mOsm/I, beta-2 microglobulina menor de 6mg/I, en determinacións repetidas de urina fetal.",
+        "B": "Cariotipo normal.",
+        "C": "Oligohidramnios antes da semana 28 de xestación.",
+        "D": "Hidronefrose bilateral."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "E15",
+      "part": "especifica",
+      "number": 15,
+      "reserve": false,
+      "stem": "Cal das seguintes aseveracións acerca da gammagrafía con Tc para o diagnóstico do divertículo de Meckel é FALSA?",
+      "options": {
+        "A": "O resultado será negativo cando exista mucosa ectópica pancreática.",
+        "B": "A efectividade da gammagrafía é a mesma en adultos que en nenos.",
+        "C": "Unha obstrucción intestinal pode ser o motivo dun falso positivo na gammagrafía.",
+        "D": "A precisión do estudo aumenta mediante a administración de pentagastrina."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E16",
+      "part": "especifica",
+      "number": 16,
+      "reserve": false,
+      "stem": "O tumor ovárico de células xerminais máis frecuente é:",
+      "options": {
+        "A": "Quiste dermoide.",
+        "B": "Teratoma inmaduro.",
+        "C": "Disxerminoma.",
+        "D": "Coriocarcinoma."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E17",
+      "part": "especifica",
+      "number": 17,
+      "reserve": false,
+      "stem": "A cal dos seguintes factores NON se asocia a presenza de hipospadias?",
+      "options": {
+        "A": "Exposición intrauterina a antiestróxenos.",
+        "B": "Hipertensión materna.",
+        "C": "Uso de anticonceptivos orais antes do embarazo.",
+        "D": "Exposición intrauterina a valproato."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E18",
+      "part": "especifica",
+      "number": 18,
+      "reserve": false,
+      "stem": "Sobre as anomalías branquiais, indica a resposta correcta:",
+      "options": {
+        "A": "Sempre son unilaterais.",
+        "B": "Na infancia, os quistes son máis frecuentes que as fístulas completas.",
+        "C": "As fístulas da terceira fenda pasan a través da bifurcación carotídea.",
+        "D": "A exérese das fístulas da primeira fenda pode requirir parotidectomía superficial."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E19",
+      "part": "especifica",
+      "number": 19,
+      "reserve": false,
+      "stem": "En canto ao diagnóstico prenatal da hernia diafragmática:",
+      "options": {
+        "A": "Máis da metade diagnostícanse durante o embarazo na ecografía de 18–22 semanas.",
+        "B": "A hernia diafragmática dereita diagnostícase con maior frecuencia que a esquerda na etapa prenatal.",
+        "C": "A ecografía prenatal axuda máis ca resonancia para ver a herniación hepática.",
+        "D": "A relación pulmón-cabeza observada fronte á esperada, menor do 25%, indica bo prognóstico."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E20",
+      "part": "especifica",
+      "number": 20,
+      "reserve": false,
+      "stem": "A hernia de Morgagni:",
+      "options": {
+        "A": "É a máis frecuente das hernias diafragmáticas conxénitas.",
+        "B": "Non adoita ter saco herniario.",
+        "C": "Ten baixa incidencia de anomalías asociadas.",
+        "D": "A maioría son asintomáticas, polo que rara vez se diagnostican no período neonatal."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E21",
+      "part": "especifica",
+      "number": 21,
+      "reserve": false,
+      "stem": "En canto á gastrosquise:",
+      "options": {
+        "A": "É raro o diagnóstico prenatal.",
+        "B": "Hai factores claros para a interrupción precoz do embarazo, como o engrosamento da parede intestinal.",
+        "C": "Unha das razóns do engrosamento da parede é o depósito de coláxeno polo efecto da urina fetal.",
+        "D": "A evidencia científica sinala que é máis beneficioso un parto por cesárea que vaxinal."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E22",
+      "part": "especifica",
+      "number": 22,
+      "reserve": false,
+      "stem": "Cal das seguintes aservacións sobre a enterostomía na enterocolite necrotizante (ECN) é FALSA?",
+      "options": {
+        "A": "O peche precoz da enterostomía diminúe o risco de estenose do intestino distal.",
+        "B": "Débese realizar sempre estudo de contraste do intestino distal previo ao peche da enterostomía.",
+        "C": "Os cabos intestinais deben ser abocados a pel separadamente en calquera localización onde alcancen a parede sen tensión.",
+        "D": "A taxa de complicacións é similar para estomas ubicados na incisión da laparotomía e estomas separados da ferida."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "E23",
+      "part": "especifica",
+      "number": 23,
+      "reserve": false,
+      "stem": "No tratamento da torsión testicular todas as respostas son correctas EXCEPTO:",
+      "options": {
+        "A": "A cirurxía antes das 6 horas asóciase a moi alta taxa de viabilidade testicular.",
+        "B": "Se a evolución dos síntomas é maior de 24 horas non é necesaria a exploración cirúrxica urxente pola nula taxa de rescate testicular.",
+        "C": "Puede realizarse orquidopexia bilateral.",
+        "D": "Debemos alertar ao paciente ante novos episodios de escroto agudo xa que a orquidopexia non evita totalmente a posibilidade de nova torsión."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E24",
+      "part": "especifica",
+      "number": 24,
+      "reserve": false,
+      "stem": "Cal das seguintes aseveracións sobre as válvulas de uretra posterior (VUP) é FALSA?",
+      "options": {
+        "A": "As VUP tipo I constitúen contorno do 95% de todas as VUP",
+        "B": "Ao redor dun terzo das válvulas de uretra posterior diagnostícanse tardiamente na infancia ou adolescencia.",
+        "C": "As válvulas de uretra tipo Il son pouco frecuentes e precisan resección cirúrxica.",
+        "D": "O signo de \"ollo de cerradura” é característico na ECO prenatal."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E25",
+      "part": "especifica",
+      "number": 25,
+      "reserve": false,
+      "stem": "Nas malformacións anorrectais a colostomía debe realizarse:",
+      "options": {
+        "A": "En asa no colon transverso.",
+        "B": "De cabos separados no colon descendente.",
+        "C": "En toda malformación anorrectal.",
+        "D": "Só en casos de atresia anorrectal con fístula rectourinaria e cloaca."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E26",
+      "part": "especifica",
+      "number": 26,
+      "reserve": false,
+      "stem": "A atresia de esófago máis frecuente:",
+      "options": {
+        "A": "Adoita ter fístula traqueo-esofáxica distal e proximal.",
+        "B": "Ten os extremos esofáxicos sempre próximos.",
+        "C": "O bolsón superior ten unha parede fina e extremo da fístula groso.",
+        "D": "A porción proximal do esófago adoita estar entre a segunda e a cuarta vértebras torácicas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E27",
+      "part": "especifica",
+      "number": 27,
+      "reserve": false,
+      "stem": "Cal dos seguintes factores diminúe a taxa de resolución espontánea do refluxo vésico-ureteral (RvU)?",
+      "options": {
+        "A": "A idade de presentación antes do ano de vida.",
+        "B": "A presenza de irmáns con RVU.",
+        "C": "O menor grao de RVU.",
+        "D": "O RVU secundario."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E28",
+      "part": "especifica",
+      "number": 28,
+      "reserve": false,
+      "stem": "Sinala a resposta correcta. Os quistes dermoides da rexión craniofacial:",
+      "options": {
+        "A": "Teñen como localización máis frecuente a rexión preauricular.",
+        "B": "Inféctanse con frecuencia.",
+        "C": "Deben extirparse ao diagnóstico polo alto risco de malignización.",
+        "D": "Cando se sitúan en liña media de coiro cabeludo e en rexión nasal hai que descartar extensión intracranial."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E29",
+      "part": "especifica",
+      "number": 29,
+      "reserve": false,
+      "stem": "Cal das seguintes masas mediastínicas caracterízase pola súa presentación no mediastino posterior?",
+      "options": {
+        "A": "Teratoma.",
+        "B": "Ganglioneuroma.",
+        "C": "Linfoma.",
+        "D": "Timoma."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E30",
+      "part": "especifica",
+      "number": 30,
+      "reserve": false,
+      "stem": "Con relación á hernia diafragmática conxénita, sinale o que é FALsO:",
+      "options": {
+        "A": "O lado máis frecuentemente afectado é o esquerdo.",
+        "B": "A herniación hepática é un signo de risco elevado.",
+        "C": "Asóciase a hipertensión pulmonar.",
+        "D": "A intervención cirúrxica precoz mellora o seu prognóstico."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E31",
+      "part": "especifica",
+      "number": 31,
+      "reserve": false,
+      "stem": "En cal destas situacións NON está aumentada a incidencia de hernia umbilical?",
+      "options": {
+        "A": "Prematuridade e baixo peso ao nacemento.",
+        "B": "Hipertiroidismo.",
+        "C": "Diálise peritoneal.",
+        "D": "Trisomía 21."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E32",
+      "part": "especifica",
+      "number": 32,
+      "reserve": false,
+      "stem": "Na síndrome opsoclonus mioclonus asociado ao Neuroblastoma, é certo que:",
+      "options": {
+        "A": "Nestes casos non adoita presentarse ataxia.",
+        "B": "Só ocorre en casos de tumor primario na cavidade torácica.",
+        "C": "É un trastorno mediado polo sistema inmune.",
+        "D": "Desaparece sempre tras a resección do tumor."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E33",
+      "part": "especifica",
+      "number": 33,
+      "reserve": false,
+      "stem": "Ingresa un neno de dous anos por deposicións escuras, palidez cutánea e debilidade. Afebril e con abdome brando, non doloroso e escavado. Tras rehidratación e estabilización de constantes. Cal das seguintes probas diagnósticas debemos realizar para coñecer a causa do sangrado?",
+      "options": {
+        "A": "Anxiografía mesentérica.",
+        "B": "Gammagrafía con eritrocitos marcados.",
+        "C": "Colonoscopia.",
+        "D": "Gammagrafía con radiosisótopos de Tc."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E34",
+      "part": "especifica",
+      "number": 34,
+      "reserve": false,
+      "stem": "A elevación da gonadotropina como marcador tumoral ovárico é característico de:",
+      "options": {
+        "A": "Coriocarcinoma.",
+        "B": "Carcinoma endometrioide.",
+        "C": "Teratoma inmaduro.",
+        "D": "Gonadoblastoma."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E35",
+      "part": "especifica",
+      "number": 35,
+      "reserve": false,
+      "stem": "Con respecto ás atresias de esófago:",
+      "options": {
+        "A": "A máis frecuente é a atresia sen fístula.",
+        "B": "É máis frecuente a atresia de esófago con fístula proximal que a atresia esofáxica pura (sen fístula).",
+        "C": "Crese que a frecuencia da atresia de esófago con fístula proximal e distal é de ao redor dun 25%, polo que sempre se debe buscar durante a intervención, a fístula proximal.",
+        "D": "A fístula superior pode sospeitarse durante a cirurxía se se ven burbullas ao abrir o bolsón proximal."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E36",
+      "part": "especifica",
+      "number": 36,
+      "reserve": false,
+      "stem": "Nun paciente con dor abdominal de 24 horas de evolución, un \"Pediatric Appendicitis Score\" de 6 indicaría que sería necesario:",
+      "options": {
+        "A": "Observación domiciliaria.",
+        "B": "Intervención cirúrxica urxente.",
+        "C": "Observación hospitalaria.",
+        "D": "Ecografía abdominal."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E37",
+      "part": "especifica",
+      "number": 37,
+      "reserve": false,
+      "stem": "En relación co Neuroblastoma, é FALSO que:",
+      "options": {
+        "A": "Máis do 40% dos casos teñen metástases no momento do diagnóstico.",
+        "B": "En menos do 50% dos casos detéctanse catecolaminas en urina.",
+        "C": "O 75% dos casos localízanse en cavidade abdominal.",
+        "D": "Un 80% dos casos 4 S (INSS) presentan metástases hepáticas."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E38",
+      "part": "especifica",
+      "number": 38,
+      "reserve": false,
+      "stem": "Pertencen á asociación CHARGE:",
+      "options": {
+        "A": "Anomalías vertebrais.",
+        "B": "Atraso do crecemento e/ou desenvolvemento.",
+        "C": "Anomalías ano-rectais.",
+        "D": "Anomalías renais."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E39",
+      "part": "especifica",
+      "number": 39,
+      "reserve": false,
+      "stem": "Nun neno de 3 anos de idade, que acode a urxencias por tumoración inguino–escrotal esquerda de 6 horas de evolución, a actitude diagnóstica inicial máis correcta sería:",
+      "options": {
+        "A": "Exploración física.",
+        "B": "Analítica de sangue.",
+        "C": "Ecografía inguino–escrotal.",
+        "D": "Radiografía de abdome."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E40",
+      "part": "especifica",
+      "number": 40,
+      "reserve": false,
+      "stem": "Segundo o Sistema de estadiamento da SIOP para o tumor de Wilms, que estadio lle confire a un tumor a presenza de implantes tumorais na superficie peritoneal?",
+      "options": {
+        "A": "Estadio II.",
+        "B": "Estadio III.",
+        "C": "Estadio IV.",
+        "D": "Estadio V."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E41",
+      "part": "especifica",
+      "number": 41,
+      "reserve": false,
+      "stem": "Cal dos seguintes factores predispón menos á formación de cicatrices renais?",
+      "options": {
+        "A": "Refluxo vésico-ureteral de alto grao.",
+        "B": "Pielonefrite aguda.",
+        "C": "Refluxo intrarenal.",
+        "D": "Presións vesicais maiores de 45cc de H2O."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E42",
+      "part": "especifica",
+      "number": 42,
+      "reserve": false,
+      "stem": "Indica a resposta FALSA. Os secuestros pulmonares extralobares:",
+      "options": {
+        "A": "Teñen cobertura pleural propia.",
+        "B": "Poden ser subdiafragmáticos.",
+        "C": "Asócianse a outras anomalías conxénitas con menor frecuencia que os secuestros intralobares.",
+        "D": "Son máis frecuentes en homes e no lado esquerdo."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E43",
+      "part": "especifica",
+      "number": 43,
+      "reserve": false,
+      "stem": "Cal das seguintes aseveracións sobre a invaxinación intestinal é FALSA?",
+      "options": {
+        "A": "A invaxinación ileocólica é a forma máis frecuente.",
+        "B": "A cirurxía retroperitoneal aumenta a incidencia de invaxinación ileoileal.",
+        "C": "O punto guía máis frecuente é un remanente do conduto vitelino.",
+        "D": "O síntoma máis frecuente é a deposición en \"xelatina de grosella”"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E44",
+      "part": "especifica",
+      "number": 44,
+      "reserve": false,
+      "stem": "Das seguintes duplicacións dixestivas cales son as máis frecuentes?:",
+      "options": {
+        "A": "Esofáxicas.",
+        "B": "Gástricas.",
+        "C": "Duodenais.",
+        "D": "Rectais."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E45",
+      "part": "especifica",
+      "number": 45,
+      "reserve": false,
+      "stem": "Nun adolescente con cadro de escroto agudo e ecografía compatible con torsión testicular, a detorsión manual:",
+      "options": {
+        "A": "Debe ser sempre a primeira medida terapéutica.",
+        "B": "Pode tentarse se non é factible o tratamento cirúrxico inmediato.",
+        "C": "A detorsión realizarase rotando o testículo de lateral a medial.",
+        "D": "Evita a exploración cirúrxica se se consegue alivio da dor e reaparición de fluxo en ecografía doppler."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E46",
+      "part": "especifica",
+      "number": 46,
+      "reserve": false,
+      "stem": "Que afirmación é FALSA respecto ao enema opaco para diagnóstico diferencial de enfermidade de Hirschsprung en recentemente nados?",
+      "options": {
+        "A": "O material de contraste debe ser soluble en auga.",
+        "B": "A zona de transición é o achado fundamental.",
+        "C": "Débese incluír a proxección lateral.",
+        "D": "A retención de contraste > 24 horas non ten valor diagnóstico."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E47",
+      "part": "especifica",
+      "number": 47,
+      "reserve": false,
+      "stem": "En canto ás complicacións dunha portoenterostomía por atresia de vías biliares:",
+      "options": {
+        "A": "A hipertensión portal é progresiva e aumenta co tempo a predisposición a complicacións.",
+        "B": "A hipertensión indica transplante hepático a pesar de que se manteña a función hepática.",
+        "C": "A síndrome hepato-pulmonar é frecuente e pode tratarse sen transplante hepático.",
+        "D": "Os quistes biliares intrahepáticos son subsidiarios de drenaxe percutáneo."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E48",
+      "part": "especifica",
+      "number": 48,
+      "reserve": false,
+      "stem": "Cal das seguintes aseveracións sobre a enterocolite necrotizante (ECN) é FALSA?",
+      "options": {
+        "A": "A neumatose intestinal non é unha indicación relativa de intervención cirúrxica.",
+        "B": "A área ileocecal é a zona afectada con maior frecuencia.",
+        "C": "A estenose intestinal adoita ocorrer na zona ileocecal.",
+        "D": "As ampolas de neumatose intestinal pódense ver ao inspeccionar o intestino durante a cirurxia."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E49",
+      "part": "especifica",
+      "number": 49,
+      "reserve": false,
+      "stem": "Que malformacións NON esperamos atopar asociadas ás duplicacións dixestivas?:",
+      "options": {
+        "A": "Vertebrais.",
+        "B": "Xenitourinarias.",
+        "C": "Cardíacas.",
+        "D": "Malrotación intestinal."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E50",
+      "part": "especifica",
+      "number": 50,
+      "reserve": false,
+      "stem": "En relación coa enterocolite na enfermidade de Hirschsprung, sinale a resposta FALSA:",
+      "options": {
+        "A": "É máis frecuente en casos de aganglionose colónica total.",
+        "B": "Pode ocorrer tras a corrección cirúrxica.",
+        "C": "É a principal causa de morte nestes pacientes.",
+        "D": "A irrigación rectal está contraindicada."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E51",
+      "part": "especifica",
+      "number": 51,
+      "reserve": false,
+      "stem": "Sobre as atresias xexuno-ileais, sinala a resposta FALSA:",
+      "options": {
+        "A": "Poden ser múltiples.",
+        "B": "Acéptase que son debidas a unha lesión isquémica intrauterina.",
+        "C": "Asócianse a alteracións cromosómicas en máis do 20% dos casos.",
+        "D": "Relacionáronse co uso de medicamentos vasoconstrictores durante o embarazo."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E52",
+      "part": "especifica",
+      "number": 52,
+      "reserve": false,
+      "stem": "A anastomose coloanal en caso de aganglionose debe situarse:",
+      "options": {
+        "A": "Na liña dentada.",
+        "B": "Na pel anal, ao redor de 1 cm por encima da liña dentada.",
+        "C": "Na mucosa rectal, ao redor de 1 cm proximal á liña dentada.",
+        "D": "Non importa a súa relación coa liña dentada, sempre que se realice en dúas capas."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E53",
+      "part": "especifica",
+      "number": 53,
+      "reserve": false,
+      "stem": "Segundo a Sociedade de Uroloxía Fetal e a súa estandarización do manexo multidisciplinar prenatal das válvulas de uretra posterior (VUP), en cal dos seguintes casos estaría indicada a cirurxía prenatal?",
+      "options": {
+        "A": "24 semanas de xestación, hiperecoxenicidade renal, anhidramnios, bioquímica urinaria fetal favorable.",
+        "B": "22 semanas de xestación, oligohidramnios, hiperecoxenicidade renal, quistes corticais, bioquímica urinaria fetal desfavorable.",
+        "C": "29 semanas de xestación, sen oligohidramnios, non hiperecoxenicidade renal, bioquímica urinaria fetal favorable.",
+        "D": "23 semanas de xestación, oligohidramnios, hiperecoxenicidade renal, ausencia de quistes renais e bioquímica urinaria fetal desfavorable."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E54",
+      "part": "especifica",
+      "number": 54,
+      "reserve": false,
+      "stem": "As lesións de Allen–Master son patognomónicas de:",
+      "options": {
+        "A": "Endometriose.",
+        "B": "Torsión de ovario.",
+        "C": "Teratoma de ovario.",
+        "D": "Carcinoma mucinoso ovárico."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E55",
+      "part": "especifica",
+      "number": 55,
+      "reserve": false,
+      "stem": "Cal dos seguintes elementos se asociaría, xeralmente, cunha atresia anorrectal con fístula rectouretral prostática?",
+      "options": {
+        "A": "Sacro ben desenvolvido.",
+        "B": "Musculatura de boa calidade.",
+        "C": "Depresión anal pouco visible.",
+        "D": "Suco interglúteo marcado."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E56",
+      "part": "especifica",
+      "number": 56,
+      "reserve": false,
+      "stem": "Respecto a os tumores testiculares no neno, sinala a resposta FALSA:",
+      "options": {
+        "A": "Son raros e supoñen 1–2% dos tumores sólidos pediátricos.",
+        "B": "A avaliación inicial dunha masa testicular debe incluír ecografía doppler e determinación de marcadores séricos.",
+        "C": "A cirurxía de preservación testicular pode considerarse en pacientes prepúberes con ecografía non suxestiva de malignidade e marcadores tumorais negativos.",
+        "D": "En caso de dúbida e antes dunha orquiectomía está indicada unha biopsia transescrotal."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E57",
+      "part": "especifica",
+      "number": 57,
+      "reserve": false,
+      "stem": "Cal das seguintes síndromes asocian con máis frecuencia hernia diafragmática?",
+      "options": {
+        "A": "Síndrome de Fryns.",
+        "B": "Síndrome de Simpson-Golabi-Behmel.",
+        "C": "Síndrome de Beckwith–Wiedemann.",
+        "D": "Todas as anteriores."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E58",
+      "part": "especifica",
+      "number": 58,
+      "reserve": false,
+      "stem": "En relación coa hernia de Spiegel sinala a resposta correcta:",
+      "options": {
+        "A": "É frecuente na infancia.",
+        "B": "O defecto localízase lateral ao bordo externo do recto anterior do abdome.",
+        "C": "Pode asociarse a criptorquidia homolateral.",
+        "D": "As respostas B e C son correctas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E59",
+      "part": "especifica",
+      "number": 59,
+      "reserve": false,
+      "stem": "Durante unha laparotomía exploradora por enterocolite necrotizante (ECN) obsérvase gangrena do ileon distal cunha perforación ileal, gangrena xeneralizada do colon agás unha zona de 3 centímetros no colon transverso. O colon sigmoide distal e o recto son viables. Cal é o procedimiento máis óptimo?",
+      "options": {
+        "A": "Resección ileocólica e anastomose termo-terminal.",
+        "B": "Rescción ileocólica con dobre enterostomía.",
+        "C": "lleostomía proximal, \"second look\" mediante laparotomía en 24–48 horas.",
+        "D": "Hemicolectomía dereita (incluíndo íleon distal), colectomía esquerda e catro enterostomías."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E60",
+      "part": "especifica",
+      "number": 60,
+      "reserve": false,
+      "stem": "Nun neno de 6 anos cunha masa testicular unilateral e puberdade precoz, en que sospeitamos un tumor de células de Leydig, NON esperamos atopar:",
+      "options": {
+        "A": "Niveis elevados de testosterona.",
+        "B": "Niveis elevados de hormona luteinizante (LH) e foliculoestimulante (FSH).",
+        "C": "Cristais de Reinke no estudo histolóxico.",
+        "D": "Elevación de 17–cetosteroides."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E61",
+      "part": "especifica",
+      "number": 61,
+      "reserve": false,
+      "stem": "Sinala a resposta FALSA respecto á patoloxía ganglionar cervical na infancia:",
+      "options": {
+        "A": "Os ganglios aumentados de tamaño son as masas cervicais máis frecuentes na infancia.",
+        "B": "Os organismos responsables con maior frecuencia da linfadenite aguda supurativa son os xermes anaerobios presentes na orofarinxe.",
+        "C": "Na linfadenite crónica, ademais de tuberculose e infección por micobacterias atípicas hai que descartar infección por Bartonella henselae.",
+        "D": "As adenopatías supraclaviculares expoñen maior preocupación de malignidade que as submandibulares."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E62",
+      "part": "especifica",
+      "number": 62,
+      "reserve": false,
+      "stem": "Respecto ás manifestacións clínicas das duplicacións dixestivas todas as respostas son correctas ExCEPTO:",
+      "options": {
+        "A": "As duplicacións esofáxicas poden producir clínica respiratoria e dixestiva, pero son con frecuencia asintomáticas.",
+        "B": "As duplicacións duodenais poden ser causa de pancreatite recidivante.",
+        "C": "A presentación máis habitual das duplicacións colónicas é a hemorraxia dixestiva pola presenza de mucosa gástrica ectópica.",
+        "D": "As duplicacións rectais poden producir estrinximento e prolapsar a través do ano."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E63",
+      "part": "especifica",
+      "number": 63,
+      "reserve": false,
+      "stem": "A técnica cirúrxica máis empregada no quiste de colédoco é:",
+      "options": {
+        "A": "Coledococistoduodenostomía.",
+        "B": "Coledococistoxexunostomía.",
+        "C": "Quistectomía e hepaticoenterostomía término-terminal en Y de Roux.",
+        "D": "Quistectomía e hepaticoxexunostomía término-lateral en Y de Roux."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E64",
+      "part": "especifica",
+      "number": 64,
+      "reserve": false,
+      "stem": "Se durante a herniotomía nun neno, obsérvase a ausencia do conduto deferente, posteriormente se debe realizar:",
+      "options": {
+        "A": "Niveis de hormonas sexuais.",
+        "B": "Ecografía renal.",
+        "C": "Cariotipo.",
+        "D": "Non se precisa ningunha proba adicional."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E65",
+      "part": "especifica",
+      "number": 65,
+      "reserve": false,
+      "stem": "A clasificación de Shimada (International Neuroblastoma Pathology Classification) ten en conta os seguintes criterios, EXCEPTO:",
+      "options": {
+        "A": "Índice de proliferación celular (índice mitose–cariorrexe).",
+        "B": "Idade (< 1,5 anos, 1,5–5 anos, ≥ 5 anos).",
+        "C": "Tipo de distribución dos neuroblastos (nodular ou mesturado).",
+        "D": "Índice de DNA (diploide o hiperploide)."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E66",
+      "part": "especifica",
+      "number": 66,
+      "reserve": false,
+      "stem": "Sinale a resposta FALSA en relación co Neuroblastoma:",
+      "options": {
+        "A": "É o tumor maligno extracranial máis frecuente na infancia.",
+        "B": "Pode remitir ou madurar espontaneamente.",
+        "C": "Existe unha forma familiar que supón ao redor do 50% dos casos.",
+        "D": "Non se identificaron factores etiolóxicos ambientais implicados."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E67",
+      "part": "especifica",
+      "number": 67,
+      "reserve": false,
+      "stem": "Que exploración debemos realizar para distinguir unha invaxinación ileocecal prolapsada dun prolapso rectal?",
+      "options": {
+        "A": "TAC abdomino-pélvico.",
+        "B": "Radigrafía de abdome.",
+        "C": "Enema opaco.",
+        "D": "Exploración rectal."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E68",
+      "part": "especifica",
+      "number": 68,
+      "reserve": false,
+      "stem": "Sobre o hemanxioma infantil, son certas as seguintes afirmacións, EXCEPTO:",
+      "options": {
+        "A": "É GLUT-1 positivo.",
+        "B": "A idade materna avanzada é un factor de risco.",
+        "C": "É o tumor máis frecuente da lactación.",
+        "D": "Na o ecografía amosan vascularización de fluxo lento, o que os distingue das malformacións arterio- venosas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E69",
+      "part": "especifica",
+      "number": 69,
+      "reserve": false,
+      "stem": "O fenómeno de Kasabach–Merrit asocia:",
+      "options": {
+        "A": "Anxioma en penacho e hemanxiendotelioma Kaposiforme.",
+        "B": "Hemanxioma infantil.",
+        "C": "Malformacións venosas.",
+        "D": "Malformacións linfáticas."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E70",
+      "part": "especifica",
+      "number": 70,
+      "reserve": false,
+      "stem": "Con respecto á hernia diafragmática conxénita, sinale a correcta:",
+      "options": {
+        "A": "Só o 40% dos casos son illadas, sen outras anomalías asociadas.",
+        "B": "As anomalías asociadas non repercuten no prognóstico.",
+        "C": "O defecto cardíaco asociado máis frecuentemente é a coartación aórtica.",
+        "D": "As anomalías xenéticas detéctanse ata nun terzo dos casos."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E71",
+      "part": "especifica",
+      "number": 71,
+      "reserve": false,
+      "stem": "Un recentemente nado, con exteriorización de asas intestinais sen saco:",
+      "options": {
+        "A": "Asocia con frecuencia outras anomalías conxénitas.",
+        "B": "A anomalía asociada máis frecuente é a atresia intestinal.",
+        "C": "A anomalía asociada máis frecuente é cardíaca.",
+        "D": "Debemos colocalo en decúbito esquerdo."
+      },
+      "answer": "B",
+      "status": "modificada"
+    },
+    {
+      "id": "E72",
+      "part": "especifica",
+      "number": 72,
+      "reserve": false,
+      "stem": "En relación á cirurxía das masas mediastínicas, cal dos seguintes síntomas ou signos non debe considerarse factor de risco anestésico?",
+      "options": {
+        "A": "Ortopnea.",
+        "B": "Reducción do 50% da área transversal do esófago previsto na TC preoperatoria.",
+        "C": "Compresión do bronquio principal e dos grandes vasos.",
+        "D": "Edema da parte superior do corpo."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E73",
+      "part": "especifica",
+      "number": 73,
+      "reserve": false,
+      "stem": "A cal dos seguintes trastornos pode estar asociada a presenza de hipospadias?",
+      "options": {
+        "A": "ADS 46XY Disxenesia gonadal completa.",
+        "B": "ADS 46XY Déficit de 17 Beta–Hidroesteroidodeshidroxenasa.",
+        "C": "ADS 46XY Déficit de Hormona antimulleriana.",
+        "D": "ADS 46XX Disxenesia gonadal."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E74",
+      "part": "especifica",
+      "number": 74,
+      "reserve": false,
+      "stem": "Nos pacientes con testículos non descendidos, sinala a resposta FALSA:",
+      "options": {
+        "A": "O risco de tumor maligno testicular é maior que na poboación xeral.",
+        "B": "En caso de testículo non descendido unilateral, o tumor pode aparecer no testículo contralateral normalmente descendido.",
+        "C": "En caso de testículo non descendido unilateral o risco de infertilidade é maior que na poboación xeral.",
+        "D": "A orquidopexia facilita a detección dun tumor testicular e diminúe o risco de torsión."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E75",
+      "part": "especifica",
+      "number": 75,
+      "reserve": false,
+      "stem": "Nunha nena lactante con hernia inguinal, a estrutura que máis frecuentemente se incarcera é:",
+      "options": {
+        "A": "Intestino delgado.",
+        "B": "Ovario.",
+        "C": "Apéndice cecal.",
+        "D": "Colon."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E76",
+      "part": "especifica",
+      "number": 76,
+      "reserve": false,
+      "stem": "Ante un lactante de 3 semanas de vida que presenta vómitos biliosos e abdome escavado. Que proba diagnóstica nos será máis útil?",
+      "options": {
+        "A": "Enema opaco.",
+        "B": "TAC abdominal.",
+        "C": "Tránsito gastrointestinal.",
+        "D": "ECO doppler abdominal."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E77",
+      "part": "especifica",
+      "number": 77,
+      "reserve": false,
+      "stem": "A asociación PHACES asocia as seguintes anomalías, EXCEPTO:",
+      "options": {
+        "A": "Anomalías arteriais.",
+        "B": "Anomalías oculares.",
+        "C": "Hemanxioma facial.",
+        "D": "Anxioma en penacho."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E78",
+      "part": "especifica",
+      "number": 78,
+      "reserve": false,
+      "stem": "A anxiomiolipomatose renal, con que síndrome se asocia máis frecuentemente?",
+      "options": {
+        "A": "Enfermidade de von Hippel–Lindau.",
+        "B": "Síndrome de Sturge Weber.",
+        "C": "Enfermidade de von Recklinghausen (neurofibromatose tipo I).",
+        "D": "Esclerose tuberosa."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E79",
+      "part": "especifica",
+      "number": 79,
+      "reserve": false,
+      "stem": "Se medimos, tras dunha cirurxía de redución de gastrosquise ou onfalocele, a presión de perfusión esplácnica:",
+      "options": {
+        "A": "O seu valor é a diferenza entre a presión arterial media e a presión intraabdominal.",
+        "B": "Referímonos á diferenza entre a presión arterial sistólica e diastólica.",
+        "C": "O seu valor é a diferenza entre a presión gástrica e intravesical.",
+        "D": "A súa cifra debe ser maior de 44 mmHg para evitar a hipoperfusión intestinal."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "E80",
+      "part": "especifica",
+      "number": 80,
+      "reserve": false,
+      "stem": "Cal é o principal factor etiolóxico implicado na apendicite aguda?",
+      "options": {
+        "A": "Obstrución da luz apendicular.",
+        "B": "Infección intestinal.",
+        "C": "Dieta baixa en fibra.",
+        "D": "Alteración na resposta inmune."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E81",
+      "part": "especifica",
+      "number": 81,
+      "reserve": false,
+      "stem": "Sobre o tratamento cirúrxico da atresia duodenal, sinala a resposta correcta:",
+      "options": {
+        "A": "Aínda que non exista sospeita de vólvulo, é sempre unha emerxencia debido ao risco de perforación.",
+        "B": "O tratamento de elección na maioría dos casos é a duodeno-xexunostomía latero-lateral.",
+        "C": "En caso de realizar plastia de redución do segmento proximal, a resección debe afectar á cara anterior ou anterolateral.",
+        "D": "Se ao resecar a membrana nunha atresia tipo I non se identifica a ampola de Vater, a resección debe ser parcial conservando o segmento lateral."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E82",
+      "part": "especifica",
+      "number": 82,
+      "reserve": false,
+      "stem": "Nunha nena de 10 meses de idade, cun tumor retroperitoneal e estadio L2 segundo o INRG (International Neuroblastoma Risk Group), cal sería a actitude inicial máis correcta?",
+      "options": {
+        "A": "Biopsia.",
+        "B": "Resección.",
+        "C": "Quimioterapia.",
+        "D": "Observación."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E83",
+      "part": "especifica",
+      "number": 83,
+      "reserve": false,
+      "stem": "En relación cos quistes broncoxénicos, indica a resposta FALSA:",
+      "options": {
+        "A": "Sitúanse sempre adxacentes á carina.",
+        "B": "Teñen un revestimento epitelial bronquial.",
+        "C": "Poden comunicar coa vía respiratoria.",
+        "D": "Deben extirparse sempre."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E84",
+      "part": "especifica",
+      "number": 84,
+      "reserve": false,
+      "stem": "Sobre as duplicacións esofáxicas é FALSO que:",
+      "options": {
+        "A": "Son na súa maioría quísticas.",
+        "B": "As anomalías vertebrais asociadas son frecuentes, sobre todo nas duplicacións toracoabdominais.",
+        "C": "Máis do 20% dos pacientes presentan duplicacións abdominais sincrónicas.",
+        "D": "A presenza de mucosa gástrica ectópica é excepcional."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E85",
+      "part": "especifica",
+      "number": 85,
+      "reserve": false,
+      "stem": "O diagnóstico definitivo da telanxiectasia hemorráxica hereditaria (THH ou enfermidade de Rendu-Osler– Weber), baséase na presenza de tres dos seguintes criterios, EXCEPTO:",
+      "options": {
+        "A": "Antecedentes familiares de THH.",
+        "B": "Epistaxe.",
+        "C": "Malformacións arterio-venosas.",
+        "D": "Malformacións capilares."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "E86",
+      "part": "especifica",
+      "number": 86,
+      "reserve": false,
+      "stem": "Como se produce embrioloxicamente a rotación intestinal normal?",
+      "options": {
+        "A": "Rotación de 270 graos en sentido antihorario da asa duodenoxexunal sobre a arteria mesentérica superior.",
+        "B": "Rotación de 180 graos en sentido antihorario da asa cecocólica sobre o eixe celíaco.",
+        "C": "Rotación de 360 graos en sentido horario da asa duodenoxexunal sobre a arteria mesentérica superior.",
+        "D": "Rotación de 270 graos en sentido horario da asa duodenoxexunal sobre a arteria mesentérica superior."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E87",
+      "part": "especifica",
+      "number": 87,
+      "reserve": false,
+      "stem": "Sobre o desenvolvemento embriolóxico do diafragma e da hernia diafragmática, é FALsO:",
+      "options": {
+        "A": "É habitual que o lado dereito se peche antes que o esquerdo.",
+        "B": "As membranas pleuroperitoneais pechan e separan as cavidades pleural e abdominal na oitava semana de xestación.",
+        "C": "A Hernia diafragmática conxénita asociouse a aberracións xenómicas en case todos os brazos cromosómicos.",
+        "D": "O 60% presenta anomalías asociadas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E88",
+      "part": "especifica",
+      "number": 88,
+      "reserve": false,
+      "stem": "Segundo a clasificación de Stoker das malformacións pulmonares conxénitas da vía respiratoria, cal é máis frecuente?",
+      "options": {
+        "A": "Tipo 1.",
+        "B": "Tipo2.",
+        "C": "Tipo 3.",
+        "D": "Tipo4."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E89",
+      "part": "especifica",
+      "number": 89,
+      "reserve": false,
+      "stem": "Todas son indicacións de intervención cirúrxica urxente ante unha hernia inguinal incarcerada, EXCEPTO:",
+      "options": {
+        "A": "Imposibilidade de redución manual.",
+        "B": "Shock séptico.",
+        "C": "Signos de peritonite.",
+        "D": "Vómitos."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E90",
+      "part": "especifica",
+      "number": 90,
+      "reserve": false,
+      "stem": "En relación ás malformacións anorrectais, é FALsO que:",
+      "options": {
+        "A": "É preciso descartar outro tipo de malformacións.",
+        "B": "A atresia anorrectal con fístula vestibular é o tipo máis frecuente na muller.",
+        "C": "A colostomía débese realizar nas primeiras 24 horas de vida.",
+        "D": "O meconio na urina indícanos unha fístula rectourinaria."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E91",
+      "part": "especifica",
+      "number": 91,
+      "reserve": false,
+      "stem": "No tratamento cirúrxico das atresias xexunoileais, indica a resposta FALSA:",
+      "options": {
+        "A": "É importante medir a lonxitude do intestino no bordo antimesentérico e apuntalo no informe cirúrxico.",
+        "B": "Débese conservar o segmento proximal dilatado sempre para evitar o risco de síndrome de intestino curto.",
+        "C": "A anastomose primaria é o método de elección.",
+        "D": "En presenza de peritonite ou dúbidas sobre viabilidade intestinal pode estar indicada unha enterostomía temporal."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E92",
+      "part": "especifica",
+      "number": 92,
+      "reserve": false,
+      "stem": "A enfermidade de Caroli:",
+      "options": {
+        "A": "Pode afectar ao fígado de forma difusa ou estar localizada nun lóbulo.",
+        "B": "O tratamento consiste na esfinterotomía.",
+        "C": "É preferible realizar unha hepatoduodenostomía.",
+        "D": "O tratamento é a hepatoxexunostomía."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E93",
+      "part": "especifica",
+      "number": 93,
+      "reserve": false,
+      "stem": "Cal dos seguintes NON sería un factor anatómico que participa na prevención do refluxo gastro–esofáxico?",
+      "options": {
+        "A": "Esfínter esofáxico inferior.",
+        "B": "Ángulo gastroesofáxico.",
+        "C": "Peristaltismo esofáxico.",
+        "D": "Segmento esofágico intra-abdominal."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E94",
+      "part": "especifica",
+      "number": 94,
+      "reserve": false,
+      "stem": "Cal dos seguintes achados anatomopatológixos non é criterio de anaplasia no tumor de Wilms?",
+      "options": {
+        "A": "Inclusións citoplásmicas positivas para o ácido periódico de Schiff.",
+        "B": "Hipercromía nuclear.",
+        "C": "Núcleos xigantes (máis de 3 veces o tamaño dos núcleos de células veciñas do mesmo tipo).",
+        "D": "Figuras mitóticas atípicas."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E95",
+      "part": "especifica",
+      "number": 95,
+      "reserve": false,
+      "stem": "O VACTERL asocia as seguintes malformacións, EXCEPTO:",
+      "options": {
+        "A": "Anomalías das extremidades.",
+        "B": "Anomalías renais.",
+        "C": "Malformacións ano–rectais.",
+        "D": "Coloboma."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E96",
+      "part": "especifica",
+      "number": 96,
+      "reserve": false,
+      "stem": "Unha embarazada está en seguimento tras detectarse no feto unha malformación conxénita microquística da vía respiratoria que afecta a un lóbulo pulmonar. Na semana 29 obsérvase polihidramnios, desprazamento mediastínico, derrame pleural e ascite, e o índice CVR (relación entre o volume da malformación e o perímetro cefálico fetal) é de 1.8. Cal será a medida terapéutica inicial adecuada?",
+      "options": {
+        "A": "Cirurxía fetal con lobectomía.",
+        "B": "Derivación toracoamniótica.",
+        "C": "Administración de esteroides á nai.",
+        "D": "Seguimento ecográfico 2 veces por semana ata a semana 32 e ExIT."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E97",
+      "part": "especifica",
+      "number": 97,
+      "reserve": false,
+      "stem": "Ante un neonato con hipospadias escrotal, escroto bífido e testes non palpables, qué aseveración é FALSA?:",
+      "options": {
+        "A": "Débese diferir a asignación do sexo e iniciar o estudo de Anomalía do Desenvolvemento Sexual (ADS).",
+        "B": "Déebe solicitar cariotipo en sangue periférica urxente.",
+        "C": "Débese realizar estudo hormonal nas primeiras 24 horas.",
+        "D": "Déebe realizar ecografía abdomino-pélvica."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E98",
+      "part": "especifica",
+      "number": 98,
+      "reserve": false,
+      "stem": "Cal das seguintes aseveracións sobre o refluxo vésico-ureteral (RVU) é FALSA?",
+      "options": {
+        "A": "O refluxo durante a fase miccional denomínase refluxo de alta presión.",
+        "B": "O refluxo intrarenal é máis frecuente nos polos renais.",
+        "C": "O refluxo intrarenal considérase RVU grao V.",
+        "D": "A perda de impresión papilar na maioría dos cálices confire ao RVU o grao IV."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E99",
+      "part": "especifica",
+      "number": 99,
+      "reserve": false,
+      "stem": "Ante unha infección de urina, cal dos seguintes patóxenos ten menor tendencia a formar litíase?",
+      "options": {
+        "A": "E. Colli.",
+        "B": "Pseudomona.",
+        "C": "Proteus.",
+        "D": "Klebsiella."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E100",
+      "part": "especifica",
+      "number": 100,
+      "reserve": false,
+      "stem": "Respecto á biopsia rectal na enfermidade de Hirschsprung, cal das seguintes afirmacións é FALSA?",
+      "options": {
+        "A": "A ausencia de células ganglionares é o principal achado.",
+        "B": "Non sempre existe hipertrofia de troncos nerviosos.",
+        "C": "Pódese detectar un aumento de acetilcolinesterase.",
+        "D": "Pódese detectar un aumento de calretinina."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E101",
+      "part": "especifica",
+      "number": 1,
+      "reserve": true,
+      "stem": "Sinale a resposta INCORRECTA, en relación co colostograma distal nas malformacións anorrectais:",
+      "options": {
+        "A": "Realízase en pacientes con colostomía.",
+        "B": "Ofrece información anatómica da malformación anorrectal.",
+        "C": "Axuda na elección da abordaxe cirúrxica.",
+        "D": "Debe usarse moi baixa presión para evitar perforacións."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E102",
+      "part": "especifica",
+      "number": 2,
+      "reserve": true,
+      "stem": "Cal destas situacións NON aumenta o risco de cancro testicular?",
+      "options": {
+        "A": "Testículos non descendidos.",
+        "B": "Varicocele.",
+        "C": "Disxenesia gonadal.",
+        "D": "Antecedente de tumor testicular nun irmán."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E103",
+      "part": "especifica",
+      "number": 3,
+      "reserve": true,
+      "stem": "Cal dos seguintes factores NON é considerado como un dato de mal prognóstico nun neonato con Válvulas de Uretra Posterior (VUP)?",
+      "options": {
+        "A": "Superficie parenquimatosa renal menor de 12 cm².",
+        "B": "Ecoxenicidade renal aumentada.",
+        "C": "Refluxo vésico-ureteral (RvU) severo a un ril non funcionante.",
+        "D": "Creatinina sérica maior de 1 mg/dl despois do tratamento inicial."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E104",
+      "part": "especifica",
+      "number": 4,
+      "reserve": true,
+      "stem": "Con respecto á hernia inguinal pediátrica, sinale a resposta CORRECTA:",
+      "options": {
+        "A": "É máis frecuente no lado esquerdo no home.",
+        "B": "A historia familiar de hernia non incrementa o risco.",
+        "C": "É máis frecuente en prematuros.",
+        "D": "Na nena é xeralmente bilateral."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E105",
+      "part": "especifica",
+      "number": 5,
+      "reserve": true,
+      "stem": "En canto ao tratamento neoplásico gonadotóxico:",
+      "options": {
+        "A": "Os alquilantes presentan baixa toxicidade gonadal.",
+        "B": "O risco de insuficiencia ovárica é maior a maior desenvolvemento puberal no momento da exposición.",
+        "C": "O risco ovárico radioterápico pode ser diminuído coa ooforopexia.",
+        "D": "As respostas B e C son certas."
+      },
+      "answer": "D",
+      "status": "modificada"
+    },
+    {
+      "id": "E106",
+      "part": "especifica",
+      "number": 6,
+      "reserve": true,
+      "stem": "En relación á apendicite aguda, sinale a resposta FALSA:",
+      "options": {
+        "A": "Diminúe o risco de desenvolver colite ulcerosa.",
+        "B": "É máis frecuente nos países menos industrializados.",
+        "C": "Existen factores xenéticos implicados.",
+        "D": "En neonatos, asóciase á aganglionose."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E107",
+      "part": "especifica",
+      "number": 7,
+      "reserve": true,
+      "stem": "Na fenda laringo-traqueo-esofáxica, é FALSO que:",
+      "options": {
+        "A": "Para a tipo Il de Myer, a abordaxe cervical é óptima.",
+        "B": "Poden ser parte da síndrome de Pallister-Hall.",
+        "C": "A traqueobroncoscopia é diagnóstica.",
+        "D": "A rouquén é un síntoma."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E108",
+      "part": "especifica",
+      "number": 8,
+      "reserve": true,
+      "stem": "Cal das seguintes aseveracións sobre o Divertículo de Meckel é certa?",
+      "options": {
+        "A": "O divertículo de Meckel non é un divertículo verdadeiro.",
+        "B": "Atópase texido heterotópico gástrico aproximadamente no 50% dos divertículos sangrantes.",
+        "C": "Débense explorar polo menos 150 cm de intestino delgado distal para descartar a presenza dun divertículo de Meckel.",
+        "D": "O tumor carcinoide é o tumor máis frecuente atopado nun divertículo de Meckel, a maioría das veces na base."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E109",
+      "part": "especifica",
+      "number": 9,
+      "reserve": true,
+      "stem": "Nun paciente operado recentemente de enfermidade de Hirschsprung mediante un descenso transanal, que acode con signos e síntomas de obstrución intestinal mecánica. Que descartaría en primeiro lugar?",
+      "options": {
+        "A": "Obstrución intestinal por brida.",
+        "B": "Xiro do intestino ao realizar a anastomose.",
+        "C": "Estenose da anastomose.",
+        "D": "Manguito muscular longo."
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E110",
+      "part": "especifica",
+      "number": 10,
+      "reserve": true,
+      "stem": "A eventración diafragmática:",
+      "options": {
+        "A": "É de orixe adquirida en todos os casos.",
+        "B": "Precisa de tomografía computarizada para o seu diagnóstico.",
+        "C": "A radioscopia pode ser diagnóstica.",
+        "D": "As eventraciones leves trátanse con toracoscopia."
+      },
+      "answer": "C",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Entornos y cachés
+ingest/.venv/
+__pycache__/
+*.pyc
+.paddlex/
+
+# Node / web
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+
+# Sistema
+.DS_Store
