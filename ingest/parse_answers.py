@@ -69,14 +69,29 @@ def _value_to_right(label_box: Box, boxes: list[Box]) -> Box | None:
 
 
 def _read_b_crop(label_box: Box, value_box: Box, image: Image.Image) -> str:
-    """Segunda lectura independiente: recorta la celda del valor y la OCRea."""
-    pad = (value_box.y1 - value_box.y0) * 0.4
-    crop = image.crop((
-        int(value_box.x0 - pad), int(value_box.y0 - pad),
-        int(value_box.x1 + pad), int(value_box.y1 + pad),
-    ))
-    boxes = ocr_boxes(crop)
-    return " ".join(b.text for b in boxes)
+    """Segunda lectura independiente: recorta la celda del valor y la OCRea.
+
+    Un recorte muy ajustado a veces no dispara el detector (el OCR no ve
+    nada) y uno muy holgado arrastra celdas vecinas. Se prueban margenes de
+    menor a mayor y se devuelve el primer resultado no vacio; si el recorte
+    contiene varias cajas se toma la mas cercana al centro del recorte, que
+    es donde esta el valor. Esta lectura nunca consulta la lectura A, asi
+    que la garantia de doble lectura independiente se mantiene intacta.
+    """
+    h = value_box.y1 - value_box.y0
+    for factor in (0.4, 0.8, 1.2):
+        pad = h * factor
+        crop = image.crop((
+            int(value_box.x0 - pad), int(value_box.y0 - pad),
+            int(value_box.x1 + pad), int(value_box.y1 + pad),
+        ))
+        boxes = ocr_boxes(crop)
+        if not boxes:
+            continue
+        ccx, ccy = crop.width / 2, crop.height / 2
+        best = min(boxes, key=lambda b: (b.cx - ccx) ** 2 + (b.cy - ccy) ** 2)
+        return best.text
+    return ""
 
 
 def parse_answers(image: Image.Image, blocks: tuple[str, ...] = ("C", "E")) -> dict:

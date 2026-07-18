@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Exam, Letter, SessionConfig } from "../types";
+import { partLabel, type Exam, type Letter, type SessionConfig } from "../types";
 import { loadExam } from "../lib/dataset";
 import { buildSession, type SessionQuestion } from "../lib/session";
 import { AnswerGrid } from "./AnswerGrid";
@@ -114,7 +114,7 @@ export function Runner({ config, onExit, onRestart }: Props) {
         <div className="q-label">
           <span className={`q-tag${q.reserve ? " reserve" : ""}`}>{q.id}</span>
           {isNula && <span className="q-tag nula">Anulada</span>}
-          <span className="q-part">{q.part === "comun" ? "Parte común" : "Parte específica"}{q.reserve ? " · reserva" : ""}</span>
+          <span className="q-part">{partLabel(exam, q.part)}{q.reserve ? " · reserva" : ""}</span>
         </div>
         <p className="q-stem">{q.stem}</p>
 

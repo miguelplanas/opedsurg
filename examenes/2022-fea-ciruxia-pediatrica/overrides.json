@@ -1,0 +1,6 @@
+{
+  "title": "FEA Cirugía Pediátrica 2022 (SERGAS)",
+  "language": "es",
+  "missing": ["E109", "E110"],
+  "reason": "El PDF fuente de la parte específica está truncado: su última página termina en la pregunta de reserva 8 (más el código de barras), por lo que faltan las reservas 9 y 10 que la planilla de respuestas sí recoge (E109 y E110). Si se quiere el examen completo hay que re-descargar el PDF de la parte específica y retirar estas etiquetas de aquí."
+}

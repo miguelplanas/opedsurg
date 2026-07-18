@@ -13,6 +13,9 @@ import "@fontsource/ibm-plex-mono/600.css";
 
 import "./styles.css";
 import { App } from "./App";
+import { initTheme } from "./lib/theme";
+
+initTheme();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

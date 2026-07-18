@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import type { Exam, Mode, Scope, SessionConfig } from "../types";
+import { partLabel, type Exam, type Mode, type Scope, type SessionConfig } from "../types";
 import { loadExam } from "../lib/dataset";
+import { selectQuestions } from "../lib/session";
 
 interface Props {
   examId: string;
@@ -8,7 +9,11 @@ interface Props {
   onStart: (config: SessionConfig) => void;
 }
 
-const TIMER_OPTIONS: (number | null)[] = [null, 15, 30, 60, 90];
+const TIMER_PRESETS = [15, 30, 60, 90];
+// Un preset solo tiene sentido si da un ritmo razonable: entre 15 s y 3 min
+// por pregunta. Fuera de ese rango se oculta.
+const MIN_SECS_PER_Q = 15;
+const MAX_SECS_PER_Q = 180;
 
 export function Setup({ examId, onBack, onStart }: Props) {
   const [exam, setExam] = useState<Exam | null>(null);
@@ -17,23 +22,58 @@ export function Setup({ examId, onBack, onStart }: Props) {
   const [shuffleQuestions, setShuffleQuestions] = useState(true);
   const [shuffleOptions, setShuffleOptions] = useState(false);
   const [timerMinutes, setTimerMinutes] = useState<number | null>(null);
+  const [customTimer, setCustomTimer] = useState(false);
+  const [customMinutes, setCustomMinutes] = useState(45);
 
   useEffect(() => {
     loadExam(examId).then(setExam);
   }, [examId]);
 
-  // Conteos disponibles: todas las preguntas (anuladas y de reserva incluidas).
+  // Conteos disponibles segun el modo (en examen real salen las anuladas y
+  // solo entran las reservas que las sustituyen).
   const counts = useMemo(() => {
     const base = { comun: 0, especifica: 0 };
     if (!exam) return base;
-    for (const q of exam.questions) {
+    for (const q of selectQuestions(exam, mode)) {
       base[q.part]++;
     }
     return base;
-  }, [exam]);
+  }, [exam, mode]);
+
+  // Ámbitos con preguntas; "ambas" solo tiene sentido si hay dos partes.
+  const scopes = useMemo(() => {
+    const s: Scope[] = [];
+    if (counts.comun > 0) s.push("comun");
+    if (counts.especifica > 0) s.push("especifica");
+    return s.length === 2 ? [...s, "ambas" as Scope] : s;
+  }, [counts]);
+
+  // Si el ámbito elegido deja de existir (examen de una sola parte), se salta
+  // al único disponible.
+  useEffect(() => {
+    if (exam && scopes.length > 0 && !scopes.includes(scope)) {
+      setScope(scopes[scopes.length - 1]);
+    }
+  }, [exam, scopes, scope]);
 
   const scopeCount =
     scope === "ambas" ? counts.comun + counts.especifica : counts[scope];
+
+  const timerPresets = useMemo(() => {
+    if (!scopeCount) return TIMER_PRESETS;
+    return TIMER_PRESETS.filter((t) => {
+      const secsPerQ = (t * 60) / scopeCount;
+      return secsPerQ >= MIN_SECS_PER_Q && secsPerQ <= MAX_SECS_PER_Q;
+    });
+  }, [scopeCount]);
+
+  // Si al cambiar la selección el preset elegido deja de ofrecerse, se vuelve
+  // a "Sin límite".
+  useEffect(() => {
+    if (!customTimer && timerMinutes !== null && !timerPresets.includes(timerMinutes)) {
+      setTimerMinutes(null);
+    }
+  }, [timerPresets, customTimer, timerMinutes]);
 
   return (
     <div className="app">
@@ -50,9 +90,9 @@ export function Setup({ examId, onBack, onStart }: Props) {
       <div className="section">
         <span className="label">Ámbito</span>
         <div className="segment">
-          {(["comun", "especifica", "ambas"] as Scope[]).map((s) => (
+          {scopes.map((s) => (
             <button key={s} aria-pressed={scope === s} onClick={() => setScope(s)}>
-              {s === "comun" ? "Común" : s === "especifica" ? "Específica" : "Ambas"}
+              {s === "ambas" ? "Ambas" : partLabel(exam, s)}
               <span className="count">
                 {s === "ambas"
                   ? counts.comun + counts.especifica
@@ -74,18 +114,54 @@ export function Setup({ examId, onBack, onStart }: Props) {
             <h3>Examen</h3>
             <p>Simulacro: responde todo y ve la nota y los fallos al final.</p>
           </button>
+          <button className="mode-card" aria-pressed={mode === "examen-real"} onClick={() => setMode("examen-real")}>
+            <h3>Examen real</h3>
+            <p>Como el día oficial: sin anuladas y solo con las reservas que las sustituyeron.</p>
+          </button>
         </div>
       </div>
 
       <div className="section">
         <span className="label">Temporizador</span>
         <div className="timer-row">
-          {TIMER_OPTIONS.map((t) => (
-            <button key={String(t)} aria-pressed={timerMinutes === t} onClick={() => setTimerMinutes(t)}>
-              {t === null ? "Sin límite" : `${t} min`}
+          <button
+            aria-pressed={!customTimer && timerMinutes === null}
+            onClick={() => { setCustomTimer(false); setTimerMinutes(null); }}
+          >
+            Sin límite
+          </button>
+          {timerPresets.map((t) => (
+            <button
+              key={t}
+              aria-pressed={!customTimer && timerMinutes === t}
+              onClick={() => { setCustomTimer(false); setTimerMinutes(t); }}
+            >
+              {t} min
             </button>
           ))}
+          <button
+            aria-pressed={customTimer}
+            onClick={() => { setCustomTimer(true); setTimerMinutes(customMinutes); }}
+          >
+            Personalizado
+          </button>
         </div>
+        {customTimer && (
+          <div className="custom-timer">
+            <input
+              type="number"
+              min={1}
+              max={300}
+              value={customMinutes}
+              onChange={(e) => {
+                const v = Math.max(1, Math.min(300, Number(e.target.value) || 1));
+                setCustomMinutes(v);
+                setTimerMinutes(v);
+              }}
+            />
+            <span>minutos</span>
+          </div>
+        )}
       </div>
 
       <div className="section">

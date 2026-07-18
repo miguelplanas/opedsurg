@@ -1,0 +1,2310 @@
+{
+  "id": "andalucia-2018",
+  "title": "FEA Cirugía Pediátrica · SAS Andalucía 2018",
+  "language": "es",
+  "counts": {
+    "comun": 103,
+    "especifica": 50
+  },
+  "partLabels": {
+    "comun": "Teórico",
+    "especifica": "Práctico"
+  },
+  "questions": [
+    {
+      "id": "C1",
+      "part": "comun",
+      "number": 1,
+      "reserve": false,
+      "stem": "Los derechos y garantías de la dignidad de la persona en el proceso de muerte se regulan, en la Comunidad Autónoma de Andalucía, en la Ley:",
+      "options": {
+        "A": "Ley 3/2001, de 28 de Mayo",
+        "B": "Ley 7/2007, de 12 de Abril",
+        "C": "Ley 22/2009, de 18 de Diciembre",
+        "D": "Ley 2/2010, de 8 de Abril"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C2",
+      "part": "comun",
+      "number": 2,
+      "reserve": false,
+      "stem": "La entidad que surge en el SSPA con el fin de poner a disposición de las organizaciones, y de todos los interesados, el conocimiento generado por sus profesionales (buenas prácticas, acciones de mejora, notificación de incidentes, etc.) con la finalidad de ayudar a proporcionar cuidados cada vez más seguros, se denomina…",
+      "options": {
+        "A": "Escuela Andaluza de Salud Pública",
+        "B": "Observatorio para la Seguridad del Paciente",
+        "C": "Fundación para la Seguridad del Paciente",
+        "D": "El Defensor del Paciente"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C3",
+      "part": "comun",
+      "number": 3,
+      "reserve": false,
+      "stem": "Señale cuál de los siguientes no es un Estudio Descriptivo:",
+      "options": {
+        "A": "Estudios transversales",
+        "B": "Estudios de series de casos",
+        "C": "Estudios de cohortes",
+        "D": "Estudios ecológicos"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C4",
+      "part": "comun",
+      "number": 4,
+      "reserve": false,
+      "stem": "¿Cuál de los siguientes no es un criterio de causalidad según Breslow?",
+      "options": {
+        "A": "Fuerza de la asociación",
+        "B": "Secuencia temporal",
+        "C": "Verosimilitud biológica",
+        "D": "Existencia de hipótesis alternativas"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C5",
+      "part": "comun",
+      "number": 5,
+      "reserve": false,
+      "stem": "¿Cuál de los siguientes sistemas de información no está integrado en DIRAYA?",
+      "options": {
+        "A": "Conjunto mínimo básico de datos (CMBD)",
+        "B": "Módulo de acceso centralizado de operadores (MACO)",
+        "C": "Historia de salud (HS)",
+        "D": "Base de datos de usuarios (BDU)"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C6",
+      "part": "comun",
+      "number": 6,
+      "reserve": false,
+      "stem": "El test no paramétrico para realizar una inferencia estadística sobre dos medias independientes, alternativo a la t de Student es:",
+      "options": {
+        "A": "Test de Mann-Whitney",
+        "B": "Correlación de Spearman",
+        "C": "Test exacto de Fisher",
+        "D": "Test de Wilcoxon"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C7",
+      "part": "comun",
+      "number": 7,
+      "reserve": false,
+      "stem": "Cuando el investigador divide los resultados muestrales en una zona de rechazo y otra de aceptación, estamos realizando…",
+      "options": {
+        "A": "Contraste de Hipótesis",
+        "B": "Estimación por intervalo",
+        "C": "Nivel de Confianza",
+        "D": "Ninguna de ellas"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C8",
+      "part": "comun",
+      "number": 8,
+      "reserve": false,
+      "stem": "El tipo de Muestreo determinado por, primero, la ordenación numérica de todos los individuos de la población, luego, la división del tamaño poblacional entre el tamaño de la muestra, resultando un cociente k y finalmente, la elección al azar de un elemento de la población, y a partir de él se seleccionan de k en k todos los elementos siguientes, se denomina…",
+      "options": {
+        "A": "Muestreo Aleatorio Simple",
+        "B": "Muestreo Aleatorio Estratificado",
+        "C": "Muestreo Aleatorio Sistemático",
+        "D": "Muestreo Aleatorio por áreas"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C9",
+      "part": "comun",
+      "number": 9,
+      "reserve": false,
+      "stem": "El instrumento AGREE es específico de la evaluación de:",
+      "options": {
+        "A": "Ensayos clínicos controlados",
+        "B": "Estudios de cohortes",
+        "C": "Guías de práctica clínica",
+        "D": "Meta‐análisis"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C10",
+      "part": "comun",
+      "number": 10,
+      "reserve": false,
+      "stem": "El Sistema de Clasificación de Pacientes utilizado actualmente en Andalucía es...",
+      "options": {
+        "A": "CMBDA",
+        "B": "COAN H y D",
+        "C": "GRD´s",
+        "D": "CIE-10"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C11",
+      "part": "comun",
+      "number": 11,
+      "reserve": false,
+      "stem": "La capacidad de las Comunidades Autónomas de asumir competencias en materia de Sanidad e Higiene, viene recogida en la Constitución en su Artículo…",
+      "options": {
+        "A": "143",
+        "B": "146",
+        "C": "148",
+        "D": "155"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C12",
+      "part": "comun",
+      "number": 12,
+      "reserve": false,
+      "stem": "No es un derecho recogido en el Artículo 22 del Estatuto de Andalucía",
+      "options": {
+        "A": "Fertilización in Vitro",
+        "B": "Consejo Genético",
+        "C": "Acceso a Cuidados Paliativos",
+        "D": "Asistencia Geriátrica Especializada"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C13",
+      "part": "comun",
+      "number": 13,
+      "reserve": false,
+      "stem": "La elaboración del Plan Andaluz de Salud corresponde a…",
+      "options": {
+        "A": "Servicio Andaluz de Salud",
+        "B": "Consejería de Salud",
+        "C": "Parlamento Andaluz",
+        "D": "Consejo de Gobierno Andaluz"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C14",
+      "part": "comun",
+      "number": 14,
+      "reserve": false,
+      "stem": "Según la Orden de 11 de marzo de 2004: ¿Quién tiene entre sus funciones elaborar y aprobar la memoria anual del Servicio Andaluz de Salud en materia de prevención de riesgos laborales?:",
+      "options": {
+        "A": "La Consejería de Empleo.",
+        "B": "La Consejería de Salud.",
+        "C": "La Subdirección de Personal de la Dirección General de Profesionales del SAS.",
+        "D": "La Unidad de Coordinación de Prevención de Riesgos Laborales."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C15",
+      "part": "comun",
+      "number": 15,
+      "reserve": false,
+      "stem": "Según el Art 26 del Estatuto Marco, procederá la prórroga en el servicio activo, a instancia del interesado, cuando en el momento de cumplir la edad de jubilación forzosa, al interesado le resten cotizaciones para causar pensión de jubilación de:",
+      "options": {
+        "A": "7 años o menos",
+        "B": "6 años o menos",
+        "C": "5 años o menos",
+        "D": "4 años o menos"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C16",
+      "part": "comun",
+      "number": 16,
+      "reserve": false,
+      "stem": "¿Cuando está indicado colocar una sonda transpilórica?",
+      "options": {
+        "A": "Es la colocación mas usual",
+        "B": "Cuando hay riesgo de aspiración",
+        "C": "En el paciente intubado",
+        "D": "Para alimentación a débito continuo"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C17",
+      "part": "comun",
+      "number": 17,
+      "reserve": false,
+      "stem": "El grado III en el traumatismo pancreático se corresponde con:",
+      "options": {
+        "A": "Fragmentación y hemorragia dentro del parenquima pancreático",
+        "B": "Fractura parcial e incompleta separación de las dos porciones del páncreas",
+        "C": "Fractura completa y separación de las dos porciones del páncreas",
+        "D": "Pseudoquiste"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C18",
+      "part": "comun",
+      "number": 18,
+      "reserve": false,
+      "stem": "¿Cuál de los siguientes fármacos utilizados para el tratamiento de tumores malignos tiene un efecto más cardiotóxico?",
+      "options": {
+        "A": "Cisplatino",
+        "B": "Vincristina",
+        "C": "Doxorrubicina",
+        "D": "Ninguno de los anteriores tiene efecto cardiotóxico"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C19",
+      "part": "comun",
+      "number": 19,
+      "reserve": false,
+      "stem": "Cual de estos cánceres es más frecuente en la infancia",
+      "options": {
+        "A": "Neuroblastoma",
+        "B": "Tumores de Sistema Nervioso Central",
+        "C": "Osteosarcoma",
+        "D": "Tumor de Ewing"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C20",
+      "part": "comun",
+      "number": 20,
+      "reserve": false,
+      "stem": "En cual de las siguientes patologías estaría contraindicada la realización de videotoracoscopia",
+      "options": {
+        "A": "Biopsia pulmonar",
+        "B": "Decorticación",
+        "C": "Persistencia de ductus arterioso",
+        "D": "En ninguna de las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C21",
+      "part": "comun",
+      "number": 21,
+      "reserve": false,
+      "stem": "¿Cuál es la causa mas frecuente de neumatocele?",
+      "options": {
+        "A": "Neumonía por Estafilococos Aureus",
+        "B": "Neumonía por Estreptococos pneumoniae",
+        "C": "Neumonía por Haemofilus influenzae",
+        "D": "Neumonía por Pseudomonas"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C22",
+      "part": "comun",
+      "number": 22,
+      "reserve": false,
+      "stem": "¿Cuando estaría indicado realizar una esofagogastroscopia por sospecha de ingestión de un caústico?",
+      "options": {
+        "A": "Inmediatamente, tras tratamiento empírico.",
+        "B": "A la semana de la ingestión, cuando se ha controlado la inflamación aguda.",
+        "C": "A las 24-48 horas tras neutralización efectiva del caústico",
+        "D": "Nunca, por el riesgo de perforación."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C23",
+      "part": "comun",
+      "number": 23,
+      "reserve": false,
+      "stem": "Las duplicaciones esofágicas se caracterizan por",
+      "options": {
+        "A": "Tener una incidencia de 1 de cada 500 recién nacidos vivos",
+        "B": "Representar el 60% de todas las duplicaciones digestivas",
+        "C": "Poder presentarse como una masa cervical",
+        "D": "La marsupialización es la técnica de elección para el tratamiento de esta malformación"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C24",
+      "part": "comun",
+      "number": 24,
+      "reserve": false,
+      "stem": "La complicación temprana más frecuentes tras la reparación de una atresia esofágica se encuentra:",
+      "options": {
+        "A": "Fugas anastomóticas",
+        "B": "Estenosis esofágica",
+        "C": "Recurrencia de la fístula traqueoesofágica",
+        "D": "Reflujo gastroesofágico"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C25",
+      "part": "comun",
+      "number": 25,
+      "reserve": false,
+      "stem": "En cual de las siguientes enfermedades podría estar indicada la esplenectomía",
+      "options": {
+        "A": "En la talasemia mayor",
+        "B": "En la enfermedad de Gaucher",
+        "C": "Anemia de células falciformes",
+        "D": "En todas las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C26",
+      "part": "comun",
+      "number": 26,
+      "reserve": false,
+      "stem": "La técnica de Lich-Gregoir en el tratamiento del reflujo vesico-ureteral consiste en:",
+      "options": {
+        "A": "Reimplante ureteral extravesical",
+        "B": "Reimplante en túnel distal",
+        "C": "Reimplante transtrigonal",
+        "D": "Reimplante transvesical"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C27",
+      "part": "comun",
+      "number": 27,
+      "reserve": false,
+      "stem": "En cuanto al tratamiento de la vejiga neurógena mediante enterocistoplastia es cierto que",
+      "options": {
+        "A": "Puede aparecer disfunción intestinal entre el 10 y el 50% de los pacientes",
+        "B": "Se ha publicado déficit de Vitamina B12 hasta en el 35% de los pacientes",
+        "C": "Se ha publicado una disminución del crecimiento óseo de hasta el 20%",
+        "D": "Todo es cierto"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C28",
+      "part": "comun",
+      "number": 28,
+      "reserve": false,
+      "stem": "En relación a las valvas de uretra anterior:",
+      "options": {
+        "A": "Presentan una frecuencia similar a las de uretra posterior",
+        "B": "La hidronefrosis y reflujo vesicoureteral ocurren con menor frecuencia que en las posteriores",
+        "C": "Pueden localizarse en cualquier zona de la uretra anterior, siendo más frecuentes en la zona bulbar",
+        "D": "Todas son correctas"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C29",
+      "part": "comun",
+      "number": 29,
+      "reserve": false,
+      "stem": "En el contexto de la disfunción vesical en pacientes con válvulas de uretra posterior no es cierta una de las siguientes respuestas:",
+      "options": {
+        "A": "La obstrucción uretral fetal causa cambios irreversibles en las células musculares lisas de la vejiga con depósitos de colágeno tipo III en la pared de la vejiga",
+        "B": "Hasta en un 40% con VUP, se desarrolla insuficiencia renal crónica y la gran mayoría de estos niños tienen disfunción miccional",
+        "C": "El pronóstico en los niños con PUV depende del estado de los riñones y la vejiga en el momento del diagnóstico y del manejo de la vejiga",
+        "D": "Los cambios ocurridos durante la etapa fetal en la vejiga, desaparecen tras el manejo adecuado de las VUP en el 60% de los pacientes."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C30",
+      "part": "comun",
+      "number": 30,
+      "reserve": false,
+      "stem": "El síndrome de WAGR no se caracteriza por:",
+      "options": {
+        "A": "La presencia de Aniridia, acompañada de Tumor de Wilms",
+        "B": "Anomalías genitourinarias",
+        "C": "Retraso mental",
+        "D": "Malformaciones intestinales"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C31",
+      "part": "comun",
+      "number": 31,
+      "reserve": false,
+      "stem": "¿Qué diagnostico puede sugerirle una masa sólida paravertebral izquierda en mediastino posterior?",
+      "options": {
+        "A": "Quiste broncógeno infectado",
+        "B": "Neuroblastoma",
+        "C": "Metástasis única de osteosarcoma",
+        "D": "Neumonía LSI"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C32",
+      "part": "comun",
+      "number": 32,
+      "reserve": false,
+      "stem": "¿Cual de estos criterios no es diagnostico del estado MS del Neuroblastoma?",
+      "options": {
+        "A": "Presencia de metástasis hepáticas",
+        "B": "Presencia de metástasis óseas",
+        "C": "Presencia de metástasis en piel",
+        "D": "Presencia de metástasis en médula ósea"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C33",
+      "part": "comun",
+      "number": 33,
+      "reserve": false,
+      "stem": "De los factores citados a continuación como predictivos de buen pronóstico en el neuroblastoma, uno de ellos es falso:",
+      "options": {
+        "A": "Diploidía del ADN",
+        "B": "Edad menor de 1 año",
+        "C": "Ausencia de amplificación de N-myc",
+        "D": "Expresión TRK-A"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C34",
+      "part": "comun",
+      "number": 34,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes afirmaciones es FALSA con relación al hepatoblastoma?",
+      "options": {
+        "A": "Se recomienda el despistage de hepatoblastoma en pacientes con poliposis adenomatoide familiar",
+        "B": "Existe asociación de este tumor con prematuridad",
+        "C": "Es más frecuente en madres por encima de los 40 años",
+        "D": "Es más frecuente en las madres que han recibido tratamiento para la infertilidad"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C35",
+      "part": "comun",
+      "number": 35,
+      "reserve": false,
+      "stem": "En neonatología, el test de Ballard es una técnica clínica comúnmente usada para el cálculo indirecto de la edad gestacional de un recién nacido, ¿cual de las siguientes respuestas corresponde a un score de 3?",
+      "options": {
+        "A": "Piel engrosada, agrietada, sin venas, areola granulosa y glándula de 1-2 mm, testículos en descenso y rugosidades escasa.",
+        "B": "Áreas de piel pálidas y agrietadas, venas raras, areola sobreelevada, glándula de 3-4 mm, testículos descendidos rugosidades abundantes",
+        "C": "Piel dura, agrietada y arrugada, areola completa , glándula de 5-10 mm, testículos colgantes, rugosidades profundas",
+        "D": "Lanugo fino, en superficie plantar solo pliegues transversos anteriores, labios mayores y menores igualmente prominentes"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C36",
+      "part": "comun",
+      "number": 36,
+      "reserve": false,
+      "stem": "¿Cual de estos tumores no presenta elevación de la alfa feto proteína?",
+      "options": {
+        "A": "Coriocarcinoma",
+        "B": "Tumor del seno endodérmico",
+        "C": "Pancreatoblastoma",
+        "D": "Hepatoblastoma"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C37",
+      "part": "comun",
+      "number": 37,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes afirmaciones considera más correcta en relación con los linfomas no Hodgkin en niños?",
+      "options": {
+        "A": "En los niños los linfomas no Hodgkin suelen ser siempre de grado bajo",
+        "B": "La mayoría de los pacientes se presentan en estadios III y IV",
+        "C": "Suelen crecer de forma lenta",
+        "D": "Todo es cierto"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C38",
+      "part": "comun",
+      "number": 38,
+      "reserve": false,
+      "stem": "¿Cual de estos tumores óseos no es potencialmente benigno?",
+      "options": {
+        "A": "Osteoma osteoide",
+        "B": "Condroblastoma",
+        "C": "Sarcoma osteogénico",
+        "D": "Fibroma condromixoide"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C39",
+      "part": "comun",
+      "number": 39,
+      "reserve": false,
+      "stem": "Los tumores testiculares de células germinales se presentan:",
+      "options": {
+        "A": "Solo en la pubertad",
+        "B": "Son mas frecuentes en la edad escolar",
+        "C": "La distrubución por edad es bimodal, en menores de 4 años y adolescencia",
+        "D": "En los tres primeros años de la vida"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C40",
+      "part": "comun",
+      "number": 40,
+      "reserve": false,
+      "stem": "Una de estas variantes del rabdiomiosarcoma infantil tiene un pronostico mas desfavorable",
+      "options": {
+        "A": "Los embrionarios, incluyendo la variedad botrioidea,",
+        "B": "Los tumores alveolares y anaplásicos",
+        "C": "El sarcoma extraóseo de Ewing",
+        "D": "Tumores indiferenciados y mixtos"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C41",
+      "part": "comun",
+      "number": 41,
+      "reserve": false,
+      "stem": "La oclusión traqueal se encuentra entre los tratamientos intraútero para mejorar la supervivencia en los pacientes diagnosticados de hernia diafragmática congénita. ¿Cual de las siguientes afirmaciones es cierta?.",
+      "options": {
+        "A": "Debe hacerse antes de la semana 12 de gestación",
+        "B": "El momento ideal para la oclusión traqueal es entre la 24 y la 26 semanas de gestación",
+        "C": "Siempre hay que realizarla después de la semana 32 de gestación",
+        "D": "Sólo debe realizarse en los pacientes con hernia diafragmática de buen pronóstico"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C42",
+      "part": "comun",
+      "number": 42,
+      "reserve": false,
+      "stem": "En relación al tratamiento de la torticolis congénita, una de ellas es falsa:",
+      "options": {
+        "A": "En el 50% el tratamiento es quirúrgico",
+        "B": "La ecografía no solo es diagnostica si no que ayuda a decidir que pacientes requieren tratamiento quirúrgico",
+        "C": "Se precisa una media de 4,7 meses de rehabilitación para su corrección",
+        "D": "La hemihipoplasia facial, es para algunos autores motivo de indicación quirúrgica"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C43",
+      "part": "comun",
+      "number": 43,
+      "reserve": false,
+      "stem": "¿Cual de estas patologías suele asociarse con ginecomastia?",
+      "options": {
+        "A": "Síndrome de Poland",
+        "B": "Hermafroditismo",
+        "C": "Síndrome de Klineferte",
+        "D": "Disgenesia gonadal"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C44",
+      "part": "comun",
+      "number": 44,
+      "reserve": false,
+      "stem": "Con respecto al pectus carinatum",
+      "options": {
+        "A": "La localización más frecuente de la protusión es la parte superior del esternón",
+        "B": "Más del 80% de los pacientes son mujeres",
+        "C": "Puede aparecer tras la corrección del pectus excavatum",
+        "D": "Su corrección siempre es quirúrgica"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C45",
+      "part": "comun",
+      "number": 45,
+      "reserve": false,
+      "stem": "¿Cuál es el tratamiento de elección ante un paciente de 6 años con sospecha de tumor testicular?",
+      "options": {
+        "A": "Orquiectomía radical vía escrotal",
+        "B": "Orquiectomía radical vía inguinal",
+        "C": "Orquiectomía radical vía inguinal y muestreo ganglionar retroperitoneal",
+        "D": "Biopsia vía escrotal y tratamiento en función del diagnóstico histológico"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C46",
+      "part": "comun",
+      "number": 46,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes situaciones se considera una contraindicación absoluta de transplante hepático.?",
+      "options": {
+        "A": "Carcinoma metastásico en hígado",
+        "B": "Encefalopatía hepática avanzada",
+        "C": "Trombosis portal extendida a sistema venoso mesentérico",
+        "D": "Todas las anteriores son ciertas"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C47",
+      "part": "comun",
+      "number": 47,
+      "reserve": false,
+      "stem": "En relación al Sindrome de Crouzon señale la incorrecta",
+      "options": {
+        "A": "El síndrome de Crouzon es el síndrome sintomático craneofacial más común, con una incidencia estimada de 1 en 25.000 recien nacidos vivos",
+        "B": "Es causado por una mutación en el gen FGFR2",
+        "C": "Se caracteriza por la triada de craneosinostosis bicoronal, exoftalmos y protusión de la parte media de la cara",
+        "D": "El exoftalmos es la característica de este síndrome, que resulta en globos prominentes. Como tal, la protección ocular es una característica clave que el clínico debe tener en cuenta"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C48",
+      "part": "comun",
+      "number": 48,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes afirmaciones del teratoma sacrocoxigeo es falsa?",
+      "options": {
+        "A": "A mayor componente presacro del tumor menor frecuencia de maliginidad",
+        "B": "El tipo maligno es mas frecuente en el varon",
+        "C": "La maliginidad es mayor en edades mas tardias",
+        "D": "Predomina en el sexo femenino"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C49",
+      "part": "comun",
+      "number": 49,
+      "reserve": false,
+      "stem": "Con respecto al hemangioma parotídeo es cierto…",
+      "options": {
+        "A": "Es el tumor benigno más frecuente que afecta a esta glándula",
+        "B": "Es más frecuente en varones",
+        "C": "Suele aparecer pasada la adolescencia",
+        "D": "El tratamiento de elección es la extirpación total de la glándula"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C50",
+      "part": "comun",
+      "number": 50,
+      "reserve": false,
+      "stem": "En relación a la malignidad de la linfadenopatía o alteraciones de los ganglios linfáticos son todas correctas salvo una:",
+      "options": {
+        "A": "Ocurre de forma infrecuente y en menos del 5%",
+        "B": "Es mas común en edades comprendidas entre 2-12 años",
+        "C": "Los nódulos suelen ser mayores de 3 cms.",
+        "D": "La región mas frecuente de malignización son las adenopatía supraclaviculares"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C51",
+      "part": "comun",
+      "number": 51,
+      "reserve": false,
+      "stem": "En relación con la hernia de Bochdalek, ¿cual de las siguientes afirmaciones es incorrecta?:",
+      "options": {
+        "A": "Pueden auscultarse ruidos peristálticos en el tórax.",
+        "B": "Existe hipoventilación de un hemitórax.",
+        "C": "El paciente puede presentar cianosis.",
+        "D": "El latido de la punta del corazón está desplazado hacia el lado afecto."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C52",
+      "part": "comun",
+      "number": 52,
+      "reserve": false,
+      "stem": "En el Sindrome de Beckwith-Wiedemann ¿ cual de las siguientes afirmaciones es falsa?:",
+      "options": {
+        "A": "La mayoria de los casos pueden estar asociados con un defecto del cromosoma 11",
+        "B": "Los tumores mas comunes en estos pacientes son el neuroblastoma y linfoma adominal",
+        "C": "Existe hipoglucemia.",
+        "D": "Son niños de talla grande"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C53",
+      "part": "comun",
+      "number": 53,
+      "reserve": false,
+      "stem": "¿Cuál de estos factores no se relacionan con mayor riesgo de apendicitis perforada?",
+      "options": {
+        "A": "Paciente menor de 2 años",
+        "B": "Apéndice retrocecal",
+        "C": "Presencia de fecalito",
+        "D": "Sexo femenino"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C54",
+      "part": "comun",
+      "number": 54,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes respuestas es FALSA en relación a la enfermedad de Hirschsprung?",
+      "options": {
+        "A": "El enema opaco es más sensible en el primer mes de vida",
+        "B": "La tinción con succinil deshidrogenasa se puede utilizar para el diagnóstico de la enfermedad",
+        "C": "En la técnica de Soave la disección se hace en el plano entre mucosa y muscular",
+        "D": "La extirpación de unos 10 cm de colon por encima de la zona de transición evita dejar zonas disfuncionales"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C55",
+      "part": "comun",
+      "number": 55,
+      "reserve": false,
+      "stem": "De los siguientes, el factor pronóstico más relevante en la corrección de la extrofia de la vejiga es",
+      "options": {
+        "A": "Tamaño de la placa.",
+        "B": "Paciente varón.",
+        "C": "Paciente mujer.",
+        "D": "Éxito del cierre primario"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C56",
+      "part": "comun",
+      "number": 56,
+      "reserve": false,
+      "stem": "¿En cuál de estas enfermedades es mas frecuente el prolapso rectal?",
+      "options": {
+        "A": "Enfermedad celíaca",
+        "B": "Hipotiroidismo congénito",
+        "C": "Fibrosis quística",
+        "D": "Megacolon agangliónico"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C57",
+      "part": "comun",
+      "number": 57,
+      "reserve": false,
+      "stem": "Dentro del tratamiento quirúrgico de la hipertensión portal se encuentra la realización de shunt, que pueden ser selectivos o no selectivos, en relación a esto es falso:",
+      "options": {
+        "A": "El shunt porto-cava es la derivación selectiva mas utilizada en el niño",
+        "B": "Shunt esplenorenal proximal es una derivación dentro del grupo de no selectivas que resulta en desviación total de la sangre venosa mesentérica en la circulación sistémica",
+        "C": "El shunt mesacava, se ha empleado en niños en una amplia variedad de entornos y enfermedades, con resultados uniformemente aceptables",
+        "D": "En niños, el shunt selectivo con cambios menores se ha utilizado con éxito para tratamiento de varices sangrantes e hiperesplenismo con tasas de permeabilidad a largo plazo superiores al 90%"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C58",
+      "part": "comun",
+      "number": 58,
+      "reserve": false,
+      "stem": "¿Cuál de las siguientes afirmaciones es FALSA respecto a las anomalías del desarrollo del tercer y cuarto arco branquiales?",
+      "options": {
+        "A": "Son las anomalías menos frecuentes del desarrollo de los arcos branquiales",
+        "B": "Las anomalías del 4º arco branquial hay que diferenciarlas del laringocele",
+        "C": "Las fístulas del tercer arco suelen discurrir entre la bifurcación de la carótida",
+        "D": "Las fístulas del cuarto arco suelen descender por debajo del arco aórtico"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C59",
+      "part": "comun",
+      "number": 59,
+      "reserve": false,
+      "stem": "La torsión testicular es una de las urgencias que precisa una rápida actuación tras su diagnóstico. ¿Cual de las siguientes afirmaciones es FALSA?",
+      "options": {
+        "A": "Si no hay posibilidad de tratamiento quirúrgico precoz, debe intentarse la detorsión manual",
+        "B": "La detorsión manual debe hacerse de medial a lateral ya que en dos tercios será la dirección correcta",
+        "C": "Tras la detorsión manual se esperará al menos 48 horas para la intervención para dar tiempo a que la inflamación disminuya",
+        "D": "Se aconseja la fijación del teste contralateral si hay malformación en badajo de campana ya que esta anomalía suele ser bilateral"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C60",
+      "part": "comun",
+      "number": 60,
+      "reserve": false,
+      "stem": "En relación a la etiología de la estenosis hipertrófica del píloro es cierto que:",
+      "options": {
+        "A": "Influyen factores genéticos y ambientales",
+        "B": "Todos los estudios realizados demuestran una disminución de células ganglionares en el músculo circular del píloro",
+        "C": "El exceso de oxido nitrico sintetasa observado en el músculo pilórico está implicado en la falta de relajación del músculo liso",
+        "D": "Todas son correctas"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C61",
+      "part": "comun",
+      "number": 61,
+      "reserve": false,
+      "stem": "¿Cual de las siguientes afirmaciones es falsa en la enterocolitis necrotizante del neonato?",
+      "options": {
+        "A": "Es la causa mas frecuente de síndrome de intestino corto",
+        "B": "La única indicación absoluta de la intervención quirúrgica es la evidencia de perforación intestinal",
+        "C": "En la actualidad el tratamiento quirúrgico sigue sin estar definido",
+        "D": "La causa mas habitual que la produce es la Enfermedad de Hirschsprung"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C62",
+      "part": "comun",
+      "number": 62,
+      "reserve": false,
+      "stem": "En el Síndrome de Budd Chiari, encontramos",
+      "options": {
+        "A": "Hipertensión portal prehepática",
+        "B": "Hipertensión portal posthepática",
+        "C": "Comunicación arteriovenosa",
+        "D": "Todo lo anterior"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C63",
+      "part": "comun",
+      "number": 63,
+      "reserve": false,
+      "stem": "Una de las siguientes afirmaciones sobre la agenesia del pene es falsa",
+      "options": {
+        "A": "La incidencia es muy baja, de 1 por cada 10 a 30 millones de recién nacidos",
+        "B": "Se puede asociar con multiples anomalías entre las que incluyen defectos musculoesqueléticos y mayor incidencia de espina bifida",
+        "C": "El cariotipo suele ser 46 XY",
+        "D": "La asignación del sexo masculino y construcción de un neofalo requiere consenso de la familia y un equipo multidisciplinar experto en desordenes de diferenciación sexual."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C64",
+      "part": "comun",
+      "number": 64,
+      "reserve": false,
+      "stem": "Acerca del divertículo de Meckel, es falso que:",
+      "options": {
+        "A": "Aparece aproximadamente en el 3% de la población",
+        "B": "Siempre tiene mucosa gástrica",
+        "C": "Su demostración rara vez se consigue mediante radiodiagnóstico",
+        "D": "La hemorragia rectal indolora es el síntoma mas frecuente"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C65",
+      "part": "comun",
+      "number": 65,
+      "reserve": false,
+      "stem": "¿Cuál de estos no es un carcinoma diferenciado de tiroides?",
+      "options": {
+        "A": "Carcinoma Papilar",
+        "B": "Carcinoma folicular",
+        "C": "Carcinoma Medular",
+        "D": "Todos son carcinomas diferenciados de tiroides"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C66",
+      "part": "comun",
+      "number": 66,
+      "reserve": false,
+      "stem": "¿Cómo clasificaría la lesión esofágica si en la exploración endoscópica visualizamos ulceración, necrosis focal y petequias?",
+      "options": {
+        "A": "Grado I",
+        "B": "Grado II",
+        "C": "Grado III",
+        "D": "Grado IV"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C67",
+      "part": "comun",
+      "number": 67,
+      "reserve": false,
+      "stem": "Con respecto a las patologías que afectan al cordón umbilical,¿cual de las siguientes respuestas considera correcta?",
+      "options": {
+        "A": "La hernia de Littre se debe a la incarceración del divertículo de Meckel a través del orificio umbilical",
+        "B": "La mayoría de los pacientes con divertículo de Meckel sintomático se diagnostican después de la adolescencia",
+        "C": "La hernia umbilical se debe operar en primer año de vida por el riesgo de estrangulación",
+        "D": "La onfalitis puede ser la responsable de trombosis portal"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C68",
+      "part": "comun",
+      "number": 68,
+      "reserve": false,
+      "stem": "En relación a la atresia yeyuno ileal una de las siguientes no es correcta:",
+      "options": {
+        "A": "Ocurre por igual en hombres y mujeres, y aproximadamente uno de cada tres bebés es prematuro",
+        "B": "Se produce como resultado de un insulto isquémico intrauterino al intestino medio",
+        "C": "El uso de medicamentos vasoconstrictores maternos y el tabaquismo materno en el primer trimestre del embarazo ha demostrado aumentar el riesgo de atresia del intestino delgado",
+        "D": "Las anormalidades cromosómicas aparecen en mas del 10% de los pacientes con atresia yeyunoileal"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C69",
+      "part": "comun",
+      "number": 69,
+      "reserve": false,
+      "stem": "¿Cual es la forma mas frecuente de manifestacion clinica del Diverticulo de Meckel?",
+      "options": {
+        "A": "Inflamatoria",
+        "B": "Hemorragica",
+        "C": "Obstructiva",
+        "D": "Perforativa"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C70",
+      "part": "comun",
+      "number": 70,
+      "reserve": false,
+      "stem": "La púrpura de Shonlein-Henoch es más frecuente que se presente en niños…",
+      "options": {
+        "A": "De menos de un mes",
+        "B": "Entre 6 meses y dos años",
+        "C": "En niños mayores de dos años",
+        "D": "Con igual frecuencia en todas las edades"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C71",
+      "part": "comun",
+      "number": 71,
+      "reserve": false,
+      "stem": "¿Cuál es la localización mas frecuente de la enfermedad de Crohn?",
+      "options": {
+        "A": "Íleon distal",
+        "B": "Ileocólica",
+        "C": "Colónica",
+        "D": "Difusa"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C72",
+      "part": "comun",
+      "number": 72,
+      "reserve": false,
+      "stem": "En referencia al epispadias femenino ¿cual de las siguientes respuestas es FALSA?",
+      "options": {
+        "A": "El clítoris es bífido",
+        "B": "La vagina tiene una posición posterior a la normal",
+        "C": "El perine está ensanchado",
+        "D": "La vagina puede estar localizada en una posición anterior a la normal"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C73",
+      "part": "comun",
+      "number": 73,
+      "reserve": false,
+      "stem": "La técnica de Sistrunk se realiza para el tratamiento quirurgico de:",
+      "options": {
+        "A": "Quiste dermoide medio cervical",
+        "B": "Bocio",
+        "C": "Quiste conducto tirogloso",
+        "D": "Ninguna de ellas"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C74",
+      "part": "comun",
+      "number": 74,
+      "reserve": false,
+      "stem": "La obstrucción duodenal…",
+      "options": {
+        "A": "Es más frecuente en la 2ª porción del duodeno",
+        "B": "La forma más frecuente es la estenosis",
+        "C": "El 85% son distales a la ampolla de Vater",
+        "D": "Son muy raras en prematuros"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C75",
+      "part": "comun",
+      "number": 75,
+      "reserve": false,
+      "stem": "En relación a la Cloaca persistente, una de ellas no es correcta:",
+      "options": {
+        "A": "Una cloaca se define como un defecto en el cual el recto,la vagina y el tracto urinario se unen y fusionan, creando único canal común",
+        "B": "La longitud del canal común varía de 1 a 7 cm y tiene valor pronóstico",
+        "C": "Independientemente de la longitud del canal, la via abdominal en la reparación es obligada",
+        "D": "Frecuentemente está asociado a megaureteres"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C76",
+      "part": "comun",
+      "number": 76,
+      "reserve": false,
+      "stem": "¿Cuál sería su diagnóstico de sospecha ante un lactante con cuadro de dolor cólico, nauseas y vómitos y en la radiología se aprecia el antro pilórico dirigido hacia el tórax?",
+      "options": {
+        "A": "Estenosis hipertrófica de píloro.",
+        "B": "Atresia pilórica.",
+        "C": "Vólvulo gástrico",
+        "D": "Ninguno de los anteriores"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C77",
+      "part": "comun",
+      "number": 77,
+      "reserve": false,
+      "stem": "¿Qué etiología tendría una ascitis en la que el análisis del líquido muestra un pH<7.0?",
+      "options": {
+        "A": "Quilosa",
+        "B": "Biliar",
+        "C": "Urinaria",
+        "D": "Hepatocelular"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C78",
+      "part": "comun",
+      "number": 78,
+      "reserve": false,
+      "stem": "La colostomía en las malformaciones anorrectales debe realizarse:",
+      "options": {
+        "A": "De cabos separados en la unión de colon transverso y descendente para facilitar el descenso posterior",
+        "B": "De cabos separados en la unión del colon descendente con el sigma",
+        "C": "En todas la malformaciones anorrectales mas bajas se puede realizar una ostomia en asa",
+        "D": "En la zona rectal lo más baja posible"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C79",
+      "part": "comun",
+      "number": 79,
+      "reserve": false,
+      "stem": "La hiperplasia suprarrenal congénita es el tipo mas comun de:",
+      "options": {
+        "A": "Seudohermafroditismo femenino",
+        "B": "Disgenesia gonadal mixta",
+        "C": "Hermafroditismo verdadero",
+        "D": "Seudohermafroditismo masculino"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C80",
+      "part": "comun",
+      "number": 80,
+      "reserve": false,
+      "stem": "Los pacientes con atresia de vías biliares, a los que se les ha realizado portoenterostomía, y cesa de forma brusca el drenaje biliar a intestino se tratan con cortocosterioides.¿ Cual es el mecanismo de acción de estos?",
+      "options": {
+        "A": "Aumento de flujo biliar",
+        "B": "Disminución de la inflamación",
+        "C": "Aumento de la respuesta inmunológica",
+        "D": "Las respuestas A y B son correctas"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C81",
+      "part": "comun",
+      "number": 81,
+      "reserve": false,
+      "stem": "En la etiopatogénesis de la enterocolitis nerotizante pueden jugar un papel importante todo lo enunciado salvo una :",
+      "options": {
+        "A": "La disminución del nivel del Ph que conduce a lesión epitelial directa",
+        "B": "El incremento del acido biliar a nivel ileal",
+        "C": "Lactancia materna en prematuros",
+        "D": "Niveles bajos de ileal bile acid–binding protein"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C82",
+      "part": "comun",
+      "number": 82,
+      "reserve": false,
+      "stem": "Respecto al pólipo juvenil del colon, señale la opción incorrecta.",
+      "options": {
+        "A": "Es de naturaleza inflamatoria",
+        "B": "Generalmente se tratan de lesiones solitarias",
+        "C": "La mayor parte de los casos requiere polipectomia",
+        "D": "En la anatomía patológica se encuentran abundantes eosinófilos"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C83",
+      "part": "comun",
+      "number": 83,
+      "reserve": false,
+      "stem": "¿En cuál de estas patologías se explora el “signo de la seda”?",
+      "options": {
+        "A": "Hernia inguinal indirecta",
+        "B": "Hidrocele",
+        "C": "Criptorquidia",
+        "D": "Hernia inguinal directa"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C84",
+      "part": "comun",
+      "number": 84,
+      "reserve": false,
+      "stem": "¿Cual de los siguientes signos y síntomas puede NO estar presente en la atresia de vía biliares?",
+      "options": {
+        "A": "Heces sin tinción de meconio en el recién nacido",
+        "B": "Ictericia",
+        "C": "Hepatomegalia",
+        "D": "Todos los anteriores deben estar siempre presente"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C85",
+      "part": "comun",
+      "number": 85,
+      "reserve": false,
+      "stem": "¿Cuál de estas no es una etiología del pseudoquiste pancreático?",
+      "options": {
+        "A": "Traumatismo",
+        "B": "Infección",
+        "C": "Congénita",
+        "D": "Todas pueden originarlos"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C86",
+      "part": "comun",
+      "number": 86,
+      "reserve": false,
+      "stem": "En la atresia de colon es falsa una de las siguientes:",
+      "options": {
+        "A": "Al igual que en la atresia de intestino delgado la causa es un trastorno vascular",
+        "B": "La asociación con otras anomalías es superior que en otros tipos de atresia",
+        "C": "El riesgo de perforación es mas alto que en la atresias de intestino delgado",
+        "D": "Es necesario descartar su asociación a cualquier otro tipo de atresia o estenosis."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C87",
+      "part": "comun",
+      "number": 87,
+      "reserve": false,
+      "stem": "El cleft esternal superior es una malformación de la pared torácica...",
+      "options": {
+        "A": "Que se aconseja reparar en el periodo neonatal",
+        "B": "La edad óptima para su reparación quirúrgica es a los 3 años",
+        "C": "Su reparación en la adolescencia tiene menos complicaciones y es más fácil",
+        "D": "Nunca debe repararse"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C88",
+      "part": "comun",
+      "number": 88,
+      "reserve": false,
+      "stem": "En el onfalocele es cierto todo lo anterior, excepto:",
+      "options": {
+        "A": "Es frecuente la asociación con defectos cardiacos",
+        "B": "La hiperglucemia neonatal debería alertar de la posibilidad de síndrome de Beckwith-Weidemann",
+        "C": "En caso de rotura del saco se debe de intervenir quirurgicamente",
+        "D": "En los onfaloceles de tamaño mediano hay que tener especial cuidado con las venas hepaticas"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C89",
+      "part": "comun",
+      "number": 89,
+      "reserve": false,
+      "stem": "En relación a la Hernia Diafragmática congénita es falsa una de las siguientes respuesta",
+      "options": {
+        "A": "Se puede asociar a defectos cardiacos, del árbol traqueobronquial y defectos del tubo neural",
+        "B": "La Hipoplasia del ventrículo izquierdo con hipoplasia del arco aórtico es la anomalía cardíaca más común",
+        "C": "Los hallazgos ecográficos fetales incluyen oligohidramnios",
+        "D": "La resonancia magnética fetal se ha introducido como una herramienta complementaria para evaluar el volumen del pulmón fetal y la ubicación del hígado"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C90",
+      "part": "comun",
+      "number": 90,
+      "reserve": false,
+      "stem": "¿Cual de las siguientes respuestas es FALSA con relación a la malrotación intestinal complicada con vólvulo?",
+      "options": {
+        "A": "El 75% se presentan en el primer mes de vida",
+        "B": "Las hernias paraduodenales se pueden producir por una falta de fijación del mesocolon derecho a la pared abdominal posterior",
+        "C": "Las hernias paraduodenales se pueden producir por una falta de fijación del mesocolon izquierdo a la pared abdominal posterior",
+        "D": "En la malrotación intestinal incompleta el ciego se sitúa siempre en la Fosa Iliaca Izquierda"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C91",
+      "part": "comun",
+      "number": 91,
+      "reserve": false,
+      "stem": "El síndrome de Beckwith-Wiedemann se caracteriza por todo lo siguiente salvo por:",
+      "options": {
+        "A": "Onfalocele",
+        "B": "Macroglosia",
+        "C": "Hernia diafragmática",
+        "D": "Predisposición al desarrollo de tumores"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C92",
+      "part": "comun",
+      "number": 92,
+      "reserve": false,
+      "stem": "En relación a las técnicas quirúrgicas para el manejo del intestino corto, la realización de una enteroplastia seriada transversa tiene todas las siguientes ventajas sobre la técnica de Bianchi, salvo una de las siguientes:",
+      "options": {
+        "A": "Requiere menor dilatación intestinal",
+        "B": "Menor riesgo de daño vascular",
+        "C": "No precisa anastomosis intestinal",
+        "D": "Se puede realizar después de haber realizado un Bianchi"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C93",
+      "part": "comun",
+      "number": 93,
+      "reserve": false,
+      "stem": "¿Cual de estas patologías se presentan en mediastino posterior?",
+      "options": {
+        "A": "Teratoma",
+        "B": "Neuroblastoma",
+        "C": "Quiste broncógeno",
+        "D": "a y b"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C94",
+      "part": "comun",
+      "number": 94,
+      "reserve": false,
+      "stem": "Si en el contexto de una gastrosquisis localiza una atresia ileal, la conducta a seguir seria:",
+      "options": {
+        "A": "Resección del segmento atrésico y anastomosis e introducción en cavidad abdominal",
+        "B": "No intentar un cierre primario del defecto y realizar enterostomia",
+        "C": "No intentar un cierre primario del defecto y realizar enteroplastia",
+        "D": "No reparar y reintroducir los segmentos atrésicos a la cavidad abdominal para posterior reparación"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C95",
+      "part": "comun",
+      "number": 95,
+      "reserve": false,
+      "stem": "¿Qué diagnósticos podremos plantearnos ante una tumoración en la línea media del cuello?",
+      "options": {
+        "A": "Adenopatía",
+        "B": "Quiste dermoide",
+        "C": "Quiste del conducto tirogloso",
+        "D": "Todas las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "C96",
+      "part": "comun",
+      "number": 96,
+      "reserve": false,
+      "stem": "El diagnóstico diferencial de las duplicaciones del esófago cervical hay que realizarlo con:",
+      "options": {
+        "A": "Malformaciones linfáticas en cuello",
+        "B": "Quistes tiroglosos",
+        "C": "Quistes de la via aérea",
+        "D": "Con ninguna, no se han descrito duplicaciones del esófago cervical"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C97",
+      "part": "comun",
+      "number": 97,
+      "reserve": false,
+      "stem": "En relación al manejo medico del síndrome del intestino corto, es falso que..",
+      "options": {
+        "A": "La nutrición enteral mejora la enfermedad hepática asociada",
+        "B": "Se debe de favorecer la secreción gástrica",
+        "C": "Se debe de tratar el sobrecrecimiento bacteriano que puede ocurrir en hasta el 60%",
+        "D": "Los trastornos de motilidad pueden beneficiarse de tratamiento con eritromicina y azitromicina"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C98",
+      "part": "comun",
+      "number": 98,
+      "reserve": false,
+      "stem": "¿Cual de las siguientes técnicas quirúrgicas no es generalmente usada para corregir quirúrgicamente la GERD en niños?:",
+      "options": {
+        "A": "T. de Nissen :funduplicatura total de 360º sin preservar vasos gastroesplénicos",
+        "B": "T. de Thal-Aschcraft :funduplicatura parcial posterior de 270º.",
+        "C": "T. de Toupet: funduplicatura parcial .",
+        "D": "T. de Boixochoa: esofagofrenopexia más fundopexia diafragmática anterior"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "C99",
+      "part": "comun",
+      "number": 99,
+      "reserve": false,
+      "stem": "La poliposis adenomatosa familiar intestinal y el Síndrome de Gardner asocian pólipos adenomatosos en colon e intestino delgado, ambos se caracterizan por",
+      "options": {
+        "A": "Tener herencia autosómica dominante",
+        "B": "Tener herencia autosómica recesiva",
+        "C": "Tener herencia ligada al sexo",
+        "D": "No son hereditarios"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "C100",
+      "part": "comun",
+      "number": 100,
+      "reserve": false,
+      "stem": "Como causas potenciales de incontinencia urinaria en pacientes con válvulas de uretra posterior se incluyen todas salvo una de las siguientes respuestas:",
+      "options": {
+        "A": "Anormalidades del detrusor",
+        "B": "Vaciado a alta presión secundario a incompleto",
+        "C": "Disinergia detrusor-esfínter en la que el esfínter muscular no se relaja durante la contracción vejiga",
+        "D": "Oliguria secundaria por un exceso en la concentración, resultado de uropatía obstructiva que causa daño tubular renal"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C101",
+      "part": "comun",
+      "number": 151,
+      "reserve": true,
+      "stem": "En relación a la megalouretra:",
+      "options": {
+        "A": "La forma escafoides es la más grave y obstructiva",
+        "B": "La lesión se diagnostica generalmente de forma prenatal",
+        "C": "Está relacionada con el Síndrome de Prune Belly",
+        "D": "Todas son correctas"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "C102",
+      "part": "comun",
+      "number": 152,
+      "reserve": true,
+      "stem": "En relación a las duplicaciones de colon y recto es correcta la siguiente respuesta",
+      "options": {
+        "A": "Constituyen aproximadamente el 17% de todas las duplicaciones entéricas",
+        "B": "Duplicaciones colónicas generalmente contienen mucosa colónica y rara vez contienen ectópicos mucosa gástrica",
+        "C": "Las duplicaciones rectales suelen ser masas quísticas de tamaño variable situadas en el espacio presacral detrás del recto, en raras ocasiones aparecen como masas anteriores",
+        "D": "Pueden asociarse con duplicación u otras anormalidades del tracto urinario y los genitales, aunque nunca con anormalidades espinales mas bajas."
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "C103",
+      "part": "comun",
+      "number": 153,
+      "reserve": true,
+      "stem": "Señale lo cierto en la gastrosquisis :",
+      "options": {
+        "A": "En más del 60% de los casos está asociada a otras malformaciones",
+        "B": "El defecto de la pared abdominal está a la izquierda en la mayoría de los pacientes",
+        "C": "La alfa fetoproteína está elevada en sangre materna con gran frecuencia",
+        "D": "La incidencia de la gastrosquisis ha disminuido en las últimas décadas"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E1",
+      "part": "especifica",
+      "number": 101,
+      "reserve": false,
+      "stem": "CASO I: Una niña de 3 meses es remitida desde Atención Primaria a la consulta de Cirugía con diagnóstico de hernia umbilical. Fue prematura y pesó al nacer 1500 gr. La exploración física revela un defecto umbilical de aproximadamente 1 cm. de diámetro, que protruye al aumentar la presión abdominal y se reduce espontáneamente. No aqueja dolor y la paciente está bien desarrollada. La incidencia de hernia umbilical en lactantes es alta.\n\nDe las siguientes afirmaciones señalar la INCORRECTA:",
+      "options": {
+        "A": "Es más frecuente en la raza negra",
+        "B": "Es más frecuente en el sexo femenino",
+        "C": "Es más frecuente en prematuros",
+        "D": "Se puede asociar a otras anomalías congénitas"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E2",
+      "part": "especifica",
+      "number": 102,
+      "reserve": false,
+      "stem": "Respecto a la historia natural de la hernia umbilical, señalar lo INCORRECTO",
+      "options": {
+        "A": "En un porcentaje significativo el defecto se cierra espontáneamente antes de los 3 años",
+        "B": "La probabilidad de cierre espontáneo es mayor en los defectos pequeños",
+        "C": "El cierre espontáneo se produce mas frecuentemente en varones",
+        "D": "Hernias umbilicales presentes a la edad de 4-5 años se cierran en la pubertad"
+      },
+      "answer": null,
+      "status": "nula"
+    },
+    {
+      "id": "E3",
+      "part": "especifica",
+      "number": 103,
+      "reserve": false,
+      "stem": "En este caso, la probabilidad de cierre espontáneo:",
+      "options": {
+        "A": "Es igual al de la población general",
+        "B": "Es menor por tratarse una niña",
+        "C": "Es mayor por haber sido prematura",
+        "D": "Es menos por haber sido prematura"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E4",
+      "part": "especifica",
+      "number": 104,
+      "reserve": false,
+      "stem": "El síntoma que los padres refieren con mas frecuencia es:",
+      "options": {
+        "A": "Vómitos",
+        "B": "Dolor",
+        "C": "Estreñimiento",
+        "D": "Súbito despertar del sueño"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E5",
+      "part": "especifica",
+      "number": 105,
+      "reserve": false,
+      "stem": "La actitud terapéutica con esta paciente debe ser:",
+      "options": {
+        "A": "Esperar el cierre espontáneo hasta los 3 años de edad",
+        "B": "Recomendar el uso de tiras adhesivas",
+        "C": "Tratamiento quirúrgico en este momento debido al antecedente de prematuridad",
+        "D": "Nada de lo anterior"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E6",
+      "part": "especifica",
+      "number": 106,
+      "reserve": false,
+      "stem": "Las complicaciones de la cirugía de la hernia umbilical son raras, la mas frecuentemente observada es:",
+      "options": {
+        "A": "Recidiva de la hernia",
+        "B": "Infección de la herida",
+        "C": "Hematoma subcutáneo",
+        "D": "Defecto cosmético de la cicatriz"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E7",
+      "part": "especifica",
+      "number": 107,
+      "reserve": false,
+      "stem": "CASO II: Paciente de 10 años de edad que acude a urgencias por cuadro de dolor abdominal de 24 horas de evolución. Antecedentes personales y familiares sin interés. La clínica y pruebas complementarias (analítica y radiografía de abdomen) fueron compatibles con apendicitis aguda, por lo que se realiza apendicectomía según técnica habitual. Se observa apéndice flemonoso, con llamativo engrosamiento en la punta.\n\n¿Su diagnóstico inicial sería?",
+      "options": {
+        "A": "Mucocele",
+        "B": "Tumor carcinoide",
+        "C": "Apendicolito",
+        "D": "Todas son posibles"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E8",
+      "part": "especifica",
+      "number": 108,
+      "reserve": false,
+      "stem": "Estudio anatomo-patológico: apéndice cecal de 8 cm de longitud que presenta en su extremo distal una zona ensanchada de 3,5 cm. Se advierte tumoración apendicular de 0,7 cm de diámetro que infiltra mesoapéndice.¿Que técnica histológicas serían necesarias para el diagnóstico dfinitivo?",
+      "options": {
+        "A": "Cromogranina positiva",
+        "B": "La técnica del PAS",
+        "C": "Inmunohistoquímia",
+        "D": "a y b son ciertas"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E9",
+      "part": "especifica",
+      "number": 109,
+      "reserve": false,
+      "stem": "Si las técnicas son positivas, su diagnóstico sería:",
+      "options": {
+        "A": "Tumor carcinoide",
+        "B": "Mucocele apendicular",
+        "C": "E. de Crhon de origen apendicular",
+        "D": "Angioma apendicular"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E10",
+      "part": "especifica",
+      "number": 110,
+      "reserve": false,
+      "stem": "Si ha realizado el diagnóstico adecuado, dicho proceso es:",
+      "options": {
+        "A": "Potencialmente maligno pero nunca produce metástasis a distancia",
+        "B": "Más frecuente en la infancia que en la edad adulta",
+        "C": "Siempre se presenta como una apendicitis aguda",
+        "D": "Es generalmente asintomático y un hallazgo casual en pacientes intervenidos quirúrgicamente por otras causas."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E11",
+      "part": "especifica",
+      "number": 111,
+      "reserve": false,
+      "stem": "En este paciente el tratamiento adecuado es:",
+      "options": {
+        "A": "La hemicolectomía posterior es el tratamiento de elección ya que infiltra el mesoapéndice",
+        "B": "La simple apendicectomía es suficiente ya que la lesion es menor de 2 cm",
+        "C": "La hemicolectomía es aconsejable si hay infiltración del mesoapendice y el tumor es mayor de 1 cm.",
+        "D": "Siempre se debe de ampliar la zona extirpada en una segunda intervención"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E12",
+      "part": "especifica",
+      "number": 112,
+      "reserve": false,
+      "stem": "Los parámetros de laboratorio que sirven en el seguimiento del paciente son:",
+      "options": {
+        "A": "Serotonina en sangre",
+        "B": "Cromogranina A",
+        "C": "5-hidroxindol ácido acético (5-HIAA) en orina",
+        "D": "Todos los anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E13",
+      "part": "especifica",
+      "number": 113,
+      "reserve": false,
+      "stem": "La clasificación histopatológica de este proceso lo divide en dos tipos. ¿Cuál de ellos es el más agresivo?",
+      "options": {
+        "A": "Tipo insular que se presenta con nidos sólidos y formación de acinos y rosetas",
+        "B": "De caracter tubular",
+        "C": "Tipo anillo de sello",
+        "D": "Todos son iguales de agresivos"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E14",
+      "part": "especifica",
+      "number": 114,
+      "reserve": false,
+      "stem": "Tras el diagnóstico se debe de realizar:",
+      "options": {
+        "A": "TAC abdominal para descartar metástasis",
+        "B": "No es preciso realizar TAC ya que no metastatiza",
+        "C": "No precisa controles periódicos",
+        "D": "Solo es necesario controles analíticos"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E15",
+      "part": "especifica",
+      "number": 115,
+      "reserve": false,
+      "stem": "¿Cual de las siguientes no es una posible localización del proceso de este caso?",
+      "options": {
+        "A": "Sobre un divertículo de Meckel",
+        "B": "En el mesenterio",
+        "C": "Arbol biliar",
+        "D": "Todas son posibles localizaciones"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E16",
+      "part": "especifica",
+      "number": 116,
+      "reserve": false,
+      "stem": "¿Cual de estas afirmaciones NO es cierta?",
+      "options": {
+        "A": "La localización más frecuente del tumor carcinoide apendicular es en la punta del apéndice",
+        "B": "La localización más frecuente del tumor mucocele es en la punta o la base del apéndice",
+        "C": "La localización más frecuente del adenocarcinoma apendicular es la punta o la base y con preferencia la base.",
+        "D": "No hay mayor o menor frecuencia en la localización de los anteriores procesos"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E17",
+      "part": "especifica",
+      "number": 117,
+      "reserve": false,
+      "stem": "Las complicaciones más grave en un mucocele apendicular es:",
+      "options": {
+        "A": "Obstrucción intestinal",
+        "B": "Hemorragia digestiva",
+        "C": "Pseudomixoma peritoneal",
+        "D": "Metástasis a distancia"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E18",
+      "part": "especifica",
+      "number": 118,
+      "reserve": false,
+      "stem": "CASO III: Varón de 8 años de edad, de raza caucásica que presenta desde hace un mes una tumoración laterocervical izquierda y crecimiento progresivo. Disfagia leve a sólidos. A la exploración se palpa tumoración de 6,5x 5,5 cm de consistencia duro-elática, indolora, que no se desplaza con la deglución y se extiende por todo el borde anterior del esternocleidomastoideo.\n\n¿Qué pruebas de imagen considera necesarias para el diagnóstico ?",
+      "options": {
+        "A": "Rx posteroanterior de torax, Ecografia cervical, Gammagrafia tiroidea, TC cervical, RM cervical",
+        "B": "Ecografia cervical, TC cervical, RM cervical",
+        "C": "Ecografia y Gammagrafia tiroidea",
+        "D": "RX posteroanterior del tórax, Ecografia cervical"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E19",
+      "part": "especifica",
+      "number": 119,
+      "reserve": false,
+      "stem": "Los estudios de imágenes demuestran masa hipodensa con componente quístico y niveles líquidos en su interior, de unos 8 cm de diámetro, que se extiende desde la región submandibular izquierda hasta retroesternón y se pone en contacto con el timo.¿Su diagnóstico de sospecha es?",
+      "options": {
+        "A": "Linfangioma quístico cervical complicado",
+        "B": "Quiste branquial de origen tímico",
+        "C": "Duplicación esofágica",
+        "D": "Puede ser a y b"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E20",
+      "part": "especifica",
+      "number": 120,
+      "reserve": false,
+      "stem": "¿Qué prueba de imagen considera más adecuada para el diagnóstico diferencial de las tumoraciones cervicales?",
+      "options": {
+        "A": "Ecografía cervical",
+        "B": "Resonancia Magnética",
+        "C": "TAC sin contraste",
+        "D": "a y b"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E21",
+      "part": "especifica",
+      "number": 121,
+      "reserve": false,
+      "stem": "¿Qué pruebas de laboratorio solicitaría?",
+      "options": {
+        "A": "Hematimetría y bioquímica estándar",
+        "B": "Perfil tiroideo",
+        "C": "Anticuerpos y marcadores tumorales",
+        "D": "Todas las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E22",
+      "part": "especifica",
+      "number": 122,
+      "reserve": false,
+      "stem": "El estudio anatomopatológico observa en la pieza enviada abundantes cristales de colesterol y corpúsculos de Hassal, el diagnóstico más probable es…",
+      "options": {
+        "A": "Higroma quístico",
+        "B": "Quiste del segundo arco branquial",
+        "C": "Ectopia tímica cervical",
+        "D": "Linfangioma cervical"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E23",
+      "part": "especifica",
+      "number": 123,
+      "reserve": false,
+      "stem": "El diagnóstico diferencial del proceso que tratamos se debe hacer con múltiples patologías, señale la menos común de ellas:",
+      "options": {
+        "A": "Quiste branquial",
+        "B": "Higroma quístico",
+        "C": "Quiste dermoide",
+        "D": "Quiste tirogloso"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E24",
+      "part": "especifica",
+      "number": 124,
+      "reserve": false,
+      "stem": "¿Cuál sería su actitud terapeútica?",
+      "options": {
+        "A": "Exéresis radical de la tumoración, estudio anatomopatológico y biopsia ganglionar",
+        "B": "Biopsia y estudio anatomopatológico",
+        "C": "Exéresis radical de la tumoración y estudio anatomopatológico",
+        "D": "Biopsia ganglionar"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E25",
+      "part": "especifica",
+      "number": 125,
+      "reserve": false,
+      "stem": "Si su diagnóstico es correcto, ¿cuál de estas afirmaciones es falsa:?",
+      "options": {
+        "A": "Son una causa infrecuente de tumoración cervical.",
+        "B": "Generalmente se manifiesta como una masa asintomática",
+        "C": "Predomina en el varón y en el lado izquierdo",
+        "D": "Recidiva con frecuencia tras la exéresis"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E26",
+      "part": "especifica",
+      "number": 126,
+      "reserve": false,
+      "stem": "CASO IV: Avisan de la UCIP por un niño de 2 años que ingresa por un cuadro de sepsis de origen urinario asociado a insuficiencia renal por imposibilidad para el sondaje para la colocación de una sonda suprapúbica, dado que necesitan medir la diuresis. Se solicita una ecografía para determinar la presencia de globo vesical. En la ecografía que se realiza en la UCIP se comprueba la presencia de una mínima cantidad de orina en la vejiga, que está muy engrosada y se objetiva la presencia de ureterohidronefrosis bilateral con un parénquima renal adelgazado, hiperecogénico con quistes parenquimatosos y demuestra la presencia de engrosamiento urotelial y el contenido de la orina tiene “debris”. Antecedentes personales: gestación no controlada, no problemas al nacimiento. Retraso pondero-estatural. Antecedentes familiares: sin interés. La analítica al ingreso demuestra anemia microcítica con una Hb de 6gr/dl, creatinina de 4.5 gr/dl, acidosis metabólica e hiperfosforemia.\n\n¿Cuál es el diagnóstico más probable?",
+      "options": {
+        "A": "Reflujo vesico-ureteral bilateral",
+        "B": "Megaureter obstructivo primario bilateral",
+        "C": "Válvulas de uretra posterior",
+        "D": "Mielomenigocele"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E27",
+      "part": "especifica",
+      "number": 127,
+      "reserve": false,
+      "stem": "¿Qué signos, síntomas y hallazgos analíticos y radiológicos le hacen sospechar el diagnóstico ?",
+      "options": {
+        "A": "Engrosamiento de la pared vesical asociado a ureterohidronefrosis y displasia renal y hallazgos analíticos de insuficiencia renal crónica",
+        "B": "Engrosamiento de la pared vesical y acidosis metabólica",
+        "C": "Engrosamiento de la pared vesical y retraso pondero-estatural asociado a anemia",
+        "D": "Ureterohidronefrosis bilateral y displasia renal asociado a ITUs de repetición"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E28",
+      "part": "especifica",
+      "number": 128,
+      "reserve": false,
+      "stem": "¿Cómo se realiza el diagnóstico?",
+      "options": {
+        "A": "CUMS",
+        "B": "Uro-RMN",
+        "C": "Uro-TAC",
+        "D": "DMSA"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E29",
+      "part": "especifica",
+      "number": 129,
+      "reserve": false,
+      "stem": "¿Por qué tiene éste paciente insuficiencia renal?",
+      "options": {
+        "A": "Displasia renal secundario a daño obstructivo fetal",
+        "B": "Displasia renal asociado a la presencia de RVU",
+        "C": "ITUs de repetición en paciente con RVU",
+        "D": "Displasia renal secundaria a daño obstructivo fetal y postnatal agravado por ITUs."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E30",
+      "part": "especifica",
+      "number": 130,
+      "reserve": false,
+      "stem": "¿Cuál es el tratamiento quirúrgico de elección?",
+      "options": {
+        "A": "Pielostomía bilateral",
+        "B": "Reimplante ureteral bilateral",
+        "C": "Antirreflujo endoscópico",
+        "D": "Resección endoscópica de VUP"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E31",
+      "part": "especifica",
+      "number": 131,
+      "reserve": false,
+      "stem": "En los casos de diagnóstico prenatal ¿Cuáles son los signos ecográficos de mal pronóstico?",
+      "options": {
+        "A": "Dilatación del tracto urinario superior y engrosamiento de la pared vesical",
+        "B": "Alteraciones del parénquima renal bilateral (quistes, hiperecogenicidad) y oligoamnios",
+        "C": "Alteraciones del parénquima renal bilateral (quistes, hiperecogenicidad) y polihidramnios",
+        "D": "Dilatación severa del tracto urinario superior con líquido amniótico normal"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E32",
+      "part": "especifica",
+      "number": 132,
+      "reserve": false,
+      "stem": "CASO V: Paciente de 4 años previamente sano derivado desde la consulta de endocrino por presentar una historia familiar de carcinoma medular de tiroides para valoración y posible tratamiento\n\n¿Hacia cuál de estas enfermedades orientaría usted su diagnóstico?",
+      "options": {
+        "A": "Neoplasia endocrina múltiple tipo I (MEN I)",
+        "B": "Neoplasia endocrina múltiple tipo II (MENII)",
+        "C": "Carcinoma papilar de tiroides",
+        "D": "Ninguno de ellos"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E33",
+      "part": "especifica",
+      "number": 133,
+      "reserve": false,
+      "stem": "En relación a las MEN I, ¿Cuál de estos órganos no está afectado?",
+      "options": {
+        "A": "Paratiroides",
+        "B": "Tiroides",
+        "C": "Páncreas",
+        "D": "Hipófisis"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E34",
+      "part": "especifica",
+      "number": 134,
+      "reserve": false,
+      "stem": "En relación a las MEN II, ¿Cuál de estos órganos no está afectado?",
+      "options": {
+        "A": "Paratiroides",
+        "B": "Tiroides",
+        "C": "Glándula suprarrenal",
+        "D": "Hipófisis"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E35",
+      "part": "especifica",
+      "number": 135,
+      "reserve": false,
+      "stem": "¿Que manifestaciones clínicas esperaríamos encontrar en este paciente en nuestra exploración?",
+      "options": {
+        "A": "Exoftalmo",
+        "B": "Hipertensión arterial",
+        "C": "Taquicardia",
+        "D": "Exploración normal"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E36",
+      "part": "especifica",
+      "number": 136,
+      "reserve": false,
+      "stem": "¿Qué prueba complementaria es la que tiene mayor rentabilidad diagnóstica?",
+      "options": {
+        "A": "Estudio analítico completo",
+        "B": "Estudio genético",
+        "C": "RM de cuello",
+        "D": "Gammagrafía tiroidea"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E37",
+      "part": "especifica",
+      "number": 137,
+      "reserve": false,
+      "stem": "¿Que estudios analíticos tendría interés para orientar nuestra sospecha diagnóstica y posterior seguimiento de la enfermedad?",
+      "options": {
+        "A": "Tiroglobulina",
+        "B": "Tirocalcitonina",
+        "C": "Insulina",
+        "D": "MCT8"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E38",
+      "part": "especifica",
+      "number": 138,
+      "reserve": false,
+      "stem": "¿Cuál es el tratamiento que propondría a este paciente en función de su edad basándose en su sospecha diagnóstica?",
+      "options": {
+        "A": "Paratiroidectomia",
+        "B": "Tiroidectomía total",
+        "C": "Tiroidectomía parcial",
+        "D": "Suprarrenalectomía unilateral"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E39",
+      "part": "especifica",
+      "number": 139,
+      "reserve": false,
+      "stem": "¿Qué control analítico fundamental realizaría en el postoperatorio inmediato?",
+      "options": {
+        "A": "Niveles de hormonas tiroideas",
+        "B": "Niveles de calcio",
+        "C": "Niveles de catecolaminas",
+        "D": "Niveles de cortisol"
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E40",
+      "part": "especifica",
+      "number": 140,
+      "reserve": false,
+      "stem": "¿Cuales son las complicaciones que podríamos tener con la cirugía propuesta?",
+      "options": {
+        "A": "Hipoparatiroidismo secundario",
+        "B": "Lesión del nervio recurrente",
+        "C": "Hemorragia",
+        "D": "Todas las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E41",
+      "part": "especifica",
+      "number": 141,
+      "reserve": false,
+      "stem": "CASO VI: El pediatra de zona nos remite un paciente varón de mes y medio, nacido a término y sin otra sintomatología que la ausencia de testes en la bolsa escrotal, el pene es de características y tamaño normales según el pediatra.\n\nLa primera actuación sería",
+      "options": {
+        "A": "Exploración física en un ambiente cálido y con el niño lo más relajado posible.",
+        "B": "Solicitud de un TAC con contraste",
+        "C": "Solicitud de RMN con contraste",
+        "D": "Solicitud de ecografía abdominal"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E42",
+      "part": "especifica",
+      "number": 142,
+      "reserve": false,
+      "stem": "En la exploración física encontramos un pene de tamaño normal, con un prepucio con un defecto ventral el meato a nivel del surco balanoprepucial. La bolsa escrotal es algo hipoplásica y no se puede palpar ningún testículo. ¿Cual de las siguientes posibilidades diagnósticas nos plantearíamos?",
+      "options": {
+        "A": "Criptorquidia bilateral con testes intraabdominales",
+        "B": "Intersexo.",
+        "C": "Testículos evanescentes",
+        "D": "Todas las respuestas son correctas"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E43",
+      "part": "especifica",
+      "number": 143,
+      "reserve": false,
+      "stem": "La incidencia de anomalías cromosómicas que cabría esperar en este paciente sería de:",
+      "options": {
+        "A": "Entre un 15 y un 25%",
+        "B": "Mas del 70%",
+        "C": "La inidencia sería igual a la de la población normal",
+        "D": "Alrededor de un 3%."
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E44",
+      "part": "especifica",
+      "number": 144,
+      "reserve": false,
+      "stem": "Que pruebas analíticas podrían estar indicadas",
+      "options": {
+        "A": "FSH",
+        "B": "LH",
+        "C": "Testosterona",
+        "D": "Todas las anteriores"
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E45",
+      "part": "especifica",
+      "number": 145,
+      "reserve": false,
+      "stem": "Que prueba de imagen sería la que con más seguridad nos daría un diagnóstico sobre la situación de los testes.",
+      "options": {
+        "A": "Resonancia Magnética con Gadolinio",
+        "B": "TAC con constraste",
+        "C": "Ecografía abdominal",
+        "D": "Gammagrafía con TC"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E46",
+      "part": "especifica",
+      "number": 146,
+      "reserve": false,
+      "stem": "Una vez que se ha diagnosticado al paciente de criptorquidia bilateral con testes no palpables a la edad de 2 meses y medio, la actitud a seguir sería:",
+      "options": {
+        "A": "Intervención urgente para el descenso testicular antes de los 6 meses.",
+        "B": "Revisión cuando el niño tenga 6 meses y valorar de nuevo, si no hay descenso testicular programar intervención alrededor del año de edad",
+        "C": "Revisiones periódicas hasta que descienda el testículo.",
+        "D": "Revisión con 4 años y si no ha descendido intervención para descenso testicular."
+      },
+      "answer": "B",
+      "status": "ok"
+    },
+    {
+      "id": "E47",
+      "part": "especifica",
+      "number": 147,
+      "reserve": false,
+      "stem": "Que planteamiento sería el más indicado para la intervención de este paciente",
+      "options": {
+        "A": "Laparotomía tipo Pfannestieel revisión de cavidad y orquidipexia si existen testículos",
+        "B": "Laparoscopia para revisión de la cavidad abdominal y orquidopexia de ambos testículos aunque estos sean anómalos y de dudosa viabilidad ya que posteriormente se suelen recuperar",
+        "C": "Laparoscopia +/- revisión del canal inguinal y orquidopexia según los hallazgos si los testículos parecen normales y viables",
+        "D": "Cualquiera de las anteriores es correcta"
+      },
+      "answer": "C",
+      "status": "ok"
+    },
+    {
+      "id": "E48",
+      "part": "especifica",
+      "number": 148,
+      "reserve": false,
+      "stem": "Cual sería el incremento esperable del riesgo de malignización respecto a testes descendidos normalmente en los testículos no descendidos",
+      "options": {
+        "A": "Entre 2 y 8 veces",
+        "B": "De 10 a 15 veces",
+        "C": "De 20-25 veces",
+        "D": "El riesgo es similar a los testes descendidos"
+      },
+      "answer": "A",
+      "status": "ok"
+    },
+    {
+      "id": "E49",
+      "part": "especifica",
+      "number": 149,
+      "reserve": false,
+      "stem": "Cual sería la razón por las que se indica la intervención de pacientes con testes no descendidos",
+      "options": {
+        "A": "El incremento de la infertilidad en testes no descendidos",
+        "B": "El incremento del riesgo de malignización en testes no descendidos",
+        "C": "El incremento del riesgo de traumatismo testicular",
+        "D": "Todas las anteriores."
+      },
+      "answer": "D",
+      "status": "ok"
+    },
+    {
+      "id": "E50",
+      "part": "especifica",
+      "number": 150,
+      "reserve": false,
+      "stem": "Cual de las siguientes anomalías histológicas esperaría encontrar si realiza una biopsia testicular entre los 6 y los 12 meses en un paciente con testículo no descendido",
+      "options": {
+        "A": "Aumento del número de células de Leydig",
+        "B": "Persistencia de gonocitos fetales",
+        "C": "Aumento del número de células de Sertoli",
+        "D": "Ninguna de las anteriores"
+      },
+      "answer": "B",
+      "status": "ok"
+    }
+  ]
+}

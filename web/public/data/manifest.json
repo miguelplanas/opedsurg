@@ -1,6 +1,18 @@
 {
   "exams": [
     {
+      "id": "2021-castilla-la-mancha",
+      "title": "FEA Cirugía Pediátrica · SESCAM 2021",
+      "counts": {
+        "comun": 0,
+        "especifica": 102
+      },
+      "language": "es",
+      "partLabels": {
+        "especifica": "Cuestionario"
+      }
+    },
+    {
       "id": "2021-fea-cirurxia-pediatrica",
       "title": "2021 Fea Cirurxia Pediatrica",
       "counts": {
@@ -8,6 +20,67 @@
         "especifica": 110
       },
       "language": "gl"
+    },
+    {
+      "id": "2022-fea-ciruxia-pediatrica",
+      "title": "FEA Cirugía Pediátrica 2022 (SERGAS)",
+      "counts": {
+        "comun": 12,
+        "especifica": 108
+      },
+      "language": "es"
+    },
+    {
+      "id": "andalucia-2015",
+      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2015",
+      "counts": {
+        "comun": 103,
+        "especifica": 50
+      },
+      "language": "es",
+      "partLabels": {
+        "comun": "Teórico",
+        "especifica": "Práctico"
+      }
+    },
+    {
+      "id": "andalucia-2018",
+      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2018",
+      "counts": {
+        "comun": 103,
+        "especifica": 50
+      },
+      "language": "es",
+      "partLabels": {
+        "comun": "Teórico",
+        "especifica": "Práctico"
+      }
+    },
+    {
+      "id": "andalucia-2021",
+      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2021",
+      "counts": {
+        "comun": 103,
+        "especifica": 50
+      },
+      "language": "es",
+      "partLabels": {
+        "comun": "Teórico",
+        "especifica": "Práctico"
+      }
+    },
+    {
+      "id": "andalucia-sas-2025",
+      "title": "FEA Cirugía Pediátrica · OPE SAS Andalucía 2025",
+      "counts": {
+        "comun": 103,
+        "especifica": 50
+      },
+      "language": "es",
+      "partLabels": {
+        "comun": "Teórico",
+        "especifica": "Práctico"
+      }
     }
   ]
 }
