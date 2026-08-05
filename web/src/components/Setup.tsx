@@ -177,8 +177,8 @@ export function Setup({ examId, onBack, onStart }: Props) {
         disabled={!exam || scopeCount === 0}
         onClick={() =>
           onStart({
-            examId, scope, mode, shuffleQuestions, shuffleOptions,
-            timerMinutes,
+            source: "examen", examId, scope, mode,
+            shuffleQuestions, shuffleOptions, timerMinutes, limit: null,
           })
         }
       >

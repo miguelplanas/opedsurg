@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { partLabel, type Exam, type Letter, type SessionConfig } from "../types";
-import { loadExam } from "../lib/dataset";
-import { buildSession, type SessionQuestion } from "../lib/session";
+import { loadAllExams, loadExam } from "../lib/dataset";
+import {
+  buildAleatorio, buildRapido, buildRepaso, buildSession, sqKey, toSession,
+  type SessionQuestion,
+} from "../lib/session";
+import { allStates } from "../lib/progress";
 import { AnswerGrid } from "./AnswerGrid";
 import { Results } from "./Results";
 
@@ -18,7 +22,9 @@ function fmt(sec: number): string {
 }
 
 export function Runner({ config, onExit, onRestart }: Props) {
-  const [exam, setExam] = useState<Exam | null>(null);
+  // Los modos de repaso/aleatorio mezclan varios examenes, asi que se guardan
+  // indexados por id en vez de tener "el examen" de la sesion.
+  const [examsById, setExamsById] = useState<Record<string, Exam> | null>(null);
   const [session, setSession] = useState<SessionQuestion[] | null>(null);
   const [index, setIndex] = useState(0);
   const [responses, setResponses] = useState<Record<string, Letter>>({});
@@ -28,10 +34,29 @@ export function Runner({ config, onExit, onRestart }: Props) {
   const startRef = useRef(Date.now());
 
   useEffect(() => {
-    loadExam(config.examId).then((e) => {
-      setExam(e);
-      setSession(buildSession(e, config));
-    });
+    let cancelled = false;
+    async function prepare() {
+      if (config.source === "examen" && config.examId) {
+        const e = await loadExam(config.examId);
+        if (cancelled) return;
+        setExamsById({ [e.id]: e });
+        setSession(buildSession(e, config));
+        return;
+      }
+      // Modos que mezclan examenes: se cargan todos y se elige el pool segun
+      // el estado de Leitner guardado.
+      const exams = await loadAllExams();
+      if (cancelled) return;
+      const states = allStates();
+      const pool =
+        config.source === "repaso" ? buildRepaso(exams, states, config.limit)
+        : config.source === "rapido" ? buildRapido(exams, states, config.limit ?? 10)
+        : buildAleatorio(exams, config.limit);
+      setExamsById(Object.fromEntries(exams.map((e) => [e.id, e])));
+      setSession(toSession(pool, config.shuffleOptions));
+    }
+    prepare();
+    return () => { cancelled = true; };
   }, [config]);
 
   // Temporizador (cuenta el tiempo; con límite, autofinaliza al agotarse).
@@ -54,17 +79,28 @@ export function Runner({ config, onExit, onRestart }: Props) {
 
   const answeredCount = useMemo(() => Object.keys(responses).length, [responses]);
 
-  if (!exam || !session) {
+  if (!examsById || !session) {
     return <div className="app"><div className="center-note"><div className="spinner" />Preparando test…</div></div>;
   }
   if (session.length === 0) {
-    return <div className="app"><div className="center-note">No hay preguntas para esta selección.</div></div>;
+    return (
+      <div className="app">
+        <div className="topbar">
+          <button className="back" onClick={onExit} aria-label="Volver">←</button>
+        </div>
+        <div className="center-note">
+          {config.source === "repaso"
+            ? "No tienes nada pendiente de repaso. Vuelve mañana o haz una tanda rápida."
+            : "No hay preguntas para esta selección."}
+        </div>
+      </div>
+    );
   }
 
   if (finished) {
     return (
       <Results
-        exam={exam}
+        examsById={examsById}
         config={config}
         session={session}
         responses={responses}
@@ -77,14 +113,16 @@ export function Runner({ config, onExit, onRestart }: Props) {
 
   const sq = session[index];
   const q = sq.question;
-  const given = responses[q.id];
+  const exam = examsById[sq.examId] ?? null;
+  const key = sqKey(sq);
+  const given = responses[key];
   const isPractice = config.mode === "practica";
   const isNula = q.status === "nula";
   const revealed = isPractice && given !== undefined;
 
   function choose(letter: Letter) {
     if (revealed || isNula) return; // bloqueado tras responder o si está anulada
-    setResponses((r) => ({ ...r, [q.id]: letter }));
+    setResponses((r) => ({ ...r, [key]: letter }));
   }
 
   function go(delta: number) {
@@ -114,7 +152,10 @@ export function Runner({ config, onExit, onRestart }: Props) {
         <div className="q-label">
           <span className={`q-tag${q.reserve ? " reserve" : ""}`}>{q.id}</span>
           {isNula && <span className="q-tag nula">Anulada</span>}
-          <span className="q-part">{partLabel(exam, q.part)}{q.reserve ? " · reserva" : ""}</span>
+          <span className="q-part">
+            {config.source !== "examen" && exam ? `${exam.title} · ` : ""}
+            {partLabel(exam, q.part)}{q.reserve ? " · reserva" : ""}
+          </span>
         </div>
         <p className="q-stem">{q.stem}</p>
 

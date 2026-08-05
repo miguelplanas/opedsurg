@@ -1,5 +1,5 @@
 import type { Letter } from "../types";
-import type { SessionQuestion } from "../lib/session";
+import { sqKey, type SessionQuestion } from "../lib/session";
 
 interface Props {
   session: SessionQuestion[];
@@ -16,7 +16,7 @@ export function AnswerGrid({ session, responses, current, reveal, onJump }: Prop
     <div className="answer-grid">
       {session.map((sq, i) => {
         const q = sq.question;
-        const given = responses[q.id];
+        const given = responses[sqKey(sq)];
         let cls = "cell";
         if (q.status === "nula") {
           cls += " nula";
@@ -32,7 +32,7 @@ export function AnswerGrid({ session, responses, current, reveal, onJump }: Prop
         const Tag = onJump ? "button" : "div";
         return (
           <Tag
-            key={q.id}
+            key={sqKey(sq)}
             className={cls}
             {...(onJump ? { onClick: () => onJump(i) } : {})}
           >

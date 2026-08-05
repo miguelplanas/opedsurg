@@ -56,11 +56,24 @@ export type Scope = "comun" | "especifica" | "ambas";
 // reservas que entraron a sustituirlas.
 export type Mode = "examen" | "practica" | "examen-real";
 
+// De donde salen las preguntas de la sesion. "examen" usa un examen concreto;
+// los demas mezclan preguntas de todos los examenes disponibles.
+export type SourceKind = "examen" | "repaso" | "aleatorio" | "rapido";
+
 export interface SessionConfig {
-  examId: string;
+  source: SourceKind;
+  examId: string | null; // null en los modos que mezclan varios examenes
   scope: Scope;
   mode: Mode;
   shuffleQuestions: boolean;
   shuffleOptions: boolean;
   timerMinutes: number | null; // null = sin temporizador
+  limit: number | null; // tope de preguntas (null = sin tope)
 }
+
+export const SOURCE_LABELS: Record<SourceKind, string> = {
+  examen: "Examen",
+  repaso: "Repaso",
+  aleatorio: "Aleatorio",
+  rapido: "Rápido",
+};

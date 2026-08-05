@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
-import type { Exam, Letter, SessionConfig } from "../types";
-import { scoreSession, type SessionQuestion } from "../lib/session";
-import { recordAttempt } from "../lib/storage";
+import { SOURCE_LABELS, type Exam, type Letter, type SessionConfig } from "../types";
+import { scoreSession, sqKey, type SessionQuestion } from "../lib/session";
+import { recordAnswers, recordBest, recordSession } from "../lib/progress";
 import { AnswerGrid } from "./AnswerGrid";
 
 interface Props {
-  exam: Exam;
+  examsById: Record<string, Exam>;
   config: SessionConfig;
   session: SessionQuestion[];
   responses: Record<string, Letter>;
@@ -20,24 +20,43 @@ function fmt(sec: number): string {
   return `${m}m ${String(s).padStart(2, "0")}s`;
 }
 
-export function Results({ exam, config, session, responses, elapsed, onExit, onRestart }: Props) {
+export function Results({ examsById, config, session, responses, elapsed, onExit, onRestart }: Props) {
   const score = scoreSession(session, responses);
   const saved = useRef(false);
 
   useEffect(() => {
-    if (saved.current) return;
+    if (saved.current) return; // el efecto puede reejecutarse; guardar una sola vez
     saved.current = true;
-    const wrongIds = session
-      .filter((sq) => {
-        const r = responses[sq.question.id];
-        return r !== undefined && r !== sq.question.answer;
-      })
-      .map((sq) => sq.question.id);
-    recordAttempt(exam.id, config.scope, score.accuracy, score.points, score.answered, wrongIds);
-  }, [exam.id, config.scope, session, responses, score]);
+
+    // Leitner: cada pregunta contestada sube o baja de caja. Las que se dejan
+    // en blanco no se tocan (no hay evidencia de si se sabian o no).
+    const byExam = new Map<string, { questionId: string; ok: boolean }[]>();
+    for (const sq of session) {
+      if (sq.question.status === "nula") continue;
+      const r = responses[sqKey(sq)];
+      if (r === undefined) continue;
+      const list = byExam.get(sq.examId) ?? [];
+      list.push({ questionId: sq.question.id, ok: r === sq.question.answer });
+      byExam.set(sq.examId, list);
+    }
+    for (const [examId, results] of byExam) recordAnswers(examId, results);
+
+    if (config.source === "examen" && config.examId) {
+      recordBest(config.examId, config.scope, score.accuracy, score.points);
+    }
+    recordSession({
+      at: new Date().toISOString(),
+      source: config.source,
+      examId: config.examId,
+      answered: score.answered,
+      correct: score.correct,
+      points: score.points,
+      elapsed,
+    });
+  }, [config, session, responses, score, elapsed]);
 
   const wrong = session.filter((sq) => {
-    const r = responses[sq.question.id];
+    const r = responses[sqKey(sq)];
     return r !== undefined && r !== sq.question.answer;
   });
 
@@ -45,7 +64,7 @@ export function Results({ exam, config, session, responses, elapsed, onExit, onR
     <div className="app">
       <div className="topbar">
         <button className="back" onClick={onExit} aria-label="Volver al inicio">←</button>
-        <span className="eyebrow">Resultado</span>
+        <span className="eyebrow">Resultado · {SOURCE_LABELS[config.source]}</span>
       </div>
 
       <div className="result-head">
@@ -80,12 +99,16 @@ export function Results({ exam, config, session, responses, elapsed, onExit, onR
           <div className="review">
             {wrong.map((sq) => {
               const q = sq.question;
+              const given = responses[sqKey(sq)]!;
               return (
-                <div key={q.id} className="review-item">
+                <div key={sqKey(sq)} className="review-item">
                   <span className={`q-tag${q.reserve ? " reserve" : ""}`}>{q.id}</span>
+                  {config.source !== "examen" && (
+                    <span className="q-part"> {examsById[sq.examId]?.title}</span>
+                  )}
                   <p>{q.stem}</p>
                   <div className="review-ans">
-                    <div className="r yours"><b>{responses[q.id]}</b><span>{q.options[responses[q.id]!]}</span></div>
+                    <div className="r yours"><b>{given}</b><span>{q.options[given]}</span></div>
                     <div className="r right"><b>{q.answer}</b><span>{q.answer ? q.options[q.answer] : ""}</span></div>
                   </div>
                 </div>

@@ -45,6 +45,42 @@ Dos piezas independientes:
   por pregunta, la letra correcta existe entre las opciones. Las anuladas (`NULA`)
   se excluyen; las modificadas usan su letra corregida.
 
+## Modos de estudio
+
+La pantalla inicial ofrece cuatro formas de entrar:
+
+- **Repaso** — solo lo que vence hoy según las cajas de Leitner, empezando por
+  lo más atrasado. Si no hay nada pendiente, el botón se desactiva y lo explica.
+- **Rápido** — 10 preguntas: primero lo vencido, luego lo flojo, y se rellena
+  con preguntas nunca vistas. Siempre aporta algo.
+- **Examen** — simulacro de una convocatoria concreta, con ámbito, modo y
+  temporizador (la pantalla de configurar de siempre).
+- **Aleatorio** — 30 preguntas mezcladas de todas las convocatorias.
+
+Los tres primeros mezclan preguntas de varios exámenes; por eso el progreso se
+guarda con clave `examenId:preguntaId` (los ids `C1`, `E12`… se repiten entre
+convocatorias).
+
+### Repetición espaciada (Leitner)
+
+Cinco cajas. Aciertas, sube una caja; fallas, vuelve a la 1.
+
+| Caja | Nombre | Vuelve a salir |
+|---|---|---|
+| 1 | Reaprender | el mismo día |
+| 2 | Frescas | 3 días |
+| 3 | Asentadas | 7 días |
+| 4 | Sólidas | 16 días |
+| 5 | Dominadas | 35 días |
+
+La caja 1 vence el mismo día a propósito: si una pregunta recién fallada
+volviese mañana, el repaso saldría vacío justo después de fallarla. Acertar una
+pregunta nueva la manda directa a la caja 2, saltándose el reaprendizaje.
+
+Las preguntas dejadas en blanco no mueven de caja: no hay evidencia de si se
+sabían. Todo se guarda en `localStorage` (sin backend ni login); el progreso del
+modelo anterior se migra solo a la caja 1.
+
 ## Correr la app en local
 
 ```bash

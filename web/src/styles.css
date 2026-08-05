@@ -13,7 +13,9 @@
   --surface-2: #f1ede2;
   --ink: #14181d;
   --ink-soft: #4a5561;
-  --ink-faint: #8a93a0;
+  /* medido: 4.66:1 sobre --paper. Con #8a93a0 se quedaba en 2.93 y las
+     etiquetas de sección, la meta del progreso y los hints no pasaban AA. */
+  --ink-faint: #68717e;
   --line: #e6e1d4;
   --blue: #2757d6;
   --blue-ink: #16389b;
@@ -21,10 +23,14 @@
   --on-blue: #ffffff;
   --marker: #f3c63b;
   --marker-soft: #ffe97c;
-  --correct: #1f9254;
+  /* Cada color cumple doble papel: relleno del badge (texto --on-* encima) y
+     color de texto sobre --*-soft. Los valores satisfacen AA en ambos. */
+  --correct: #17783f;
   --correct-soft: #ddf2e4;
-  --wrong: #d14b3e;
+  --on-correct: #ffffff;
+  --wrong: #b8382b;
   --wrong-soft: #fadfda;
+  --on-wrong: #ffffff;
   --amber: #c8892a;
   --amber-soft: #f5e7cd;
   --radius: 14px;
@@ -34,6 +40,10 @@
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "IBM Plex Sans", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  /* Sin esto, los colores de sistema (buttontext, los controles nativos, la
+     barra de scroll, el cursor de los input) se resuelven siempre en claro,
+     aunque el tema sea oscuro: de ahí los títulos en negro sobre fondo oscuro. */
+  color-scheme: light;
 }
 
 /* Tema oscuro: por sistema (salvo elección explícita de claro) o por
@@ -41,12 +51,13 @@
    CSS no permite compartirlos entre media query y selector. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --paper: #10151c;
     --surface: #171d26;
     --surface-2: #1e2632;
     --ink: #edf0f4;
     --ink-soft: #a8b2c0;
-    --ink-faint: #6d7887;
+    --ink-faint: #7a8593;
     --line: #29323f;
     --blue: #7fb0f5;
     --blue-ink: #a9caf8;
@@ -56,20 +67,25 @@
     --marker-soft: rgba(243, 198, 59, 0.24);
     --correct: #46c47f;
     --correct-soft: #14301f;
+    /* En oscuro el relleno es claro: el texto del badge debe ser tinta oscura,
+       no blanco (blanco sobre #46c47f daba 2.22:1). */
+    --on-correct: #06210f;
     --wrong: #e2796d;
     --wrong-soft: #33201e;
+    --on-wrong: #2b0b06;
     --amber: #d9a94e;
     --amber-soft: #2e2617;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
   }
 }
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --paper: #10151c;
   --surface: #171d26;
   --surface-2: #1e2632;
   --ink: #edf0f4;
   --ink-soft: #a8b2c0;
-  --ink-faint: #6d7887;
+  --ink-faint: #7a8593;
   --line: #29323f;
   --blue: #7fb0f5;
   --blue-ink: #a9caf8;
@@ -79,8 +95,10 @@
   --marker-soft: rgba(243, 198, 59, 0.24);
   --correct: #46c47f;
   --correct-soft: #14301f;
+  --on-correct: #06210f;
   --wrong: #e2796d;
   --wrong-soft: #33201e;
+  --on-wrong: #2b0b06;
   --amber: #d9a94e;
   --amber-soft: #2e2617;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -101,7 +119,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-button { font-family: inherit; cursor: pointer; }
+/* Los botones no heredan color por defecto: la hoja del navegador les pone
+   `buttontext`. Se fuerza la herencia para que ningún control caiga en un color
+   de sistema; las clases que quieran otro color lo declaran despues. */
+button { font-family: inherit; cursor: pointer; color: inherit; }
 
 .app {
   max-width: var(--maxw);
@@ -238,6 +259,81 @@ button { font-family: inherit; cursor: pointer; }
 .grid-texture i { width: 10px; height: 10px; border-radius: 3px; background: var(--blue); }
 .grid-texture i:nth-child(3n) { background: var(--marker); }
 .grid-texture i:nth-child(4n) { background: transparent; border: 1px solid var(--line); }
+
+/* ---------- landing: tira de progreso + modos ---------- */
+.streak-strip {
+  position: relative;
+  width: 100%;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin-top: 18px; padding: 12px 26px 12px 14px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); color: var(--ink-soft);
+  font-family: var(--font-mono); font-size: 12px; text-align: left;
+}
+.streak-strip b { color: var(--ink); font-weight: 600; font-size: 14px; }
+/* Fuera del flujo: si no, con 4 datos cae a una segunda linea el solo. */
+.streak-strip .more {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 20px; color: var(--ink-faint); line-height: 1;
+}
+
+.mode-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.big-mode {
+  width: 100%; text-align: left; color: var(--ink);
+  background: var(--surface); border: 1.5px solid var(--line);
+  border-radius: var(--radius); padding: 17px 18px; box-shadow: var(--shadow);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+.big-mode:active { transform: scale(0.99); }
+.big-mode.primary { border-color: var(--blue); background: var(--blue-soft); }
+/* Repaso sin nada pendiente: se atenua pero sigue legible y explica por que. */
+.big-mode:disabled { opacity: 0.6; cursor: default; box-shadow: none; }
+.big-mode:disabled.primary { border-color: var(--line); background: var(--surface); }
+.big-mode-top { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.big-mode h2 {
+  font-family: var(--font-display); font-size: 21px; font-weight: 600;
+  margin: 0; line-height: 1.1;
+}
+.big-mode p { margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.4; }
+.pill {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  background: var(--blue); color: var(--on-blue);
+  border-radius: 999px; padding: 3px 9px; margin-left: auto;
+}
+.pill.ghost { background: var(--surface-2); color: var(--ink-soft); }
+
+/* ---------- estadísticas ---------- */
+.findings { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.findings li {
+  font-size: 14px; line-height: 1.4; color: var(--ink-soft);
+  padding-left: 15px; position: relative;
+}
+.findings li::before {
+  content: ""; position: absolute; left: 0; top: 0.5em;
+  width: 7px; height: 7px; border-radius: 2px; background: var(--ink-faint);
+}
+.findings li.up::before { background: var(--correct); }
+.findings li.down::before { background: var(--wrong); }
+.findings b { color: var(--ink); }
+
+.boxes { display: flex; flex-direction: column; gap: 8px; }
+.box-row { display: flex; align-items: center; gap: 10px; }
+.box-name { font-size: 13px; color: var(--ink-soft); width: 84px; flex: none; }
+.box-bar { flex: 1; height: 8px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.box-bar > i { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+.box-n { font-size: 12px; color: var(--ink-faint); width: 32px; text-align: right; flex: none; }
+
+.exam-stat {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px 14px; font-size: 13px;
+}
+.exam-stat-title { color: var(--ink); }
+.exam-stat .mono { color: var(--ink-soft); font-size: 12px; flex: none; }
+
+.btn-ghost.danger { color: var(--wrong); border-color: var(--wrong); margin-top: 26px; }
+
+.hint { color: var(--ink-faint); font-size: 12.5px; margin: 12px 0 0; }
 
 /* ---------- setup ---------- */
 .section { margin-top: 26px; }
@@ -394,9 +490,9 @@ button { font-family: inherit; cursor: pointer; }
 .opt.selected { border-color: var(--blue); background: var(--blue-soft); }
 .opt.selected .badge { background: var(--blue); color: var(--on-blue); }
 .opt.correct { border-color: var(--correct); background: var(--correct-soft); }
-.opt.correct .badge { background: var(--correct); color: #fff; }
+.opt.correct .badge { background: var(--correct); color: var(--on-correct); }
 .opt.wrong { border-color: var(--wrong); background: var(--wrong-soft); }
-.opt.wrong .badge { background: var(--wrong); color: #fff; }
+.opt.wrong .badge { background: var(--wrong); color: var(--on-wrong); }
 .opt:disabled { cursor: default; }
 .options.nula .opt { opacity: 0.55; }
 
