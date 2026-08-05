@@ -53,15 +53,29 @@ npm install
 npm run dev        # desarrollo
 npm run build      # producción (genera dist/ con service worker PWA)
 npm run preview    # sirve el build
+npm run check:data # comprueba que web/public/data == data/
 ```
+
+`npm run build` ejecuta `check:data` antes de compilar: si `web/public/data` no
+coincide con `data/` (típico tras `andalucia.py` o `clm.py`, que no sincronizan
+solos), el build falla y te recuerda ejecutar `python -m ingest.pipeline sync`.
+Así nunca despliegas exámenes viejos sin darte cuenta.
 
 ## Desplegar en Vercel
 
-La app es estática. En Vercel, con el directorio raíz apuntando a `web/`:
+La app es estática y no necesita variables de entorno ni backend. Lo único que
+hay que configurar es el **Root Directory**, porque la app no vive en la raíz
+del repo:
 
-- Framework preset: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
+- **Root Directory: `web`** ← lo único imprescindible
+- Framework preset: **Vite** (se detecta solo)
+- Build command: `npm run build` (por defecto)
+- Output directory: `dist` (por defecto)
+
+Sin el Root Directory, Vercel busca `package.json` en la raíz, no lo encuentra
+y falla con "No framework detected".
+
+Cada `git push` a `master` redespliega automáticamente.
 
 Una vez desplegada, tu hermana abre el enlace en Safari y elige "Añadir a
 pantalla de inicio": queda como una app, a pantalla completa y offline.
