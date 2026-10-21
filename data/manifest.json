@@ -2,7 +2,7 @@
   "exams": [
     {
       "id": "2021-castilla-la-mancha",
-      "title": "FEA Cirugía Pediátrica · SESCAM 2021",
+      "title": "SESCAM Castilla-La Mancha 2021",
       "counts": {
         "comun": 0,
         "especifica": 102
@@ -14,7 +14,7 @@
     },
     {
       "id": "2021-fea-cirurxia-pediatrica",
-      "title": "2021 Fea Cirurxia Pediatrica",
+      "title": "SERGAS Galicia 2021 (en gallego)",
       "counts": {
         "comun": 12,
         "especifica": 110
@@ -23,7 +23,7 @@
     },
     {
       "id": "2022-fea-ciruxia-pediatrica",
-      "title": "FEA Cirugía Pediátrica 2022 (SERGAS)",
+      "title": "SERGAS Galicia 2022",
       "counts": {
         "comun": 12,
         "especifica": 108
@@ -32,7 +32,7 @@
     },
     {
       "id": "andalucia-2015",
-      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2015",
+      "title": "SAS Andalucía 2015",
       "counts": {
         "comun": 103,
         "especifica": 50
@@ -45,7 +45,7 @@
     },
     {
       "id": "andalucia-2018",
-      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2018",
+      "title": "SAS Andalucía 2018",
       "counts": {
         "comun": 103,
         "especifica": 50
@@ -58,7 +58,7 @@
     },
     {
       "id": "andalucia-2021",
-      "title": "FEA Cirugía Pediátrica · SAS Andalucía 2021",
+      "title": "SAS Andalucía 2021",
       "counts": {
         "comun": 103,
         "especifica": 50
@@ -71,7 +71,7 @@
     },
     {
       "id": "andalucia-sas-2025",
-      "title": "FEA Cirugía Pediátrica · OPE SAS Andalucía 2025",
+      "title": "OPE SAS Andalucía 2025",
       "counts": {
         "comun": 103,
         "especifica": 50

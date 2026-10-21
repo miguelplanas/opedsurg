@@ -40,7 +40,7 @@ OUT_JSON = ROOT / "data/exams/2021-castilla-la-mancha.json"
 FLAGS_JSON = ROOT / "data/flags/2021-castilla-la-mancha.json"
 
 EXAM_ID = "2021-castilla-la-mancha"
-TITLE = "FEA Cirugía Pediátrica · SESCAM 2021"
+TITLE = "SESCAM Castilla-La Mancha 2021"
 N_PRINTED = 105            # preguntas realmente impresas en el cuestionario
 N_QUESTIONS = 102          # preguntas puntuadas (100 + 2 reservas usadas)
 NULLED = {14, 57}          # anuladas según la plantilla correctora definitiva

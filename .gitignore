@@ -6,9 +6,8 @@ __pycache__/
 
 # Node / web
 web/node_modules/
-web/.next/
-web/out/
-web/.vercel/
+web/.wrangler/
+.playwright-cli/
 
 # Sistema
 .DS_Store

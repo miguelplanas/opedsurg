@@ -36,22 +36,22 @@ CONFIG = {
     "andalucia-2015": {
         "exam_glob": "Examen Andaluci*a 2015.pdf",
         "answers_glob": "Respuestas Andaluci*a 2015.pdf",
-        "title": "FEA Cirugía Pediátrica · SAS Andalucía 2015",
+        "title": "SAS Andalucía 2015",
     },
     "andalucia-2018": {
         "exam_glob": "Examen Andaluci*a 2018.pdf",
         "answers_glob": "Respuestas Andaluci*a 2018.pdf",
-        "title": "FEA Cirugía Pediátrica · SAS Andalucía 2018",
+        "title": "SAS Andalucía 2018",
     },
     "andalucia-2021": {
         "exam_glob": "Examen Andalucia 2021.pdf",
         "answers_glob": "Respuestas Andalucia 2021.pdf",
-        "title": "FEA Cirugía Pediátrica · SAS Andalucía 2021",
+        "title": "SAS Andalucía 2021",
     },
     "andalucia-sas-2025": {
         "exam_glob": "Examen OPE SAS 2025.pdf",
         "answers_glob": "Respuestas OPE SAS 2025.pdf",
-        "title": "FEA Cirugía Pediátrica · OPE SAS Andalucía 2025",
+        "title": "OPE SAS Andalucía 2025",
     },
 }
 

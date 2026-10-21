@@ -1,14 +1,16 @@
 # Opo Tests
 
-Tests de oposición tipo test a partir de los PDF escaneados de examen y sus
-planillas de respuestas, con una app PWA instalable en el móvil.
+Tests de la oposición de Cirugía Pediátrica a partir de los PDF escaneados de
+examen y sus planillas de respuestas. Es una app web instalable en el móvil que
+funciona sin conexión, en https://opedsurg.miguelplanas.dev, con usuario y
+contraseña.
 
 Dos piezas independientes:
 
-- **`ingest/`** — pipeline en Python que convierte los PDF escaneados en un
-  dataset JSON validado. Local, gratis y preciso (doble lectura + validación).
-- **`web/`** — app PWA (Vite + React) que consume ese dataset. Instalable en
-  iPhone/Android, funciona offline. Desplegable en Vercel.
+- **`ingest/`**: pipeline en Python que convierte los PDF escaneados en un
+  dataset JSON validado. Local, gratis y preciso (doble lectura y validación).
+- **`web/`**: la app (HTML, CSS y JS sin build) y el Worker de Cloudflare que la
+  sirve y pide la contraseña.
 
 ## Añadir un examen nuevo
 
@@ -19,6 +21,10 @@ Dos piezas independientes:
    examenes/<id-del-examen>/parte-especifica/*.pdf
    examenes/<id-del-examen>/respuestas/*.pdf
    ```
+
+   El título que se ve en la app va en `examenes/<id>/overrides.json`
+   (`"title": "SERGAS Galicia 2022"`): solo el organismo y el año, sin
+   "FEA Cirugía Pediátrica", que ya dice la app.
 
 2. Ejecuta el pipeline (crea el entorno la primera vez):
 
@@ -31,17 +37,21 @@ Dos piezas independientes:
    - Si todo valida: escribe `data/exams/<id>.json`, actualiza el manifest y lo
      copia a `web/public/data/`. Salida `[OK]`.
    - Si hay cualquier duda (conteos que no cuadran, doble lectura discrepante,
-     opción inexistente…): **no escribe nada**, deja las incidencias en
+     opción inexistente...): **no escribe nada**, deja las incidencias en
      `data/flags/<id>.json` y salida `[BLOQUEADO]`. Así un error nunca llega a la
      app en silencio.
 
+   `andalucia.py` y `clm.py` escriben en `data/` pero no copian a la web:
+   después, `ingest/.venv/bin/python -m ingest.pipeline sync`. Si se olvida, los
+   tests fallan (`web/test/data.test.js`) y no se despliega.
+
 ### Cómo funciona la precisión
 
-- El mapeo pregunta→respuesta es posicional y determinista (la pregunta N de la
-  común es `C_N`, la N de la específica es `E_N`); no depende del OCR.
-- La planilla se lee **dos veces de forma independiente** (OCR de página + OCR
+- El mapeo pregunta a respuesta es posicional y determinista (la pregunta N de
+  la común es `C_N`, la N de la específica es `E_N`); no depende del OCR.
+- La planilla se lee **dos veces de forma independiente** (OCR de página y OCR
   del recorte de cada celda) y solo se acepta cada respuesta si ambas coinciden.
-- Se validan invariantes: conteo de preguntas == conteo de respuestas, 4 opciones
+- Se validan invariantes: conteo de preguntas igual al de respuestas, 4 opciones
   por pregunta, la letra correcta existe entre las opciones. Las anuladas (`NULA`)
   se excluyen; las modificadas usan su letra corregida.
 
@@ -49,17 +59,19 @@ Dos piezas independientes:
 
 La pantalla inicial ofrece cuatro formas de entrar:
 
-- **Repaso** — solo lo que vence hoy según las cajas de Leitner, empezando por
-  lo más atrasado. Si no hay nada pendiente, el botón se desactiva y lo explica.
-- **Rápido** — 10 preguntas: primero lo vencido, luego lo flojo, y se rellena
-  con preguntas nunca vistas. Siempre aporta algo.
-- **Examen** — simulacro de una convocatoria concreta, con ámbito, modo y
-  temporizador (la pantalla de configurar de siempre).
-- **Aleatorio** — 30 preguntas mezcladas de todas las convocatorias.
+- **Repaso**: solo lo que vence hoy según las cajas de Leitner, empezando por lo
+  más atrasado. Si no hay nada pendiente, se desactiva y lo explica.
+- **Rápido**: 10 preguntas. Primero lo vencido, luego lo flojo, y se rellena con
+  preguntas nunca vistas. Siempre aporta algo.
+- **Simulacro**: una convocatoria concreta, con parte, forma de corregir
+  (práctica, examen o examen real) y temporizador.
+- **Aleatorio**: 30 preguntas mezcladas de todas las convocatorias.
 
-Los tres primeros mezclan preguntas de varios exámenes; por eso el progreso se
-guarda con clave `examenId:preguntaId` (los ids `C1`, `E12`… se repiten entre
-convocatorias).
+Una tanda a medias se guarda en el móvil a cada respuesta: si iOS cierra la app,
+el inicio ofrece continuarla.
+
+Las que mezclan convocatorias guardan el progreso con clave
+`examenId:preguntaId`, porque los ids `C1`, `E12`... se repiten entre exámenes.
 
 ### Repetición espaciada (Leitner)
 
@@ -75,57 +87,55 @@ Cinco cajas. Aciertas, sube una caja; fallas, vuelve a la 1.
 
 La caja 1 vence el mismo día a propósito: si una pregunta recién fallada
 volviese mañana, el repaso saldría vacío justo después de fallarla. Acertar una
-pregunta nueva la manda directa a la caja 2, saltándose el reaprendizaje.
+pregunta nueva la manda directa a la caja 2.
 
-Las preguntas dejadas en blanco no mueven de caja: no hay evidencia de si se
-sabían. Todo se guarda en `localStorage` (sin backend ni login); el progreso del
-modelo anterior se migra solo a la caja 1.
+Las preguntas en blanco no mueven de caja: no hay evidencia de si se sabían.
+Todo se guarda en `localStorage` de cada móvil (sin backend); la clave
+`opo-tests:progress:v2` es la misma desde la primera versión, así que cambiar la
+app no borra el progreso.
 
-## Correr la app en local
+## La app en local
 
 ```bash
 cd web
-npm install
-npm run dev        # desarrollo
-npm run build      # producción (genera dist/ con service worker PWA)
-npm run preview    # sirve el build
-npm run check:data # comprueba que web/public/data == data/
+npm test           # tests (lógica, progreso, Worker y dataset)
+npm run dev        # http://localhost:3001, usuario y contraseña "prueba"
 ```
 
-`npm run build` ejecuta `check:data` antes de compilar: si `web/public/data` no
-coincide con `data/` (típico tras `andalucia.py` o `clm.py`, que no sincronizan
-solos), el build falla y te recuerda ejecutar `python -m ingest.pipeline sync`.
-Así nunca despliegas exámenes viejos sin darte cuenta.
+No hay dependencias que instalar: Node 24 basta.
 
-## Desplegar en Vercel
+## Despliegue
 
-La app es estática y no necesita variables de entorno ni backend. Lo único que
-hay que configurar es el **Root Directory**, porque la app no vive en la raíz
-del repo:
+Worker de Cloudflare `opedsurg` (`web/wrangler.jsonc`), con el dominio
+`opedsurg.miguelplanas.dev`. Al fusionar en `main`, la CI pasa los tests y
+despliega con `wrangler deploy`.
 
-- **Root Directory: `web`** ← lo único imprescindible
-- Framework preset: **Vite** (se detecta solo)
-- Build command: `npm run build` (por defecto)
-- Output directory: `dist` (por defecto)
+- Secretos de GitHub: `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`.
+- Secretos del Worker: `APP_USER` y `APP_PASSWORD` (`npx wrangler@4 secret put
+  APP_PASSWORD` desde `web/`). Cambiar la contraseña cierra la sesión en todos los
+  móviles. Sin ellos no entra nadie.
 
-Sin el Root Directory, Vercel busca `package.json` en la raíz, no lo encuentra
-y falla con "No framework detected".
+Mientras dure el traspaso, Vercel (`opedsurg.vercel.app`, `web/vercel.json`)
+sirve la misma app sin contraseña, para poder copiar desde allí el progreso
+guardado (Progreso, Copiar mi progreso) y pegarlo en la nueva. Después se borra
+el proyecto de Vercel y `web/vercel.json`.
 
-Cada `git push` a `master` redespliega automáticamente.
-
-Una vez desplegada, tu hermana abre el enlace en Safari y elige "Añadir a
-pantalla de inicio": queda como una app, a pantalla completa y offline.
+Para instalarla en el iPhone: Safari, la dirección, Compartir y "Añadir a
+pantalla de inicio". La app instalada no comparte cookies con Safari, así que
+pide entrar una vez más dentro de la app; después dura 400 días.
 
 ## Estructura
 
 ```
-examenes/            PDFs de entrada (por examen)
+examenes/            PDF de entrada (por examen)
 ingest/              pipeline Python (render, ocr, parse, validate, pipeline)
 data/                dataset generado (fuente de verdad)
-web/                 app PWA (Vite + React); consume web/public/data
+web/public/          la app; web/public/data es la copia publicada de data/
+web/worker/          Worker: contraseña delante de public/
+web/test/            tests con node:test
 ```
 
-## Pendiente / futuro
+## Pendiente
 
 - Explicaciones con IA por respuesta (pre-generadas en castellano). El esquema de
   datos deja el hueco preparado; ver `ingest/pipeline.py` (`explain.py`).
