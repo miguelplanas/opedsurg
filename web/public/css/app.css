@@ -1,0 +1,170 @@
+/* Lo propio de Opo Tests. La base común está en base.css (no se edita aquí).
+   Rasgo propio: la rejilla de la planilla oficial (C1, E12...), que hace de
+   mapa de la tanda y de corrección. Anotado en DESIGN.md. */
+
+.page > header .nav { margin-left: auto; }
+/* El foco que pone la app al cambiar de vista no se pinta: solo lo lleva el lector de pantalla. */
+[tabindex="-1"]:focus { outline: none; }
+
+.row { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.link-btn { display: inline-flex; align-items: center; text-decoration: none; }
+.summary a { text-decoration: none; }
+.summary a:hover { text-decoration: underline; }
+
+/* Filas que son un botón o un enlace entero: modos, convocatorias. */
+.list > li:has(> .mode, > .row-link) { padding: 0; }
+.mode, .row-link {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+  min-height: var(--tap);
+  padding: var(--s3) 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity var(--fast) var(--ease);
+}
+.mode:disabled { cursor: default; opacity: 0.55; }
+.mode:not(:disabled):active, .row-link:active { opacity: 0.6; }
+.mode-text { display: grid; gap: 2px; min-width: 0; }
+.mode-title { font: var(--text-m); font-weight: 500; }
+.mode.primary .mode-title::after { content: ""; display: inline-block; width: 8px; height: 8px; margin-left: var(--s2); border-radius: 50%; background: var(--ink); vertical-align: middle; }
+.mode .meta, .row-link .meta { margin-left: auto; }
+
+/* Tanda a medias en el inicio. */
+.resume { display: grid; gap: var(--s3); padding: var(--s4); border: 1px solid var(--line); border-radius: var(--r-surface); background: var(--surface); }
+
+/* --- Configurar --- */
+.setup { display: grid; gap: var(--s8); }
+.setup fieldset { margin: 0; padding: 0; border: 0; min-width: 0; display: grid; gap: var(--s2); }
+.setup legend { padding: 0; margin-bottom: var(--s2); }
+.choice { display: flex; align-items: center; gap: var(--s3); flex: 1; min-height: var(--tap); cursor: pointer; }
+.choice input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--ink); }
+.choice .meta { margin-left: auto; }
+.minutes { width: 6rem; flex: none; }
+.setup .list > li { padding-block: var(--s1); }
+
+/* Barra de acción pegada abajo, al alcance del pulgar. */
+.action-bar {
+  position: sticky;
+  bottom: 0;
+  margin-inline: calc(-1 * var(--s4));
+  padding: var(--s3) var(--s4) calc(var(--s3) + var(--safe-bottom));
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: var(--s2);
+}
+.action-bar .btn { flex: 1; }
+.page:has(.action-bar) { padding-bottom: 0; }
+
+/* --- Responder --- */
+.run-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: calc(-1 * var(--s6) - var(--safe-top)) calc(-1 * var(--s4)) 0;
+  padding: calc(var(--s2) + var(--safe-top)) var(--s2) 0;
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: var(--s2);
+}
+.run-head .timer { min-width: 4ch; text-align: right; }
+.run-head .timer.low { color: var(--danger); }
+.bar { grid-column: 1 / -1; height: 2px; margin-inline: calc(-1 * var(--s2)); background: var(--line); }
+.bar i { display: block; height: 100%; background: var(--ink); transition: width var(--fast) var(--ease); }
+
+.question { display: grid; gap: var(--s4); }
+.stem { font: var(--text-m); }
+.options { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  width: 100%;
+  min-height: var(--tap);
+  padding: var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  background: var(--surface);
+  font: var(--text-s);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--fast) var(--ease), border-color var(--fast) var(--ease);
+}
+.option:not(:disabled):hover { background: var(--sunken); }
+.option:disabled { cursor: default; }
+.option .letter { flex: none; width: 1.5em; padding-top: 1px; color: var(--ink-2); }
+.option.selected { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.option.selected .letter { color: var(--ink); font-weight: 500; }
+/* En práctica, el color dice si está bien: borde de color, texto en tinta. */
+.option.correct { border-color: var(--ok); box-shadow: inset 0 0 0 1px var(--ok); }
+.option.wrong { border-color: var(--danger); box-shadow: inset 0 0 0 1px var(--danger); }
+.question:has(.option.correct) .option:not(.correct, .wrong) { opacity: 0.6; }
+.option .tag { white-space: normal; }
+
+.run-foot { margin-top: auto; }
+
+/* --- Rejilla: la planilla oficial (rasgo propio) --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: var(--s1); }
+.cell {
+  display: grid;
+  place-items: center;
+  min-height: var(--tap);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  background: var(--surface);
+  color: var(--ink-2);
+}
+button.cell { cursor: pointer; padding: 0; }
+.cell.answered { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.cell[aria-current] { outline: 2px solid var(--ink); outline-offset: 1px; }
+.cell.nula { border-style: dashed; text-decoration: line-through; }
+.cell.correct { border-color: var(--ok); box-shadow: inset 0 -3px 0 var(--ok); color: var(--ink); }
+.cell.wrong { border-color: var(--danger); box-shadow: inset 0 -3px 0 var(--danger); color: var(--ink); }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1) var(--s2); }
+.key { display: inline-block; width: 12px; height: 12px; border: 1px solid var(--line); border-radius: 3px; vertical-align: -1px; }
+.key.correct { box-shadow: inset 0 -3px 0 var(--ok); border-color: var(--ok); }
+.key.wrong { box-shadow: inset 0 -3px 0 var(--danger); border-color: var(--danger); }
+.key.nula { border-style: dashed; }
+
+/* --- Resultados --- */
+.list > li.review { display: grid; gap: var(--s2); align-items: start; padding-block: var(--s4); }
+.answer { font: var(--text-s); }
+.answer::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: var(--s2); border-radius: 50%; vertical-align: 1px; }
+.answer.wrong::before { background: var(--danger); }
+.answer.correct::before { background: var(--ok); }
+
+/* --- Progreso --- */
+.boxes .box-name { width: 7.5rem; flex: none; }
+.box-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--sunken); overflow: hidden; }
+.box-bar i { display: block; height: 100%; background: var(--ink); }
+.btn.danger-fill { background: var(--danger); color: #fff; }
+.btn.danger-fill:hover { background: color-mix(in srgb, var(--danger) 85%, var(--ink)); }
+
+/* --- Hojas --- */
+dialog.sheet { width: 100%; max-height: min(80dvh, 40rem); padding-top: 0; overflow-y: auto; overscroll-behavior: contain; }
+dialog.sheet > * + * { margin-top: var(--s4); }
+.sheet-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  margin-inline: calc(-1 * var(--s6));
+  padding: var(--s4) var(--s6) var(--s2);
+  background: var(--surface);
+}
+.sheet-head h2 { font: var(--text-m); font-weight: 500; }
+
+/* --- Entrar --- */
+.login { max-width: 22rem; }
+.login form { display: grid; gap: var(--s3); }
+.login label { font: var(--tech-m); }

@@ -1,0 +1,20 @@
+{
+  // Worker "opedsurg": sirve public/ en https://opedsurg.miguelplanas.dev y,
+  // antes de cada fichero, pide usuario y contraseña (worker/index.js).
+  // Despliega la CI al fusionar en main (.github/workflows/ci.yml).
+  "name": "opedsurg",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  // Solo en su dominio: la URL pública *.workers.dev y las de preview, apagadas.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "opedsurg.miguelplanas.dev", "custom_domain": true }],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Todo pasa por el Worker: si no, los ficheros se servirían sin contraseña.
+    "run_worker_first": true,
+    "not_found_handling": "none"
+  }
+}
