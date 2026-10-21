@@ -46,7 +46,9 @@ jobs:
       - name: Check it is live
         run: |
           for i in 1 2 3 4 5 6; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' https://opedsurg.miguelplanas.dev/login)
+            # || true: el shell de Actions corta al primer fallo, y un nombre
+            # recién creado puede no resolver aún (curl sale con 6).
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://opedsurg.miguelplanas.dev/login || true)
             [ "$code" = 200 ] && exit 0
             sleep 10
           done
