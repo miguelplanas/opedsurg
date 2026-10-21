@@ -217,6 +217,50 @@ export function resetAll() {
   }
 }
 
+// Pasar el progreso de un sitio a otro (de la app vieja en Vercel a la nueva,
+// o a otro móvil): cada dominio y cada app instalada tiene su propio
+// localStorage. Es texto para poder copiarlo y pegarlo.
+export function exportProgress() {
+  return JSON.stringify({ app: 'opo-tests', version: 2, ...read() });
+}
+
+// Fusiona en vez de sustituir: importar dos veces, o en un móvil que ya tiene
+// progreso, no duplica nada. De cada pregunta gana la vista más tarde.
+export function importProgress(text) {
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    throw new Error('Eso no es un progreso copiado de Opo Tests.');
+  }
+  if (data?.app !== 'opo-tests' || typeof data.questions !== 'object' || !Array.isArray(data.sessions)) {
+    throw new Error('Eso no es un progreso copiado de Opo Tests.');
+  }
+  const store = read();
+  let added = 0;
+  for (const [k, s] of Object.entries(data.questions)) {
+    if (!(s?.box >= 1 && s.box <= MAX_BOX && typeof s.due === 'string')) continue;
+    const mine = store.questions[k];
+    if (!mine || Date.parse(s.lastSeen) > Date.parse(mine.lastSeen)) {
+      if (!mine) added++;
+      store.questions[k] = s;
+    }
+  }
+  const seen = new Set(store.sessions.map((r) => `${r.at}|${r.source}`));
+  for (const r of data.sessions) {
+    if (r?.at && !seen.has(`${r.at}|${r.source}`)) store.sessions.push(r);
+  }
+  store.sessions.sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
+  for (const [k, b] of Object.entries(data.best ?? {})) {
+    const mine = store.best[k];
+    store.best[k] = mine
+      ? { accuracy: Math.max(mine.accuracy, b.accuracy), points: Math.max(mine.points, b.points), attempts: Math.max(mine.attempts, b.attempts) }
+      : b;
+  }
+  write(store);
+  return { questions: Object.keys(data.questions).length, added };
+}
+
 // Tanda a medias. iOS cierra la app en segundo plano sin avisar: sin esto, un
 // simulacro de 150 preguntas se perdía al contestar un mensaje. Se guardan
 // referencias (examId, id de pregunta, orden de opciones), no las preguntas.

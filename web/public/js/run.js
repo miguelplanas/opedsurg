@@ -72,6 +72,8 @@ export function discardRun() {
 }
 
 export function finishRun(run) {
+  if (run.done) return;
+  run.done = true;
   const s = score(run.items, run.responses);
   for (const [examId, results] of answersByExam(run.items, run.responses)) {
     recordAnswers(examId, results);

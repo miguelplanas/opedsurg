@@ -1,8 +1,11 @@
 // Service worker de Opo Tests: la app y las preguntas funcionan sin conexión.
-// Todo se sirve de la caché al momento y se refresca por detrás, así una
-// versión nueva llega en la siguiente apertura sin tener que cambiar nada aquí.
-// Solo se guardan respuestas buenas: si la sesión caducó, la red devuelve la
-// pantalla de entrar (una redirección) y eso no debe pisar la app guardada.
+// - Abrir la app (navegación a /): primero la red, con 3 s de margen; sin red,
+//   la copia guardada. Así una sesión caducada lleva a la pantalla de entrar
+//   en vez de quedarse para siempre en una copia vieja.
+// - Lo demás (JS, CSS, preguntas): de la caché al momento y se refresca por
+//   detrás, así una versión nueva llega sin cambiar nada aquí.
+// Solo se guardan respuestas buenas: una redirección a /login o un 401 no
+// pisan la app guardada.
 const CACHE = 'opo-tests-v1';
 const SHELL = [
   '/', '/index.html', '/manifest.webmanifest', '/favicon.svg?v=2',
@@ -39,13 +42,18 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin || url.pathname === '/login') return;
-  // Las rutas son hashes, así que toda navegación es la página principal.
-  const key = e.request.mode === 'navigate' ? '/' : e.request;
+  if (e.request.mode === 'navigate') {
+    // Las rutas son hashes: la única página es /. Otra URL abierta a mano
+    // (un .json, un .js) va a la red sin tocar la caché.
+    if (url.pathname !== '/' && url.pathname !== '/index.html') return;
+    e.respondWith(openApp(e));
+    return;
+  }
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
-    const cached = await cache.match(key);
+    const cached = await cache.match(e.request);
     const network = fetch(e.request).then((res) => {
-      if (good(res)) cache.put(key, res.clone());
+      if (good(res)) cache.put(e.request, res.clone());
       return res;
     });
     if (cached) {
@@ -55,3 +63,21 @@ self.addEventListener('fetch', (e) => {
     return network;
   })());
 });
+
+async function openApp(e) {
+  const cache = await caches.open(CACHE);
+  const network = fetch(e.request).then((res) => {
+    if (good(res)) cache.put('/', res.clone());
+    return res;
+  });
+  const timeout = new Promise((resolve) => setTimeout(resolve, 3000));
+  try {
+    // La red gana si contesta a tiempo, también con la redirección a /login.
+    const res = await Promise.race([network, timeout]);
+    if (res) return res;
+  } catch {
+    // sin red: la copia guardada
+  }
+  e.waitUntil(network.catch(() => {}));
+  return (await cache.match('/')) ?? network;
+}

@@ -1,6 +1,6 @@
 import { h, clock, plural, sheet } from '../ui.js';
 import { itemKey, partLabel, LETTERS } from '../quiz.js';
-import { loadExam } from '../dataset.js';
+import { examsFor } from '../dataset.js';
 import { saveRun } from '../progress.js';
 import { currentRun, discardRun, finishRun, quickConfig, startRun, QUICK_LIMIT } from '../run.js';
 import { go, state } from '../nav.js';
@@ -41,9 +41,7 @@ export async function runner() {
   }
 
   const { config, items } = run;
-  const titles = Object.fromEntries(await Promise.all(
-    [...new Set(items.map((i) => i.examId))].map(async (id) => [id, await loadExam(id)]),
-  ));
+  const titles = await examsFor(items);
   const practice = config.mode === 'practica';
   const mixed = config.source !== 'examen';
   const limit = config.timerMinutes ? config.timerMinutes * 60 : null;
@@ -93,7 +91,7 @@ export async function runner() {
     };
 
     body.replaceChildren(
-      h('h1', { class: 'visually-hidden' }, `Pregunta ${run.index + 1} de ${items.length}`),
+      h('h1', { class: 'visually-hidden', tabindex: '-1' }, `Pregunta ${run.index + 1} de ${items.length}`),
       h('p', { class: 'tech muted' }, `[${q.id}] ${where}`),
       h('p', { class: 'stem' }, q.stem),
       h('ul', { class: 'options' }, item.optionOrder.map(option)),
@@ -140,8 +138,14 @@ export async function runner() {
     );
   }
 
+  // Una sola vez: el tiempo puede acabarse con una hoja abierta (Corregir,
+  // Salir, Rejilla) y su botón volvería a guardar todas las respuestas.
+  let finished = false;
   function finish() {
+    if (finished) return;
+    finished = true;
     teardown();
+    for (const dlg of document.querySelectorAll('dialog[open]')) dlg.close();
     finishRun(run);
   }
 

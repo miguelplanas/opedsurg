@@ -24,9 +24,17 @@ function mode({ title, text, meta, onclick, disabled, primary }) {
 export function home() {
   const ov = overview();
   const pending = pendingRun();
-  const start = (source, limit) => (e) => {
-    e.currentTarget.disabled = true;
-    startRun(quickConfig(source, limit));
+  const status = h('p', { class: 'status error', role: 'status' });
+  const start = (source, limit) => async (e) => {
+    const button = e.currentTarget;
+    button.disabled = true;
+    status.textContent = '';
+    try {
+      await startRun(quickConfig(source, limit));
+    } catch (err) {
+      button.disabled = false;
+      status.textContent = `${err.message} Sin conexión solo funciona lo que ya se abrió una vez.`;
+    }
   };
 
   const lead =
@@ -92,6 +100,7 @@ export function home() {
           onclick: start('aleatorio', RANDOM_LIMIT),
         }),
       ),
+      status,
     ),
   ];
 }

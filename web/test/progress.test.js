@@ -84,3 +84,28 @@ test('borrar todo deja el progreso a cero', () => {
   p.resetAll();
   assert.equal(p.overview().tracked, 0);
 });
+
+test('copiar y pegar el progreso fusiona sin duplicar', () => {
+  const now = new Date('2026-10-21T10:00:00+02:00');
+  p.recordAnswers('ex', [{ questionId: 'C1', ok: true }, { questionId: 'C2', ok: false }], now);
+  p.recordRound({ at: now.toISOString(), source: 'rapido', examId: null, answered: 2, correct: 1, points: 0.375, elapsed: 30 });
+  p.recordBest('ex', 'ambas', 0.5, 0.375);
+  const text = p.exportProgress();
+
+  localStorage.clear();
+  p.recordAnswers('ex', [{ questionId: 'C1', ok: false }], new Date('2026-10-22T10:00:00+02:00')); // más reciente
+  assert.deepEqual(p.importProgress(text), { questions: 2, added: 1 });
+  assert.deepEqual(p.importProgress(text), { questions: 2, added: 0 }, 'pegar dos veces no añade nada');
+  const s = p.allStates();
+  assert.equal(s['ex:C1'].box, 1, 'gana la respuesta más reciente');
+  assert.equal(s['ex:C2'].box, 1);
+  assert.equal(p.overview().rounds, 1, 'la tanda no se duplica');
+  assert.equal(p.bestForExam('ex'), 0.5);
+});
+
+test('pegar algo que no es un progreso avisa y no toca nada', () => {
+  p.recordAnswers('ex', [{ questionId: 'C1', ok: true }]);
+  assert.throws(() => p.importProgress('hola'), /no es un progreso/);
+  assert.throws(() => p.importProgress('{"questions":{}}'), /no es un progreso/);
+  assert.equal(p.overview().tracked, 1);
+});

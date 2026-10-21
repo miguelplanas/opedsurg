@@ -168,3 +168,6 @@ dialog.sheet > * + * { margin-top: var(--s4); }
 .login { max-width: 22rem; }
 .login form { display: grid; gap: var(--s3); }
 .login label { font: var(--tech-m); }
+
+/* Copiar y pegar el progreso */
+textarea.field.code { font: var(--tech-s); font-size: 16px; resize: vertical; }

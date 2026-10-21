@@ -31,6 +31,7 @@ export async function setup(examId) {
   const scopeName = (s) => (s === 'ambas' ? 'Las dos partes' : partLabel(exam, s));
 
   const start = h('button', { class: 'btn primary', type: 'submit' });
+  const status = h('p', { class: 'status error', role: 'status' });
   const custom = h('input', {
     class: 'field minutes', type: 'number', name: 'minutes', min: 1, max: 300, value: 45,
     inputmode: 'numeric', 'aria-label': 'Minutos',
@@ -70,6 +71,7 @@ export async function setup(examId) {
       ),
     ),
     h('div', { class: 'action-bar' }, start),
+    status,
   );
 
   const value = (name) => form.elements[name].value;
@@ -97,6 +99,7 @@ export async function setup(examId) {
     const t = value('timer');
     const minutes = t === 'custom' ? Math.max(1, Math.min(300, Number(custom.value) || 45)) : t ? Number(t) : null;
     start.disabled = true;
+    status.textContent = '';
     startRun({
       source: 'examen',
       examId,
@@ -106,6 +109,9 @@ export async function setup(examId) {
       shuffleOptions: form.elements.shuffleOptions.checked,
       timerMinutes: minutes,
       limit: null,
+    }).catch((err) => {
+      start.disabled = false;
+      status.textContent = err.message;
     });
   });
   refresh();

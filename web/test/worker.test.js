@@ -67,3 +67,15 @@ test('sin secretos configurados no deja entrar a nadie', async () => {
   assert.equal(res.status, 503);
   assert.ok(!(await validToken(bare, 'x.y')));
 });
+
+test('demasiados intentos de contraseña por IP dan 429', async () => {
+  let calls = 0;
+  const limited = { ...env, LOGIN_LIMIT: { limit: async () => ({ success: ++calls <= 2 }) } };
+  const post = () => worker.fetch(req('/login', {
+    method: 'POST', headers: { 'CF-Connecting-IP': '203.0.113.9' },
+    body: new URLSearchParams({ user: 'hermana', password: 'una-clave-larga' }),
+  }), limited);
+  assert.equal((await post()).status, 303);
+  assert.equal((await post()).status, 303);
+  assert.equal((await post()).status, 429);
+});

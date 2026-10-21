@@ -124,6 +124,12 @@ async function handle(request, env) {
   if (url.pathname === '/login') {
     if (request.method === 'POST') {
       if (!configured(env)) return html(loginPage({ error: 'La app aún no tiene contraseña configurada.' }), 503);
+      // 10 intentos por minuto y por IP (wrangler.jsonc, LOGIN_LIMIT): la
+      // espera de abajo no frena a quien pruebe contraseñas en paralelo.
+      const ip = request.headers.get('CF-Connecting-IP') ?? 'local';
+      if (env.LOGIN_LIMIT && !(await env.LOGIN_LIMIT.limit({ key: ip })).success) {
+        return html(loginPage({ error: 'Demasiados intentos. Espera un minuto.' }), 429);
+      }
       const form = await request.formData().catch(() => null);
       const user = String(form?.get('user') ?? '').trim();
       const password = String(form?.get('password') ?? '');

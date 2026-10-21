@@ -1,10 +1,67 @@
 import { h, header, pct, plural, sheet } from '../ui.js';
 import { loadManifest } from '../dataset.js';
-import { BOX_INTERVALS, BOX_NAMES, byExam, overview, resetAll, trend } from '../progress.js';
+import {
+  BOX_INTERVALS, BOX_NAMES, byExam, exportProgress, importProgress, overview, resetAll, trend,
+} from '../progress.js';
+import { discardRun } from '../run.js';
 import { sourceName } from './home.js';
-import { go } from '../nav.js';
+import { go, state } from '../nav.js';
 
 const day = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'short' });
+
+// Copiar y pegar el progreso: cada dominio y cada app instalada guarda el suyo.
+function transfer(hasData) {
+  const status = h('p', { class: `status${state.flash ? ' ok' : ''}`, role: 'status' }, state.flash ?? '');
+  state.flash = null;
+
+  async function copy() {
+    const text = exportProgress();
+    try {
+      await navigator.clipboard.writeText(text);
+      status.className = 'status ok';
+      status.textContent = 'Copiado. Ábrelo donde quieras tenerlo, Progreso, Pegar progreso.';
+    } catch {
+      // Sin portapapeles: el texto a la vista para copiarlo a mano.
+      const area = h('textarea', { class: 'field code', rows: 6, readonly: true, 'aria-label': 'Progreso copiado' });
+      area.value = text;
+      sheet('Copiar progreso', h('p', { class: 'muted' }, 'Mantén pulsado el texto, Seleccionar todo y Copiar.'), area);
+      area.select();
+    }
+  }
+
+  function paste() {
+    const area = h('textarea', { class: 'field code', rows: 6, 'aria-label': 'Progreso copiado' });
+    const msg = h('p', { class: 'status error', role: 'status' });
+    const dlg = sheet('Pegar progreso',
+      h('p', { class: 'muted' }, 'Pega aquí lo que copiaste con Copiar mi progreso. Se suma a lo que ya hay en este móvil.'),
+      area,
+      msg,
+      h('button', {
+        class: 'btn primary', type: 'button',
+        onclick: () => {
+          try {
+            const { added } = importProgress(area.value.trim());
+            state.flash = `Importado: ${plural(added, 'pregunta nueva', 'preguntas nuevas')}.`;
+            dlg.close();
+            go('#/progreso');
+          } catch (err) {
+            msg.textContent = err.message;
+          }
+        },
+      }, 'Importar'),
+    );
+  }
+
+  return h('section', { class: 'stack transfer' },
+    h('h2', { class: 'label' }, 'Pasar el progreso'),
+    h('p', { class: 'small muted' }, 'El progreso se guarda en cada móvil (y en cada app instalada) por separado. Para llevarlo a otro, cópialo aquí y pégalo allí.'),
+    h('div', { class: 'row' },
+      hasData && h('button', { class: 'btn', type: 'button', onclick: copy }, 'Copiar mi progreso'),
+      h('button', { class: 'btn', type: 'button', onclick: paste }, 'Pegar progreso'),
+    ),
+    status,
+  );
+}
 
 export async function stats() {
   const ov = overview();
@@ -16,6 +73,7 @@ export async function stats() {
         h('p', { class: 'empty' }, 'Todavía no hay datos. Haz una tanda y vuelve.'),
         h('div', {}, h('a', { class: 'btn primary link-btn', href: '#/' }, 'Ir a estudiar')),
       ),
+      transfer(false),
     ];
   }
 
@@ -47,7 +105,7 @@ export async function stats() {
     const dlg = sheet('Borrar el progreso',
       h('p', { class: 'muted' }, 'Se borran las cajas, el historial y la tanda sin terminar de este móvil. No se puede deshacer.'),
       h('div', { class: 'row' },
-        h('button', { class: 'btn primary danger-fill', type: 'button', onclick: () => { resetAll(); dlg.close(); go('#/'); } }, 'Borrar todo'),
+        h('button', { class: 'btn primary danger-fill', type: 'button', onclick: () => { resetAll(); discardRun(); dlg.close(); go('#/'); } }, 'Borrar todo'),
         h('button', { class: 'btn', type: 'button', onclick: () => dlg.close() }, 'Cancelar'),
       ),
     );
@@ -88,6 +146,7 @@ export async function stats() {
           h('span', {}, sourceName(r.source), h('span', { class: 'tech muted' }, ` ${day.format(new Date(r.at))}`)),
           h('span', { class: 'meta' }, `${pct(r.answered ? r.correct / r.answered : 0)} [${r.answered}]`)))),
     ),
+    transfer(true),
     h('div', {}, h('button', { class: 'btn quiet danger', type: 'button', onclick: confirmReset }, 'Borrar todo el progreso')),
   ];
 }

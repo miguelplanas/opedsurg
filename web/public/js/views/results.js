@@ -1,6 +1,6 @@
 import { h, header, pct, points, duration, plural } from '../ui.js';
 import { itemKey } from '../quiz.js';
-import { loadExam } from '../dataset.js';
+import { examsFor } from '../dataset.js';
 import { startRun } from '../run.js';
 import { go, state } from '../nav.js';
 import { sourceName } from './home.js';
@@ -13,9 +13,7 @@ export async function results() {
   }
   const { score: s, items, responses, config } = r;
   const mixed = config.source !== 'examen';
-  const titles = Object.fromEntries(await Promise.all(
-    [...new Set(items.map((i) => i.examId))].map(async (id) => [id, (await loadExam(id)).title]),
-  ));
+  const titles = Object.fromEntries(Object.entries(await examsFor(items)).map(([id, e]) => [id, e.title]));
 
   const wrong = items.filter((i) => {
     const g = responses[itemKey(i)];
