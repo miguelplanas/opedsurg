@@ -17,7 +17,7 @@ Siguen esperando a Miguel (el check `guard` deja `ok-miguel` pendiente hasta que
 `main` → CI (`.github/workflows/ci.yml`) → tests → `wrangler deploy` del Worker `opedsurg` en Cloudflare. Fusionar es desplegar.
 
 - Secretos de GitHub: `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`.
-- Secretos del Worker: `APP_USER` y `APP_PASSWORD`. Sin ellos no entra nadie. La contraseña está también en `secrets.env` del homelab como `OPEDSURG_PASSWORD` (se usa, no se lee).
+- Secretos del Worker: `APP_USER` y `APP_PASSWORD`. Sin ellos no entra nadie. El usuario y la contraseña están también en `~/.config/opedsurg/acceso.txt` de `devbox` (600): es para Miguel, un agente no lo lee ni lo imprime. Para cambiarla: nueva contraseña en ese fichero y `cf workers secrets update APP_PASSWORD --script-name opedsurg --text "$P" --type secret_text`.
 - Es pública: `*.miguelplanas.dev` es privado salvo excepción, y este nombre la tiene en AdGuard (`@@||opedsurg.miguelplanas.dev^$dnsrewrite`). La vigila Gatus (endpoint `opedsurg`).
 
 ## Arquitectura
