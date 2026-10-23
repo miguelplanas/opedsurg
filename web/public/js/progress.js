@@ -217,9 +217,8 @@ export function resetAll() {
   }
 }
 
-// Pasar el progreso de un sitio a otro (de la app vieja en Vercel a la nueva,
-// o a otro móvil): cada dominio y cada app instalada tiene su propio
-// localStorage. Es texto para poder copiarlo y pegarlo.
+// Pasar el progreso a otro móvil, o de Safari a la app instalada: cada uno
+// tiene su propio localStorage. Es texto para poder copiarlo y pegarlo.
 export function exportProgress() {
   return JSON.stringify({ app: 'opo-tests', version: 2, ...read() });
 }

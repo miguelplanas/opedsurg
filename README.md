@@ -115,11 +115,6 @@ despliega con `wrangler deploy`.
   APP_PASSWORD` desde `web/`). Cambiar la contraseña cierra la sesión en todos los
   móviles. Sin ellos no entra nadie.
 
-Mientras dure el traspaso, Vercel (`opedsurg.vercel.app`, `web/vercel.json`)
-sirve la misma app sin contraseña, para poder copiar desde allí el progreso
-guardado (Progreso, Copiar mi progreso) y pegarlo en la nueva. Después se borra
-el proyecto de Vercel y `web/vercel.json`.
-
 Para instalarla en el iPhone: Safari, la dirección, Compartir y "Añadir a
 pantalla de inicio". La app instalada no comparte cookies con Safari, así que
 pide entrar una vez más dentro de la app; después dura 400 días.
