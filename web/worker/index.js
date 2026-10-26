@@ -84,10 +84,7 @@ export function loginPage({ error = '', user = '' } = {}) {
       <span class="brand">Opo Tests</span>
       <button class="btn quiet theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema claro u oscuro"></button>
     </header>
-    <section class="stack">
-      <h1>Entrar</h1>
-      <p class="muted">Solo hace falta una vez en cada móvil.</p>
-    </section>
+    <h1 class="visually-hidden">Entrar</h1>
     <form method="post" action="/login">
       <label for="user">Usuario</label>
       <input class="field" id="user" name="user" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" required value="${escape(user)}">
