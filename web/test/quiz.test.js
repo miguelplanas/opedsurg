@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   selectQuestions, buildExam, buildRepaso, buildRapido, buildAleatorio, score, answersByExam,
-  countByPart, timerPresets, itemKey,
+  countByPart, timerPresets, itemKey, keyCommand,
 } from '../public/js/quiz.js';
 import { q } from './helpers.js';
 
@@ -78,4 +78,17 @@ test('puntuación de oposición: +0,5, -0,125 y anuladas fuera', () => {
 test('temporizadores con un ritmo razonable', () => {
   assert.deepEqual(timerPresets(153), [60, 90]);
   assert.deepEqual(timerPresets(10), [15, 30]);
+});
+
+test('teclado de la tanda: letras y números contestan, flechas mueven, Enter sigue', () => {
+  assert.deepEqual(keyCommand('a'), { type: 'choose', pos: 0 });
+  assert.deepEqual(keyCommand('D'), { type: 'choose', pos: 3 });
+  assert.deepEqual(keyCommand('2'), { type: 'choose', pos: 1 });
+  assert.deepEqual(keyCommand('ArrowLeft'), { type: 'move', delta: -1 });
+  assert.deepEqual(keyCommand('ArrowRight'), { type: 'move', delta: 1 });
+  assert.deepEqual(keyCommand('Enter'), { type: 'advance' });
+  assert.equal(keyCommand('Enter', true), null, 'Enter en un botón lo pulsa, no avanza');
+  assert.equal(keyCommand('e'), null);
+  assert.equal(keyCommand('5'), null);
+  assert.equal(keyCommand(''), null);
 });

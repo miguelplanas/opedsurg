@@ -1,5 +1,5 @@
 import { h, clock, plural, sheet } from '../ui.js';
-import { itemKey, partLabel, LETTERS } from '../quiz.js';
+import { itemKey, partLabel, keyCommand } from '../quiz.js';
 import { examsFor } from '../dataset.js';
 import { saveRun } from '../progress.js';
 import { currentRun, discardRun, finishRun, quickConfig, startRun, QUICK_LIMIT } from '../run.js';
@@ -53,6 +53,10 @@ export async function runner() {
   const body = h('div', { class: 'question' });
   const prev = h('button', { class: 'btn', type: 'button', onclick: () => move(-1) }, 'Anterior');
   const next = h('button', { class: 'btn primary', type: 'button', onclick: () => advance() });
+  // En el ordenador la rejilla va siempre a la derecha (app.css); en el móvil,
+  // en su hoja.
+  const sideGrid = h('div', { class: 'grid' });
+  const sideCount = h('p', { class: 'tech muted' });
 
   function current() {
     return items[run.index];
@@ -100,7 +104,15 @@ export async function runner() {
         : revealed ? (given === q.answer ? 'Correcto.' : `Fallo. La correcta es la ${q.answer}.`)
         : ''),
     );
+    sideCount.textContent = `[${answered()} de ${items.length} contestadas]`;
+    sideGrid.replaceChildren(...cells((i) => goTo(i)));
     if (focus) body.querySelector('h1').focus({ preventScroll: true });
+  }
+
+  function goTo(i) {
+    run.index = i;
+    saveRun(run);
+    paint(true);
   }
 
   function choose(letter) {
@@ -167,8 +179,8 @@ export async function runner() {
     );
   }
 
-  function openGrid() {
-    const cells = items.map((item, i) => {
+  function cells(pick) {
+    return items.map((item, i) => {
       const given = run.responses[itemKey(item)];
       const cls = ['cell', 'tech'];
       if (item.question.status === 'nula') cls.push('nula');
@@ -176,12 +188,15 @@ export async function runner() {
       return h('button', {
         class: cls.join(' '), type: 'button', 'aria-current': i === run.index ? 'step' : null,
         'aria-label': `${item.question.id}${given ? `, contestada ${given}` : ''}`,
-        onclick: () => { dlg.close(); run.index = i; saveRun(run); paint(true); },
+        onclick: () => pick(i),
       }, item.question.id);
     });
+  }
+
+  function openGrid() {
     const dlg = sheet('Rejilla',
       h('p', { class: 'tech muted' }, `[${answered()} de ${items.length} contestadas] Toca una para ir a ella.`),
-      h('div', { class: 'grid' }, cells),
+      h('div', { class: 'grid' }, cells((i) => { dlg.close(); goTo(i); })),
       h('button', { class: 'btn primary', type: 'button', onclick: () => { dlg.close(); askFinish(); } }, 'Corregir ahora'),
     );
   }
@@ -202,12 +217,11 @@ export async function runner() {
 
   onKey = (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey || document.querySelector('dialog[open]')) return;
-    const k = e.key.toUpperCase();
-    const n = LETTERS.indexOf(k) >= 0 ? LETTERS.indexOf(k) : '1234'.indexOf(e.key);
-    if (n >= 0) choose(current().optionOrder[n]);
-    else if (e.key === 'ArrowRight') move(1);
-    else if (e.key === 'ArrowLeft') move(-1);
-    else return;
+    const cmd = keyCommand(e.key, Boolean(e.target.closest?.('button:not(.option), a, input, textarea')));
+    if (!cmd) return;
+    if (cmd.type === 'choose') choose(current().optionOrder[cmd.pos]);
+    else if (cmd.type === 'move') move(cmd.delta);
+    else advance();
     e.preventDefault();
   };
   document.addEventListener('keydown', onKey);
@@ -221,10 +235,16 @@ export async function runner() {
       h('button', { class: 'btn quiet', type: 'button', onclick: exit }, 'Salir'),
       counter,
       timer,
-      h('button', { class: 'btn quiet', type: 'button', onclick: openGrid }, 'Rejilla'),
+      h('button', { class: 'btn quiet grid-btn', type: 'button', onclick: openGrid }, 'Rejilla'),
       bar,
     ),
     body,
+    h('aside', { class: 'run-side', 'aria-label': 'Rejilla' },
+      sideCount,
+      sideGrid,
+      h('p', { class: 'tech muted keys' }, '[A-D] contesta\n[← →] mueve\n[Enter] sigue'),
+      h('button', { class: 'btn', type: 'button', onclick: askFinish }, 'Corregir ahora'),
+    ),
     h('div', { class: 'action-bar run-foot' }, prev, next),
   ];
 }

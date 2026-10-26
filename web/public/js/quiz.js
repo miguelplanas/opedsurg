@@ -166,3 +166,16 @@ export function timerPresets(questions) {
     return perQ >= 15 && perQ <= 180;
   });
 }
+
+// Teclado de la tanda (en el ordenador): A-D o 1-4 contesta la opción en esa
+// posición, las flechas mueven y Enter pasa a la siguiente. `onControl` dice si
+// el foco está en un botón o campo que no es una opción: ahí Enter es suyo.
+export function keyCommand(key, onControl = false) {
+  const n = LETTERS.indexOf(key.toUpperCase());
+  const pos = n >= 0 ? n : '1234'.indexOf(key);
+  if (key.length === 1 && pos >= 0) return { type: 'choose', pos };
+  if (key === 'ArrowRight') return { type: 'move', delta: 1 };
+  if (key === 'ArrowLeft') return { type: 'move', delta: -1 };
+  if (key === 'Enter' && !onControl) return { type: 'advance' };
+  return null;
+}

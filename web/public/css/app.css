@@ -62,7 +62,7 @@
 .page:has(.action-bar) { padding-bottom: 0; }
 
 /* --- Responder --- */
-.run-head {
+.page > .run-head {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -109,6 +109,31 @@
 .option .tag { white-space: normal; }
 
 .run-foot { margin-top: auto; }
+
+/* En el ordenador la rejilla va fija a la derecha de la pregunta, con los
+   atajos de teclado; en el móvil sigue en su hoja (botón Rejilla). */
+.run-side { display: none; }
+@media (min-width: 64rem) {
+  .page:has(> .run-side) {
+    max-width: calc(var(--measure) + 20rem + var(--s12));
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    column-gap: var(--s12);
+  }
+  .page > .run-head { grid-column: 1 / -1; grid-template-columns: auto 1fr auto; }
+  .run-head .grid-btn { display: none; }
+  .run-side .keys { white-space: pre-line; }
+  .run-side {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    align-self: start;
+    position: sticky;
+    top: calc(var(--s12) + var(--s6));
+    display: grid;
+    gap: var(--s4);
+  }
+  .run-side .grid { grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); }
+  .page:has(> .run-side) > .action-bar { grid-column: 1; }
+}
 
 /* --- Rejilla: la planilla oficial (rasgo propio) --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: var(--s1); }
