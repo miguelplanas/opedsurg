@@ -22,7 +22,9 @@ test('sin cookie, una página lleva a entrar y lo demás da 401', async () => {
 test('la pantalla de entrar y sus estilos se ven sin cookie', async () => {
   const page = await worker.fetch(req('/login'), env);
   assert.equal(page.status, 200);
-  assert.match(await page.text(), /autocomplete="current-password"/);
+  const body = await page.text();
+  assert.match(body, /autocomplete="current-password"/);
+  assert.doesNotMatch(body, /Solo hace falta/, 'sin texto de explicación: solo el formulario');
   assert.equal((await worker.fetch(req('/css/base.css'), env)).status, 200);
   assert.equal(page.headers.get('X-Robots-Tag'), 'noindex, nofollow');
 });
